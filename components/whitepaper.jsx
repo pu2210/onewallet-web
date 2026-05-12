@@ -1,13 +1,8 @@
 const Whitepaper = () => {
-  const { t, lang } = useI18n();
-  const { showToast } = useToast();
-  const comingSoonMsg = {
-    en: "Coming soon",
-    ko: "곧 제공 예정",
-    ja: "近日公開",
-    zh: "即将推出",
-  };
-  const showSoon = () => showToast(comingSoonMsg[lang] || comingSoonMsg.en, { icon: "clock" });
+  const { t } = useI18n();
+  const PDF_URL = "assets/ONEWALLET-Whitepaper-v1.0.pdf";
+  const PDF_NAME = "ONEWALLET-Whitepaper-v1.0.pdf";
+
   return (
     <section id="whitepaper">
       <div className="sec-bg wp-bg"></div>
@@ -22,8 +17,21 @@ const Whitepaper = () => {
           <h3>{t("wp.cardTitle")}</h3>
           <p>{t("wp.cardDesc")}</p>
           <div className="wp-actions">
-            <button className="btn-dark" onClick={showSoon}><Icon name="arrowUp" size={14} stroke={2.2} style={{transform: "rotate(180deg)"}}/> {t("wp.download")}</button>
-            <button className="btn-secondary" onClick={showSoon}><Icon name="arrowRight" size={14} stroke={2.2}/> {t("wp.viewOnline")}</button>
+            <a
+              className="btn-dark"
+              href={PDF_URL}
+              download={PDF_NAME}
+            >
+              <Icon name="arrowUp" size={14} stroke={2.2} style={{transform: "rotate(180deg)"}}/> {t("wp.download")}
+            </a>
+            <a
+              className="btn-secondary"
+              href={PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="arrowRight" size={14} stroke={2.2}/> {t("wp.viewOnline")}
+            </a>
           </div>
         </div>
       </div>
