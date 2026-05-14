@@ -1,0 +1,26 @@
+# ONEWALLET
+
+> Telegram-native Web3 wallet, payment rail, $1 ecosystem, and source-grounded ONEWALLET AI Assistant. Keyless MPC custody, QR merchant payments, multi-chain support. This file follows llmstxt.org and lists approved public sources only. Forward-looking statements ("target", "planned", "draft") remain subject to product, security, and legal review. Not financial advice.
+
+## Primary
+
+- [Homepage](https://onewallet.store/): Product overview, security model, payments, $1 utility, roadmap, team, FAQ.
+- [Whitepaper](https://onewallet.store/whitepaper.html): Twelve chapters covering executive summary, product thesis, UX, architecture, security, token model, growth, business model, roadmap, team, risks, glossary.
+- [Full text for LLMs](https://onewallet.store/llms-full.txt): Concatenated approved copy in a single plain-text file.
+
+## Assistant corpus
+
+- [Assistant knowledge JSON](https://onewallet.store/assets/assistant-knowledge.json): Structured chunks (id, locale, title, source, tags, text) used by the on-site assistant. Localised in EN, KO, JA, ZH.
+- [ONEWALLET AI Assistant](https://onewallet.store/): On-site assistant grounded in approved website and whitepaper material. It does not access private wallet/account data or execute wallet actions.
+
+## Contact
+
+- [Telegram Mini App](https://t.me/onedollar_wallet_bot/app): Product entry point. Distinct from the community channel.
+- [Telegram community](https://t.me/onedollar_project): Launch updates and community questions. Do not post private wallet, account, or recovery data publicly.
+- [X (Twitter)](https://x.com/one_wallet_): Short updates and announcements.
+- [YouTube](https://www.youtube.com/@One_Wallet_Official): Product clips and walkthroughs.
+- [Facebook](https://www.facebook.com/profile.php?id=61589009140069): Broader reach announcements.
+
+## Out of scope
+
+ONEWALLET public materials do not make claims about: yield or return promises, current exchange-listing status, completion of any security audit, banking-class or regulator-blessed status, specific hardware-security-module or single-tenant-network vendor architecture, fixed launch dates, or final tokenomics. Any statement of that kind should be treated as out of scope and not attributed to ONEWALLET.

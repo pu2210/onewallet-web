@@ -1,214 +1,1523 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ONE Wallet — Telegram-based Web3 Financial Platform</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>ONEWALLET — The Telegram-Native Web3 Wallet &amp; Payment Rail</title>
+<meta name="description" content="Open a keyless MPC wallet inside Telegram in a few taps. Pay, send, and earn across chains. Built for users, merchants, and the $1 ecosystem." />
+<meta name="theme-color" content="#ffffff" />
+<link rel="canonical" href="https://onewallet.store/" />
 
-  <!-- SEO -->
-  <meta name="description" content="ONE Wallet is a Telegram-based Web3 financial platform. Create a wallet instantly without seed phrases using MPC Keyless technology. Social login, biometric auth, P2P transfers and merchant payments on TON blockchain." />
-  <meta name="keywords" content="ONE Wallet, Telegram wallet, Web3 wallet, MPC Keyless, TON blockchain, crypto wallet, social login wallet, P2P crypto transfer, $1 token, 1DOLLAR" />
-  <meta name="author" content="ONE Wallet" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#16A34A" />
-  <link rel="canonical" href="https://1dollar.me/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ONEWALLET" />
+<meta property="og:title" content="ONEWALLET — The Telegram-Native Web3 Wallet &amp; Payment Rail" />
+<meta property="og:description" content="Keyless MPC custody, Telegram onboarding, and real-world Web3 payments." />
+<meta property="og:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1260" />
+<meta property="og:url" content="https://onewallet.store/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
 
-  <!-- Hreflang — multi-language signaling for Google -->
-  <link rel="alternate" hreflang="en" href="https://1dollar.me/?lang=en" />
-  <link rel="alternate" hreflang="ko" href="https://1dollar.me/?lang=ko" />
-  <link rel="alternate" hreflang="ja" href="https://1dollar.me/?lang=ja" />
-  <link rel="alternate" hreflang="zh" href="https://1dollar.me/?lang=zh" />
-  <link rel="alternate" hreflang="x-default" href="https://1dollar.me/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ONEWALLET — Web3 finance, opened like a Telegram chat." />
+<meta name="twitter:description" content="Keyless MPC custody, Telegram onboarding, and real-world Web3 payments." />
+<meta name="twitter:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ONE Wallet — Telegram-based Web3 Financial Platform" />
-  <meta property="og:description" content="Create a wallet instantly in Telegram. No seed phrases. MPC Keyless security with social login. The simplest way into Web3." />
-  <meta property="og:url" content="https://1dollar.me/" />
-  <meta property="og:site_name" content="ONE Wallet" />
-  <meta property="og:image" content="https://1dollar.me/assets/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="ONE Wallet — Telegram-based Web3 Financial Platform with MPC Keyless security on TON Blockchain" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="ko_KR" />
-  <meta property="og:locale:alternate" content="ja_JP" />
-  <meta property="og:locale:alternate" content="zh_CN" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
 
-  <!-- Multi-language meta description (for crawlers honoring lang-tagged tags) -->
-  <meta name="description" lang="ko" content="ONE Wallet은 텔레그램 기반 Web3 금융 플랫폼입니다. MPC Keyless 기술로 니모닉 없이 즉시 지갑을 생성하고, 소셜 로그인, 생체 인증, P2P 송금, TON 블록체인 기반 가맹점 결제를 지원합니다." />
-  <meta name="description" lang="ja" content="ONE Wallet は Telegram ベースの Web3 金融プラットフォームです。MPC Keyless 技術によりニーモニックなしで即座にウォレットを作成し、ソーシャルログイン、生体認証、P2P 送金、TON ブロックチェーン上の加盟店決済をサポートします。" />
-  <meta name="description" lang="zh" content="ONE Wallet 是基于 Telegram 的 Web3 金融平台。通过 MPC 无密钥技术无需助记词即可即时创建钱包,支持社交登录、生物识别认证、P2P 转账以及基于 TON 区块链的商户支付。" />
-  <meta name="keywords" lang="ko" content="ONE Wallet, 텔레그램 지갑, Web3 지갑, MPC Keyless, TON 블록체인, 암호화폐 지갑, 소셜 로그인 지갑, P2P 송금, $1 토큰, 1DOLLAR" />
-  <meta name="keywords" lang="ja" content="ONE Wallet, Telegram ウォレット, Web3 ウォレット, MPC Keyless, TON ブロックチェーン, 暗号資産ウォレット, ソーシャルログイン, P2P 送金, $1 トークン, 1DOLLAR" />
-  <meta name="keywords" lang="zh" content="ONE Wallet, Telegram 钱包, Web3 钱包, MPC 无密钥, TON 区块链, 加密钱包, 社交登录钱包, P2P 转账, $1 代币, 1DOLLAR" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@500;600;700;800&family=Noto+Sans+JP:wght@500;600;700;800&family=Noto+Sans+SC:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ONE Wallet — Telegram-based Web3 Financial Platform" />
-  <meta name="twitter:description" content="Create a wallet instantly in Telegram. MPC Keyless security, social login, no seed phrases." />
-  <meta name="twitter:image" content="https://1dollar.me/assets/og-image.png" />
-  <meta name="twitter:image:alt" content="ONE Wallet — Telegram-based Web3 Financial Platform" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Organization","name":"ONEWALLET","url":"https://onewallet.store/","logo":"https://onewallet.store/assets/logo.png","description":"Telegram-native Web3 wallet, payment rail, and $1 token ecosystem.","sameAs":["https://t.me/onedollar_project","https://x.com/one_wallet_","https://www.youtube.com/@One_Wallet_Official","https://www.facebook.com/profile.php?id=61589009140069"]},
+  {"@type":"WebSite","name":"ONEWALLET","url":"https://onewallet.store/","inLanguage":["en","ko","ja","zh"]},
+  {"@type":"SoftwareApplication","name":"ONEWALLET","applicationCategory":"FinanceApplication","operatingSystem":"Telegram Mini App","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+]}
+</script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ONE Wallet",
-    "url": "https://1dollar.me/",
-    "logo": "https://1dollar.me/assets/logo.png",
-    "description": "Telegram-based Web3 Financial Platform. MPC Keyless wallet with social login on TON blockchain.",
-    "sameAs": []
+<style>
+  :root {
+    /* Circle-grade institutional light system */
+    --bg: #ffffff; --bg-elevated: #f7f8fb; --bg-card: #ffffff; --bg-code: #f8fafc;
+    --bg-hero: #f4fff9; --bg-soft-blue: #f1f8ff; --bg-lavender: #f6f2ff;
+    --border: #e8eaf0; --border-strong: #d1d5dd;
+    --fg: #29233b; --fg-strong: #1a162a; --fg-muted: #4e4763; --fg-subtle: #6f6a82;
+    --brand: #0f7a5a; --brand-bright: #0b5f47; --brand-dim: rgba(15,122,90,0.55); --brand-soft: #e7f8f1;
+    --info: #0073c3; --violet-ref: #8656ef;
+    --warning: #b45309; --warning-bg: rgba(180,83,9,0.07); --danger: #b91c1c;
+    --radius-sm: 8px; --radius-md: 12px; --radius-lg: 20px; --radius-pill: 999px;
+    --sans: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --serif: var(--sans); /* legacy alias, no serif used */
+    --mono: "JetBrains Mono","SF Mono",Menlo,Consolas,monospace;
+    --maxw: 1150px; --gutter: clamp(20px, 4vw, 40px);
+    --shadow-sm: 0 1px 2px rgba(41,35,59,0.04), 0 2px 8px rgba(41,35,59,0.04);
+    --shadow-md: 0 2px 6px rgba(41,35,59,0.05), 0 12px 32px rgba(41,35,59,0.06);
+    --shadow-lg: 0 4px 12px rgba(41,35,59,0.06), 0 24px 60px rgba(41,35,59,0.08);
+    --shadow-soft: 0 16px 50px rgba(41,35,59,0.08);
+    --shadow-glow: 0 0 0 1px var(--brand-soft), 0 14px 36px rgba(15,122,90,0.10);
+    --t-fast: 160ms cubic-bezier(0.2,0.7,0.2,1);
+    --t-med: 280ms cubic-bezier(0.2,0.7,0.2,1);
+    --t-slow: 520ms cubic-bezier(0.2,0.7,0.2,1);
   }
-  </script>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--sans); background: var(--bg); color: var(--fg); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+  h1, h2, h3, h4, .eyebrow, .chip, .btn { text-wrap: balance; }
+  h2, h3 { word-break: keep-all; overflow-wrap: normal; }
+  p, li, summary { text-wrap: pretty; }
+  body, main, section, article, aside { min-width: 0; }
+  body > *, main > *, .wrap > *, .hero-grid > *, .security-grid > *, .pay-grid > *, .audience-grid > *, .team-wrap > *, .token-grid > *, .roadmap > *, .flow-steps > *, .trust-grid > *, .foot-grid > * { min-width: 0; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  /* CJK wrapping rules + font cascade for non-Latin scripts */
+  html[lang="ko"] body { font-family: "Inter","Noto Sans KR",-apple-system,sans-serif; font-feature-settings: "ss01","cv11"; }
+  html[lang="ja"] body { font-family: "Inter","Noto Sans JP",-apple-system,sans-serif; }
+  html[lang="zh"] body { font-family: "Inter","Noto Sans SC",-apple-system,sans-serif; }
+  html[lang="ko"], html[lang="ja"], html[lang="zh"] {
+    word-break: keep-all; overflow-wrap: break-word; line-break: strict;
+  }
+  html[lang="ko"] h1, html[lang="ja"] h1, html[lang="zh"] h1,
+  html[lang="ko"] h2, html[lang="ja"] h2, html[lang="zh"] h2,
+  html[lang="ko"] h3, html[lang="ja"] h3, html[lang="zh"] h3 {
+    font-family: inherit; font-weight: 800; letter-spacing: -0.018em;
+  }
+  /* :lang() pseudo-class covers inherited language across descendants */
+  :lang(ko), :lang(ja), :lang(zh) { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
 
-  <template id="__bundler_thumbnail">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-      <rect width="200" height="200" fill="#E8F7EE"/>
-      <circle cx="100" cy="100" r="50" fill="#16A34A"/>
-      <text x="100" y="115" text-anchor="middle" font-size="44" font-weight="800" fill="#fff" font-family="sans-serif">$1</text>
-    </svg>
-  </template>
+  h1,h2,h3,h4 { font-family: var(--sans); color: var(--fg-strong); margin: 0 0 0.5em; }
+  h1 { font-size: clamp(44px, 7vw, 80px); line-height: 1.04; letter-spacing: -0.032em; font-weight: 500; }
+  h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.024em; font-weight: 500; }
+  h3 { font-size: clamp(20px, 2vw, 26px); line-height: 1.22; letter-spacing: -0.012em; font-weight: 600; }
+  h4 { font-size: 16px; font-weight: 600; letter-spacing: -0.005em; margin: 0 0 6px; }
+  p { margin: 0 0 1em; color: var(--fg); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: var(--mono); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+  section { padding: clamp(64px, 8vw, 112px) 0; position: relative; }
+  section + section { padding-top: clamp(48px, 6vw, 88px); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 20px; }
+  html[lang="ko"] .eyebrow, html[lang="ja"] .eyebrow, html[lang="zh"] .eyebrow { font-family: inherit; letter-spacing: 0.04em; }
+  .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--brand); border-radius: 1px; }
+  .sect-head { max-width: 780px; }
+  .sect-head h2 { margin-bottom: 16px; }
+  .sect-head p { color: var(--fg-muted); font-size: clamp(16px, 1.4vw, 18px); line-height: 1.55; }
+  .sect-head-center { max-width: 760px; margin: 0 auto; text-align: center; }
+  .sect-head-center .eyebrow { justify-content: center; }
+  .sect-head-center .eyebrow::before { display: none; }
+
+  :focus-visible { outline: 2.5px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+  .btn:focus-visible { outline-offset: 4px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { position: absolute; left: 12px; top: 12px; background: var(--brand); color: #ffffff; padding: 8px 12px; border-radius: 6px; z-index: 100; }
+
+  header.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); background: rgba(255,255,255,0.72); border-bottom: 1px solid transparent; transition: border-color var(--t-fast), background var(--t-fast), box-shadow var(--t-fast); }
+  header.nav.scrolled { background: rgba(255,255,255,0.92); border-bottom-color: var(--border); box-shadow: 0 1px 0 rgba(41,35,59,0.03), 0 4px 16px rgba(41,35,59,0.04); }
+  .nav-inner { display: flex; align-items: center; gap: 16px; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.012em; color: var(--fg-strong); font-size: 15px; transition: opacity var(--t-fast); }
+  .brand:hover { opacity: 0.85; }
+  .brand img { width: 28px; height: 28px; border-radius: 50%; transition: transform var(--t-med); }
+  .brand:hover img { transform: rotate(-6deg) scale(1.05); }
+  nav.links { display: flex; gap: 28px; margin-left: 28px; flex: 1; }
+  nav.links a { color: var(--fg-muted); font-size: 14px; font-weight: 500; transition: color var(--t-fast); position: relative; padding: 4px 0; }
+  nav.links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform var(--t-med); border-radius: 1px; }
+  nav.links a:hover { color: var(--fg-strong); }
+  nav.links a:hover::after { transform: scaleX(1); }
+  .nav-cta { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+
+  .lang-switch { position: relative; }
+  .lang-trigger { font-family: var(--mono); font-size: 11px; color: var(--fg-muted); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; cursor: pointer; letter-spacing: 0.06em; transition: border-color var(--t-fast), color var(--t-fast); display: inline-flex; align-items: center; gap: 6px; }
+  .lang-trigger:hover, .lang-trigger[aria-expanded="true"] { border-color: var(--border-strong); color: var(--fg-strong); }
+  .lang-trigger .caret { width: 10px; height: 10px; opacity: 0.6; transition: transform var(--t-fast); pointer-events: none; }
+  .lang-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+  .lang-trigger > * { pointer-events: none; }
+  .lang-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 10px; padding: 6px; min-width: 160px; box-shadow: var(--shadow-md); display: none; flex-direction: column; z-index: 60; }
+  .lang-menu.open { display: flex; animation: dropFade var(--t-fast) ease both; }
+  @keyframes dropFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .lang-menu button { background: transparent; border: 0; color: var(--fg); text-align: left; padding: 8px 10px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; display: flex; justify-content: space-between; align-items: center; gap: 8px; transition: background var(--t-fast); }
+  .lang-menu button:hover { background: var(--bg-elevated); }
+  .lang-menu button[aria-checked="true"] { background: var(--brand-soft); color: var(--brand); }
+  .lang-menu button .code { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); }
+
+  .menu-btn { display: none; background: transparent; border: 1px solid var(--border); color: var(--fg); border-radius: 8px; width: 36px; height: 36px; cursor: pointer; align-items: center; justify-content: center; transition: border-color var(--t-fast); }
+  .menu-btn:hover { border-color: var(--border-strong); }
+  .menu-btn svg { width: 18px; height: 18px; }
+  @media (max-width: 880px) { nav.links { display: none; } .lang-switch { display: none; } .menu-btn { display: inline-flex; } }
+  @media (max-width: 600px) { .nav-cta > .btn { display: none; } }
+  /* Mobile menu — full-screen sheet below nav, no transform animation
+     (display:none → flex doesn't transition cleanly), no backdrop-filter
+     (mobile Safari quirks cause partial-render). Solid white. */
+  .mobile-sheet {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    bottom: 0;
+    /* Use dvh (dynamic viewport) for mobile Safari URL-bar collapse. Fallback to vh. */
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    z-index: 49;
+    padding: 24px var(--gutter) 40px;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    transition: opacity var(--t-fast);
+  }
+  .mobile-sheet[hidden] { display: none !important; }
+  .mobile-sheet[data-open="true"] { display: flex; opacity: 1; }
+  .mobile-sheet a {
+    color: var(--fg-strong);
+    font-size: 20px;
+    padding: 20px 4px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--sans);
+    font-weight: 600;
+    letter-spacing: -0.014em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color var(--t-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-sheet a::after {
+    content: "→";
+    color: var(--fg-subtle);
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 400;
+    transition: color var(--t-fast), transform var(--t-fast);
+  }
+  .mobile-sheet a:hover, .mobile-sheet a:active { color: var(--brand); }
+  .mobile-sheet a:hover::after, .mobile-sheet a:active::after { color: var(--brand); transform: translateX(4px); }
+  .mobile-sheet .sheet-cta { margin-top: 28px; }
+  .mobile-sheet .sheet-cta .btn {
+    width: 100%; justify-content: center; padding: 16px 20px; font-size: 15px;
+    /* override base .mobile-sheet a styles */
+    font-weight: 700; letter-spacing: -0.005em; border-bottom: 1.5px solid transparent;
+    color: #ffffff;
+  }
+  .mobile-sheet .sheet-cta .btn::after { content: none; }
+  .mobile-sheet .sheet-cta .btn:hover, .mobile-sheet .sheet-cta .btn:active { color: #ffffff; }
+  .mobile-sheet .lang-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .mobile-sheet .lang-row::before {
+    content: "Language";
+    flex-basis: 100%;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--fg-subtle);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  html[lang="ko"] .mobile-sheet .lang-row::before { content: "언어"; font-family: inherit; letter-spacing: 0.04em; }
+  html[lang="ja"] .mobile-sheet .lang-row::before { content: "言語"; font-family: inherit; letter-spacing: 0.04em; }
+  html[lang="zh"] .mobile-sheet .lang-row::before { content: "语言"; font-family: inherit; letter-spacing: 0.04em; }
+  .mobile-sheet .lang-row button {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--fg-strong);
+    background: var(--bg-elevated);
+    border: 1.5px solid var(--border);
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    min-width: 56px;
+    -webkit-tap-highlight-color: transparent;
+    transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+  }
+  .mobile-sheet .lang-row button:hover, .mobile-sheet .lang-row button:active { border-color: var(--fg-strong); }
+  .mobile-sheet .lang-row button[aria-checked="true"] {
+    background: var(--fg-strong);
+    color: #ffffff;
+    border-color: var(--fg-strong);
+  }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; padding: 12px 20px; border-radius: var(--radius-sm); transition: transform var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), border-color var(--t-fast), color var(--t-fast); cursor: pointer; border: 1.5px solid transparent; font-family: inherit; white-space: nowrap; letter-spacing: -0.005em; }
+  .btn:active { transform: translateY(1px) scale(0.99); }
+  .btn-primary { background: var(--fg-strong); color: #ffffff; }
+  .btn-primary:hover { background: var(--brand); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(15,122,90,0.22); }
+  .btn-ghost { background: transparent; color: var(--fg-strong); border-color: var(--fg-strong); }
+  .btn-ghost:hover { background: var(--fg-strong); color: #ffffff; }
+  .btn-sm { padding: 9px 16px; font-size: 13px; }
+  .btn .arrow { transition: transform var(--t-fast); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity var(--t-slow), transform var(--t-slow); will-change: opacity, transform; }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity var(--t-slow), transform var(--t-slow); }
+  .reveal-stagger.in > * { opacity: 1; transform: none; }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: 40ms; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: 110ms; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 180ms; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 250ms; }
+  .reveal-stagger.in > *:nth-child(5) { transition-delay: 320ms; }
+  .reveal-stagger.in > *:nth-child(6) { transition-delay: 390ms; }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; } *,*::before,*::after { transition: none !important; animation: none !important; } }
+
+  .hero { position: relative; padding-top: clamp(56px, 8vw, 110px); padding-bottom: clamp(48px, 7vw, 90px); background: linear-gradient(315deg, #ffffff 0%, var(--bg-hero) 35%, var(--bg-soft-blue) 65%, var(--bg-lavender) 100%); overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -10% -10% auto auto; width: 60%; aspect-ratio: 1/1; background: radial-gradient(circle at 70% 30%, rgba(134,86,239,0.10), rgba(15,122,90,0.06) 40%, transparent 70%); pointer-events: none; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(28px, 5vw, 64px); align-items: center; position: relative; z-index: 1; }
+  @media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .hero h1 em { color: var(--brand); font-style: normal; font-weight: 600; }
+  .hero .lede { margin: 24px 0 32px; font-size: clamp(17px, 1.55vw, 20px); color: var(--fg-muted); max-width: 54ch; line-height: 1.55; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .proof-chips { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
+  .proof-chips::-webkit-scrollbar { display: none; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--fg-muted); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 6px 14px; background: rgba(255,255,255,0.72); backdrop-filter: blur(8px); transition: border-color var(--t-fast), color var(--t-fast); white-space: nowrap; flex-shrink: 0; }
+  html[lang="ko"] .chip, html[lang="ja"] .chip, html[lang="zh"] .chip { font-family: inherit; }
+  .chip:hover { color: var(--fg-strong); border-color: var(--border-strong); }
+  .chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0; }
+
+  /* Hero visual: framed product mockup */
+  .hero-visual { position: relative; aspect-ratio: 1/1.05; max-width: 560px; margin-left: auto; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, var(--bg-hero) 100%); box-shadow: var(--shadow-soft), 0 0 0 1px rgba(41,35,59,0.04); transition: transform var(--t-med), box-shadow var(--t-med); }
+  .hero-visual::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 50% at 20% 15%, rgba(15,122,90,0.08), transparent 70%), radial-gradient(50% 50% at 85% 90%, rgba(134,86,239,0.06), transparent 70%); pointer-events: none; z-index: 1; }
+  .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; position: relative; z-index: 0; transition: transform var(--t-slow); }
+  .hero-visual:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft), 0 0 0 1px rgba(41,35,59,0.08); }
+  .hero-visual:hover img { transform: scale(1.02); }
+  .hero-meta { position: absolute; bottom: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: 10px; color: var(--fg-muted); letter-spacing: 0.1em; text-transform: uppercase; z-index: 2; background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  .hero-meta b { color: var(--fg-strong); font-weight: 600; }
+
+  .trust { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; background: #ffffff; }
+  .trust-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); letter-spacing: 0.14em; text-transform: uppercase; text-align: center; margin-bottom: 24px; }
+  html[lang="ko"] .trust-eyebrow, html[lang="ja"] .trust-eyebrow, html[lang="zh"] .trust-eyebrow { font-family: inherit; letter-spacing: 0.04em; }
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  @media (max-width: 820px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; } }
+  .trust-item { padding: 8px 0; border-left: 2px solid var(--brand-soft); padding-left: 16px; }
+  .trust-num { font-family: var(--mono); font-size: 11px; color: var(--brand); letter-spacing: 0.14em; margin-bottom: 6px; display: block; }
+  .trust-item h4 { font-size: 15px; margin-bottom: 4px; }
+  .trust-item p { color: var(--fg-muted); font-size: 13.5px; margin: 0; line-height: 1.55; }
+
+  /* Platform grid — Circle-style varied panels */
+  .platform-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 48px; }
+  @media (max-width: 940px) { .platform-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .platform-grid { grid-template-columns: 1fr; } }
+  .plat-card { display: flex; flex-direction: column; padding: 32px; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-lg); transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med); position: relative; overflow: hidden; min-height: 280px; }
+  .plat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); border-color: transparent; }
+  .plat-card:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+  .plat-card .plat-tag { font-family: var(--mono); font-size: 11px; color: var(--brand); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; font-weight: 600; }
+  /* Per-card tag color for palette diversity */
+  .plat-blue .plat-tag { color: var(--info); }
+  .plat-lavender .plat-tag { color: var(--violet-ref); }
+  .plat-wide .plat-tag { color: var(--brand-soft); }
+  html[lang="ko"] .plat-card .plat-tag, html[lang="ja"] .plat-card .plat-tag, html[lang="zh"] .plat-card .plat-tag { font-family: inherit; letter-spacing: 0.04em; }
+  .plat-card h3 { font-size: clamp(20px, 1.8vw, 26px); line-height: 1.18; margin-bottom: 10px; color: var(--fg-strong); }
+  .plat-card p { color: var(--fg-muted); font-size: 14.5px; margin: 0; flex: 1; line-height: 1.55; }
+  .plat-card .plat-vis { margin-top: 24px; border-radius: var(--radius-md); overflow: hidden; background: rgba(255,255,255,0.55); aspect-ratio: 4/3; position: relative; }
+  .plat-card .plat-vis svg { width: 100%; height: 100%; display: block; }
+  .plat-card .plat-vis img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--t-slow); }
+  .plat-card:hover .plat-vis img { transform: scale(1.04); }
+  .plat-card.plat-lead .plat-vis { aspect-ratio: 16/9; }
+  /* Ecosystem image carries its own product-render background — no blend filtering needed */
+  .plat-vis-dark { background: transparent !important; }
+  .plat-vis-dark img { mix-blend-mode: normal; opacity: 1; filter: none; }
+  .plat-lead { grid-column: span 4; background: linear-gradient(135deg, #ffffff 0%, var(--brand-soft) 60%, var(--bg-hero) 100%); }
+  .plat-blue { grid-column: span 2; background: linear-gradient(160deg, var(--bg-soft-blue) 0%, #ffffff 100%); }
+  .plat-mint { grid-column: span 2; background: linear-gradient(160deg, var(--brand-soft) 0%, #ffffff 100%); }
+  .plat-lavender { grid-column: span 2; background: linear-gradient(160deg, var(--bg-lavender) 0%, #ffffff 100%); }
+  .plat-wide { grid-column: span 2; background: linear-gradient(135deg, #1a162a 0%, #29233b 60%, #0b5f47 100%); color: #ffffff; }
+  .plat-wide h3, .plat-wide p { color: #ffffff; }
+  .plat-wide .plat-tag { color: #e7f8f1; }
+  .plat-wide p { color: rgba(255,255,255,0.78); }
+  @media (max-width: 940px) {
+    .plat-lead, .plat-blue, .plat-mint, .plat-lavender, .plat-wide { grid-column: span 1; }
+    .plat-lead { grid-column: span 2; }
+  }
+  @media (max-width: 560px) {
+    .plat-lead { grid-column: span 1; }
+  }
+
+  /* Diversified audience cards — mint, blue, lavender backgrounds */
+  .audience-card:nth-child(1) { background: linear-gradient(160deg, var(--brand-soft) 0%, #ffffff 70%); }
+  .audience-card:nth-child(2) { background: linear-gradient(160deg, var(--bg-soft-blue) 0%, #ffffff 70%); }
+  .audience-card:nth-child(3) { background: linear-gradient(160deg, var(--bg-lavender) 0%, #ffffff 70%); }
+  .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+  @media (max-width: 820px) { .audience-grid { grid-template-columns: 1fr; } }
+  .audience-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px; transition: transform var(--t-med), border-color var(--t-med), box-shadow var(--t-med); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden; }
+  .audience-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 60% at 50% 0%, rgba(15,122,90,0.06), transparent 70%); opacity: 0; transition: opacity var(--t-med); pointer-events: none; }
+  .audience-card:hover { border-color: transparent; transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+  .audience-card:hover::before { opacity: 1; }
+  .audience-card .tag { font-family: var(--mono); font-size: 10px; color: var(--brand); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; }
+  html[lang="ko"] .audience-card .tag, html[lang="ja"] .audience-card .tag, html[lang="zh"] .audience-card .tag { font-family: inherit; letter-spacing: 0.06em; }
+  .audience-card h3 { margin-bottom: 10px; position: relative; }
+  .audience-card p { color: var(--fg-muted); font-size: 14px; flex: 1; position: relative; }
+  .audience-card .more { font-family: var(--mono); font-size: 12px; color: var(--brand); display: inline-flex; gap: 6px; margin-top: 16px; transition: gap var(--t-fast); font-weight: 700; }
+  html[lang="ko"] .audience-card .more, html[lang="ja"] .audience-card .more, html[lang="zh"] .audience-card .more { font-family: inherit; }
+  .audience-card:hover .more { gap: 10px; }
+
+  .flow { background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 48px); margin-top: 48px; box-shadow: var(--shadow-sm); }
+  .flow-banner { margin: 0 0 32px; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 21/8; background: linear-gradient(135deg, #ffffff, var(--bg-hero)); border: 1px solid var(--border); }
+  .flow-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .flow-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 820px) { .flow-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .flow-steps { grid-template-columns: 1fr; } }
+  .step { position: relative; padding: 24px; background: var(--bg-hero); border: 1px solid transparent; border-radius: var(--radius-md); transition: border-color var(--t-fast), transform var(--t-fast), background var(--t-fast); }
+  .step:hover { border-color: var(--brand-dim); transform: translateY(-2px); background: #ffffff; box-shadow: var(--shadow-sm); }
+  .step .n { font-family: var(--mono); font-size: 11px; color: var(--brand); letter-spacing: 0.14em; margin-bottom: 12px; display: block; font-weight: 600; }
+  .step h4 { margin-bottom: 6px; }
+  .step p { color: var(--fg-muted); font-size: 13.5px; margin: 0; line-height: 1.55; }
+  .step:not(:last-child)::after { content: "→"; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); color: var(--fg-subtle); font-family: var(--mono); z-index: 1; }
+  @media (max-width: 820px) { .step:not(:last-child)::after { display: none; } }
+
+  .security-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 60px); align-items: start; margin-top: 44px; }
+  @media (max-width: 940px) { .security-grid { grid-template-columns: 1fr; } }
+  .ascii-block { border: 1px solid var(--border); border-left: 3px solid var(--brand); border-radius: var(--radius-sm); background: var(--bg-code); padding: 22px; font-family: var(--mono); font-size: 12.5px; color: var(--fg-muted); line-height: 1.7; white-space: pre; overflow-x: auto; max-width: 100%; }
+  .ascii-block .hl { color: var(--brand-bright); }
+  .ascii-block .dim { color: var(--fg-subtle); }
+
+  .t-wrap { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+  .threat-table { width: 100%; min-width: 480px; border-collapse: collapse; margin-top: 22px; font-size: 13.5px; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+  .threat-table th, .threat-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  .threat-table tr:last-child td { border-bottom: 0; }
+  .threat-table th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--fg-subtle); text-transform: uppercase; font-weight: 500; background: var(--bg-elevated); }
+  html[lang="ko"] .threat-table th, html[lang="ja"] .threat-table th, html[lang="zh"] .threat-table th { font-family: inherit; letter-spacing: 0.04em; }
+  .badge { font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.08em; }
+  .badge-ok { background: var(--brand-soft); color: var(--brand); }
+  .badge-warn { background: var(--warning-bg); color: var(--warning); }
+
+  .payments { background: linear-gradient(180deg, var(--bg), var(--bg-elevated)); }
+  .pay-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(28px, 5vw, 60px); align-items: start; margin-top: 44px; }
+  @media (max-width: 940px) { .pay-grid { grid-template-columns: 1fr; } }
+  .pay-visual { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; border: 1px solid var(--border); background: linear-gradient(135deg, #ffffff, var(--bg-hero)); margin-bottom: 24px; }
+  .pay-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pay-flow { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+  .pay-flow ol { padding-left: 0; list-style: none; counter-reset: step; margin: 0; }
+  .pay-flow li { counter-increment: step; padding: 14px 0; border-bottom: 1px dashed var(--border); display: flex; gap: 16px; align-items: start; }
+  .pay-flow li:last-child { border-bottom: 0; }
+  .pay-flow li::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); color: var(--brand); font-size: 12px; min-width: 28px; padding-top: 2px; font-weight: 700; }
+  .pay-flow li b { display: block; color: var(--fg-strong); font-weight: 500; margin-bottom: 2px; }
+  .pay-flow li span { color: var(--fg-muted); font-size: 14px; }
+
+  .token-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  @media (max-width: 820px) { .token-grid { grid-template-columns: 1fr; } }
+  .token-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 24px; transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med); }
+  .token-card:hover { border-color: transparent; transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+  .token-card .icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 18px; }
+  .token-card .icon svg { width: 22px; height: 22px; }
+  /* Multi-color token icons */
+  .token-card:nth-child(1) .icon { background: var(--brand-soft); color: var(--brand); }
+  .token-card:nth-child(2) .icon { background: var(--bg-soft-blue); color: var(--info); }
+  .token-card:nth-child(3) .icon { background: var(--bg-lavender); color: var(--violet-ref); }
+  .token-card:nth-child(4) .icon { background: var(--brand-soft); color: var(--brand); }
+  .token-card:nth-child(5) .icon { background: var(--bg-soft-blue); color: var(--info); }
+  .token-card:nth-child(6) .icon { background: var(--bg-lavender); color: var(--violet-ref); }
+  .token-card p { color: var(--fg-muted); font-size: 14px; margin: 0; }
+  .legal-note { margin-top: 28px; padding: 16px 20px; background: var(--warning-bg); border-left: 3px solid var(--warning); border-radius: var(--radius-sm); font-size: 13px; color: var(--fg-muted); }
+  .legal-note b { color: var(--warning); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 8px; }
+  html[lang="ko"] .legal-note b, html[lang="ja"] .legal-note b, html[lang="zh"] .legal-note b { font-family: inherit; letter-spacing: 0.04em; }
+
+  .fly-wrap { background: var(--bg-code); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: clamp(20px, 3vw, 36px) clamp(20px, 3vw, 36px) clamp(28px, 4vw, 44px); margin-top: 44px; box-shadow: var(--shadow-md); }
+  .fly-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; flex-wrap: wrap; padding-bottom: 14px; margin-bottom: 10px; border-bottom: 1px dashed var(--border-strong); }
+  .fly-head .fly-title { font-family: var(--mono); font-size: 13px; color: var(--fg-strong); letter-spacing: 0.04em; }
+  .fly-head .fly-sub { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); }
+  html[lang="ko"] .fly-head .fly-title, html[lang="ja"] .fly-head .fly-title, html[lang="zh"] .fly-head .fly-title,
+  html[lang="ko"] .fly-head .fly-sub, html[lang="ja"] .fly-head .fly-sub, html[lang="zh"] .fly-head .fly-sub { font-family: inherit; }
+  .fly-head .fly-legend { display: flex; gap: 18px; font-family: var(--mono); font-size: 11px; color: var(--fg-muted); }
+  .fly-head .fly-legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .fly-head .fly-legend i { width: 22px; height: 2px; border-radius: 2px; display: inline-block; }
+  .fly-svg { width: 100%; height: auto; display: block; }
+  .fly-svg .node { fill: var(--bg-card); stroke: var(--brand); stroke-width: 1.5; }
+  .fly-svg .node.sec { stroke: var(--warning); }
+  .fly-svg .node-lbl { font: 600 13px var(--mono); fill: var(--brand-bright); }
+  .fly-svg .node-lbl.sec { fill: var(--warning); }
+  .fly-svg .node-sub { font: 11px var(--mono); fill: var(--fg-subtle); }
+  .fly-svg .edge { stroke: var(--brand); stroke-width: 1.4; fill: none; }
+  .fly-svg .edge.sec { stroke: var(--warning); stroke-dasharray: 5 4; }
+  .fly-svg .edge.back { stroke: var(--brand-dim); stroke-dasharray: 4 4; }
+  .fly-svg .edge-lbl { font: 500 11px var(--mono); fill: var(--fg-muted); }
+  .fly-svg .frame-lbl { font: 500 10px var(--mono); fill: var(--fg-subtle); letter-spacing: 1.2px; }
+  @media (max-width: 720px) { .fly-svg { min-width: 540px; } .fly-wrap { overflow-x: auto; } }
+
+  .roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+  @media (max-width: 820px) { .roadmap { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .roadmap { grid-template-columns: 1fr; } }
+  .milestone { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px 24px; position: relative; transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med); }
+  .milestone:hover { border-color: transparent; transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+  .milestone .q { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--fg-subtle); font-weight: 600; }
+  .milestone h4 { margin: 10px 0 12px; font-size: 17px; }
+  .milestone ul { padding-left: 16px; margin: 0; color: var(--fg-muted); font-size: 13.5px; line-height: 1.7; }
+  .ms-status { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; padding: 3px 8px; border-radius: 4px; position: absolute; top: 22px; right: 22px; }
+  html[lang="ko"] .ms-status, html[lang="ja"] .ms-status, html[lang="zh"] .ms-status { font-family: inherit; letter-spacing: 0.02em; }
+  .ms-done { background: var(--brand-soft); color: var(--brand); }
+  .ms-prog { background: rgba(106,166,255,0.12); color: var(--info); }
+  .ms-plan { background: rgba(255,255,255,0.06); color: var(--fg-muted); }
+
+  /* Flex layout so an odd final row (2 cards out of 5) stays horizontally centered */
+  .team-wrap { margin: 44px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; max-width: 1100px; }
+  .team-wrap .member { flex: 0 1 calc(33.333% - 12px); max-width: 340px; min-width: 280px; }
+  @media (max-width: 940px) { .team-wrap .member { flex-basis: calc(50% - 9px); } }
+  @media (max-width: 600px) { .team-wrap .member { flex-basis: 100%; min-width: 0; } }
+  .member { position: relative; background: linear-gradient(180deg, rgba(15,122,90,0.03), transparent 60%), var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px; transition: transform var(--t-med), border-color var(--t-med), box-shadow var(--t-med); overflow: hidden; }
+  .member .deco { position: absolute; top: -48px; right: -56px; width: 220px; height: 220px; pointer-events: none; opacity: 0.85; mask-image: radial-gradient(ellipse at top right, #000 28%, transparent 68%); -webkit-mask-image: radial-gradient(ellipse at top right, #000 28%, transparent 68%); transition: transform var(--t-slow), opacity var(--t-med); filter: blur(0.5px); }
+  .member .deco img { width: 100%; height: 100%; object-fit: cover; display: block; filter: blur(0px); transition: filter var(--t-med); }
+  .member:hover .deco { transform: scale(1.08) rotate(-3deg); opacity: 0.95; }
+  .member::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--brand), transparent); opacity: 0; transition: opacity var(--t-med); }
+  .member:hover { border-color: transparent; transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+  .member:hover::after { opacity: 1; }
+  .member .photo { width: 88px; height: 88px; border-radius: 16px; overflow: hidden; background: var(--bg-elevated); border: 1px solid var(--border); margin-bottom: 22px; box-shadow: 0 6px 18px rgba(6,17,43,0.10); transition: transform var(--t-med); }
+  .member:hover .photo { transform: scale(1.04); }
+  .member .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .member .role { font-family: var(--mono); font-size: 11px; color: var(--brand); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+  html[lang="ko"] .member .role, html[lang="ja"] .member .role, html[lang="zh"] .member .role { font-family: inherit; letter-spacing: 0.06em; }
+  .member .name { color: var(--fg-strong); font-size: 18px; font-weight: 700; margin-bottom: 14px; font-family: var(--sans); letter-spacing: -0.01em; line-height: 1.3; }
+  html[lang="ko"] .member .name, html[lang="ja"] .member .name, html[lang="zh"] .member .name { font-family: inherit; }
+  .member .name .kr { color: var(--fg); font-weight: 600; margin-right: 8px; opacity: 0.92; }
+  .member ul { list-style: none; padding: 0; margin: 0; color: var(--fg-muted); font-size: 13.5px; line-height: 1.75; }
+  .member ul li { position: relative; padding-left: 14px; }
+  .member ul li::before { content: "·"; position: absolute; left: 4px; color: var(--brand); font-weight: 700; }
+
+  .faq { max-width: 820px; margin: 44px auto 0; }
+  .faq details { border-top: 1px solid var(--border); padding: 20px 4px; transition: padding var(--t-fast); }
+  .faq details:last-of-type { border-bottom: 1px solid var(--border); }
+  .faq details[open] summary { color: var(--brand); }
+  .faq summary { cursor: pointer; font-weight: 600; color: var(--fg-strong); display: flex; justify-content: space-between; align-items: center; font-size: 17px; list-style: none; gap: 16px; letter-spacing: -0.012em; transition: color var(--t-fast); }
+  .faq summary:hover { color: var(--brand); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq details p { color: var(--fg-muted); font-size: 14.5px; margin: 14px 0 0; padding-right: 36px; line-height: 1.7; }
+
+  .cta-banner { margin-top: 80px; padding: clamp(40px, 6vw, 72px); background: linear-gradient(135deg, var(--fg-strong) 0%, #0b5f47 100%); color: #ffffff; border-radius: var(--radius-lg); display: flex; gap: 24px; justify-content: space-between; align-items: center; flex-wrap: wrap; position: relative; overflow: hidden; }
+  .cta-banner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 90% 50%, rgba(15,122,90,0.4), transparent 60%); pointer-events: none; }
+  .cta-banner > * { position: relative; z-index: 1; }
+  .cta-banner h3 { color: #ffffff; font-size: clamp(24px, 2.8vw, 34px); margin: 0 0 10px; font-family: var(--sans); font-weight: 600; letter-spacing: -0.018em; }
+  .cta-banner p { color: rgba(255,255,255,0.92); margin: 0; max-width: 48ch; font-size: 16px; font-weight: 500; line-height: 1.5; text-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+  .cta-banner .btn-primary { background: #ffffff; color: var(--fg-strong); }
+  .cta-banner .btn-primary:hover { background: var(--brand); color: #ffffff; }
+  .cta-banner .btn-ghost { color: #ffffff; border-color: rgba(255,255,255,0.5); }
+  .cta-banner .btn-ghost:hover { background: #ffffff; color: var(--fg-strong); border-color: #ffffff; }
+
+  footer { border-top: 1px solid var(--border); padding: 72px 0 40px; margin-top: 96px; background: var(--bg-elevated); }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+  @media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  .foot-col h5 { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-subtle); margin: 0 0 16px; font-weight: 500; }
+  html[lang="ko"] .foot-col h5, html[lang="ja"] .foot-col h5, html[lang="zh"] .foot-col h5 { font-family: inherit; letter-spacing: 0.04em; }
+  .foot-col a { display: block; color: var(--fg-muted); font-size: 14px; padding: 4px 0; transition: color var(--t-fast); }
+  .foot-col a:hover { color: var(--fg-strong); }
+  .foot-about .brand { gap: 12px; font-size: 17px; font-weight: 700; letter-spacing: -0.012em; }
+  .foot-about .brand img { width: 36px; height: 36px; }
+  .foot-about p { color: var(--fg-muted); font-size: 13.5px; max-width: 38ch; margin-top: 16px; line-height: 1.6; }
+  .foot-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--fg-subtle); font-family: var(--mono); }
+  .foot-social { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 22px; }
+  .foot-social .lbl { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-subtle); margin-right: 6px; }
+  html[lang="ko"] .foot-social .lbl, html[lang="ja"] .foot-social .lbl, html[lang="zh"] .foot-social .lbl { font-family: inherit; letter-spacing: 0.04em; }
+  .foot-social a.sns { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: var(--radius-pill); color: var(--fg-muted); background: var(--bg); transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast), transform var(--t-fast); }
+  .foot-social a.sns:hover { color: var(--brand); border-color: var(--brand-dim); background: var(--brand-soft); transform: translateY(-1px); }
+  .foot-social a.sns:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .foot-social a.sns svg { width: 16px; height: 16px; display: block; }
+  .foot-social a.sns::after { content: none; }
+
+  /* Security model diagram */
+  .sec-diag { background: var(--bg-code); border: 1px solid var(--border); border-radius: var(--radius-md); padding: clamp(18px,3vw,28px); box-shadow: var(--shadow-sm); }
+  .sec-diag-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--border-strong); }
+  .sec-diag-title { font-family: var(--mono); font-size: 12.5px; color: var(--fg-strong); letter-spacing: 0.04em; }
+  .sec-diag-sub { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); }
+  html[lang="ko"] .sec-diag-title, html[lang="ja"] .sec-diag-title, html[lang="zh"] .sec-diag-title,
+  html[lang="ko"] .sec-diag-sub, html[lang="ja"] .sec-diag-sub, html[lang="zh"] .sec-diag-sub { font-family: inherit; }
+  .sec-diag svg { width: 100%; height: auto; display: block; }
+  .sec-diag svg .node { fill: var(--bg-card); stroke: var(--brand); stroke-width: 1.5; }
+  .sec-diag svg .node.alt { stroke: var(--warning); }
+  .sec-diag svg .node-lbl { font: 600 13px var(--mono); fill: var(--brand-bright); }
+  .sec-diag svg .node-lbl.alt { fill: var(--warning); }
+  .sec-diag svg .edge { stroke: var(--brand); stroke-width: 1.4; fill: none; }
+  .sec-diag svg .edge.alt { stroke: var(--warning); stroke-dasharray: 5 4; }
+  .sec-diag-props { margin-top: 14px; padding: 12px 14px; background: var(--bg-elevated); border-left: 3px solid var(--brand); border-radius: var(--radius-sm); color: var(--fg-muted); font-size: 13px; font-family: var(--mono); line-height: 1.7; }
+  html[lang="ko"] .sec-diag-props, html[lang="ja"] .sec-diag-props, html[lang="zh"] .sec-diag-props { font-family: inherit; }
+  @media (max-width: 720px) { .sec-diag { overflow-x: auto; } .sec-diag svg { min-width: 480px; } }
+
+  /* ── Scroll progress bar ── */
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--brand), var(--violet-ref)); z-index: 100; width: 0%; transition: none; pointer-events: none; }
+
+  /* ── Back-to-top FAB ── */
+  .back-to-top { position: fixed; bottom: 96px; right: 32px; z-index: 60; width: 44px; height: 44px; border-radius: 50%; background: var(--fg-strong); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: var(--shadow-md); opacity: 0; transform: translateY(12px) scale(0.9); transition: opacity var(--t-med), transform var(--t-med), background var(--t-fast); pointer-events: none; }
+  .back-to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
+  .back-to-top:hover { background: var(--brand); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .back-to-top svg { width: 18px; height: 18px; }
+  @media (max-width: 600px) { .back-to-top { bottom: 88px; right: 16px; width: 40px; height: 40px; } }
+
+  /* ── Sparkle keyframes ── */
+  @keyframes owSparkle { 0%,100% { transform: scale(1) rotate(0deg); } 25% { transform: scale(1.1) rotate(-4deg); } 50% { transform: scale(0.95) rotate(2deg); } 75% { transform: scale(1.05) rotate(-1deg); } }
+  @keyframes owSparkleHover { 0% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.18) rotate(-8deg); } 100% { transform: scale(1) rotate(0deg); } }
+
+  /* ── Assistant: nav icon ── */
+  .ow-nav-ai { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--brand); cursor: pointer; transition: border-color var(--t-fast), color var(--t-fast), background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast); }
+  .ow-nav-ai:hover { border-color: var(--brand); color: var(--brand-bright); background: var(--brand-soft); box-shadow: 0 0 0 3px rgba(15,122,90,0.08); transform: scale(1.06); }
+  .ow-nav-ai svg { width: 18px; height: 18px; transition: transform 600ms cubic-bezier(0.2,0.7,0.2,1); }
+  .ow-nav-ai:hover svg { animation: owSparkleHover 600ms ease both; }
+
+  /* ── Assistant: bottom-center liquid-glass pill ── */
+  .ow-ask-pill { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 88; display: inline-flex; align-items: center; gap: 14px; width: clamp(380px, 36vw, 480px); padding: 10px 14px 10px 22px; min-height: 56px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.55); background: rgba(255,255,255,0.62); -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%); box-shadow: 0 18px 50px rgba(41,35,59,0.16), 0 1px 0 rgba(255,255,255,0.6) inset; font: 600 15px/1 var(--sans); color: var(--fg-strong); cursor: pointer; transition: transform var(--t-fast), box-shadow var(--t-fast), background var(--t-fast); }
+  .ow-ask-pill:hover { transform: translateX(-50%) translateY(-2px); background: rgba(255,255,255,0.78); box-shadow: 0 22px 60px rgba(41,35,59,0.22), 0 1px 0 rgba(255,255,255,0.7) inset; }
+  .ow-ask-pill .ow-pill-text { flex: 1; text-align: left; letter-spacing: -0.005em; color: var(--fg-muted); font-weight: 500; }
+  .ow-ask-pill .ow-pill-key { font: 600 11px/1 var(--mono); color: var(--fg-muted); background: rgba(41,35,59,0.06); border: 1px solid rgba(41,35,59,0.10); border-radius: 6px; padding: 4px 6px; flex: 0 0 auto; }
+  .ow-ask-pill .ow-pill-go { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; background: linear-gradient(135deg, var(--fg-strong) 0%, var(--brand-bright) 100%); color: #fff; flex: 0 0 auto; box-shadow: 0 2px 8px rgba(15,122,90,0.18); transition: transform var(--t-fast), box-shadow var(--t-fast); }
+  .ow-ask-pill:hover .ow-pill-go { transform: scale(1.06); box-shadow: 0 4px 14px rgba(15,122,90,0.28); }
+  .ow-ask-pill .ow-pill-go svg { width: 16px; height: 16px; animation: owSparkle 4s ease-in-out infinite; }
+  @media (max-width: 600px) {
+    .ow-ask-pill { left: 50%; right: auto; transform: translateX(-50%); width: min(320px, calc(100vw - 32px)); min-height: 52px; padding: 8px 10px 8px 18px; gap: 10px; }
+    .ow-ask-pill:hover { transform: translateX(-50%) translateY(-2px); }
+    .ow-ask-pill .ow-pill-text { font-size: 14px; }
+    .ow-ask-pill .ow-pill-key { display: none; }
+    .ow-ask-pill .ow-pill-go { width: 34px; height: 34px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ow-ask-pill, .ow-ask-pill:hover { transition: none; transform: translateX(-50%); }
+  }
+
+  /* ── Assistant: centered modal ── */
+  html.ow-modal-locked, html.ow-modal-locked body { overflow: hidden; }
+  .ow-modal-root { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: clamp(16px, 4vw, 40px); }
+  .ow-modal-root[hidden] { display: none; }
+  .ow-backdrop { position: absolute; inset: 0; background: rgba(20,18,32,0.42); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); animation: owFade 180ms ease; }
+  .ow-modal { position: relative; width: min(720px, 100%); max-height: min(86dvh, 760px); background: var(--bg-card); border: 1px solid var(--border); border-radius: 28px; box-shadow: 0 40px 100px rgba(20,18,32,0.32); overflow: hidden; display: grid; grid-template-rows: auto minmax(280px, 1fr) auto; animation: owPop 220ms cubic-bezier(0.2,0.7,0.2,1); }
+  .ow-modal-head { display: flex; align-items: center; gap: 14px; padding: 22px 26px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.9); }
+  .ow-modal-icon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: linear-gradient(135deg, var(--brand-soft) 0%, rgba(15,122,90,0.15) 100%); color: var(--brand); }
+  .ow-modal-icon svg { width: 22px; height: 22px; animation: owSparkle 5s ease-in-out infinite; }
+  .ow-modal-titles { min-width: 0; }
+  .ow-modal-titles h2 { font-size: 22px; line-height: 1.15; margin: 0; font-weight: 600; letter-spacing: -0.01em; color: var(--fg-strong); }
+  .ow-modal-sub { margin: 4px 0 0; color: var(--fg-muted); font-size: 13px; line-height: 1.4; }
+  .ow-trust-chip { display: inline-flex; align-items: center; margin-top: 8px; padding: 3px 9px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font: 600 10.5px/1.4 var(--mono); letter-spacing: 0.04em; border: 1px solid rgba(15,122,90,0.18); }
+  html[lang="ko"] .ow-trust-chip, html[lang="ja"] .ow-trust-chip, html[lang="zh"] .ow-trust-chip { font-family: var(--sans); letter-spacing: 0; font-size: 11px; }
+  .ow-trust-chip[hidden] { display: none; }
+  .ow-modal-head .ow-back { display: inline-flex; align-items: center; gap: 6px; background: transparent; border: 0; color: var(--fg-muted); font: 500 13px/1 var(--sans); cursor: pointer; padding: 8px 10px; border-radius: 8px; }
+  .ow-modal-head .ow-back:hover { background: var(--bg-elevated); color: var(--fg-strong); }
+  .ow-modal-head .ow-back svg { width: 16px; height: 16px; }
+  .ow-modal-head .ow-back[hidden] { display: none; }
+  .ow-modal-head .ow-back ~ .ow-modal-icon { margin-left: 0; }
+  .ow-close { margin-left: auto; display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--fg-muted); cursor: pointer; transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast); }
+  .ow-close:hover { color: var(--fg-strong); background: var(--bg-elevated); border-color: var(--border-strong); }
+  .ow-close svg { width: 16px; height: 16px; }
+  .ow-modal-body { overflow-y: auto; padding: 26px 30px; outline: none; }
+  .ow-intro { display: flex; flex-direction: column; gap: 18px; min-height: 240px; justify-content: flex-end; }
+  .ow-intro-text { color: var(--fg-muted); font-size: 14px; line-height: 1.5; margin: 0; }
+  .ow-suggest-label { font: 600 11px/1 var(--mono); color: var(--fg-subtle); letter-spacing: 0.12em; text-transform: uppercase; margin: 8px 0 -2px; }
+  html[lang="ko"] .ow-suggest-label, html[lang="ja"] .ow-suggest-label, html[lang="zh"] .ow-suggest-label { font-family: inherit; letter-spacing: 0.04em; text-transform: none; }
+  .ow-chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ow-chip { display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; text-align: left; border: 1px solid var(--border); background: var(--bg-card); color: var(--fg); border-radius: 14px; padding: 14px 14px; font: 500 14px/1.35 var(--sans); cursor: pointer; transition: border-color var(--t-fast), background var(--t-fast), color var(--t-fast), transform var(--t-fast); }
+  .ow-chip:hover { border-color: var(--brand); background: var(--brand-soft); color: var(--fg-strong); transform: translateY(-2px) scale(1.01); box-shadow: 0 4px 12px rgba(15,122,90,0.10); }
+  .ow-chip svg { width: 14px; height: 14px; color: var(--fg-subtle); flex: 0 0 auto; transition: transform var(--t-fast), color var(--t-fast); }
+  .ow-chip:hover svg { color: var(--brand); transform: translateX(2px); }
+  .ow-thread { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .ow-msg { max-width: 88%; border-radius: 18px; padding: 12px 16px; font-size: 15px; line-height: 1.55; }
+  .ow-msg-user { align-self: flex-end; background: linear-gradient(135deg, var(--fg-strong) 0%, var(--brand-bright) 100%); color: #fff; border-bottom-right-radius: 6px; box-shadow: 0 2px 8px rgba(15,122,90,0.12); }
+  .ow-msg-bot { align-self: flex-start; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 2.5px solid var(--brand); color: var(--fg); border-bottom-left-radius: 6px; }
+  .ow-msg-pending { display: inline-flex; align-items: center; gap: 10px; color: var(--fg-muted); font-style: italic; }
+  .ow-pending-dots { display: inline-flex; gap: 4px; }
+  .ow-pending-dots i { width: 6px; height: 6px; border-radius: 999px; background: var(--brand); opacity: 0.35; animation: owPendingBlink 1.2s infinite ease-in-out; }
+  .ow-pending-dots i:nth-child(2) { animation-delay: 0.18s; }
+  .ow-pending-dots i:nth-child(3) { animation-delay: 0.36s; }
+  @keyframes owPendingBlink { 0%, 80%, 100% { opacity: 0.25; transform: scale(0.85); } 40% { opacity: 1; transform: scale(1); } }
+  @media (prefers-reduced-motion: reduce) { .ow-pending-dots i { animation: none; opacity: 0.6; } }
+  .ow-msg-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; color: var(--brand); font-weight: 700; border-bottom: 1px solid currentColor; }
+  .ow-msg-link svg { width: 14px; height: 14px; }
+  .ow-modal-form { padding: 14px 26px 20px; border-top: 1px solid var(--border); background: var(--bg-card); display: flex; flex-direction: column; gap: 10px; }
+  .ow-form-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+  .ow-form-row input { min-width: 0; border: 1.5px solid var(--border-strong); border-radius: 999px; padding: 14px 18px; font: 500 16px/1.2 var(--sans); color: var(--fg); outline: 0; background: var(--bg-card); transition: border-color var(--t-fast), box-shadow var(--t-fast); }
+  .ow-form-row input:focus { border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-soft); }
+  .ow-form-row button[type="submit"] { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 999px; border: 0; background: linear-gradient(135deg, var(--fg-strong) 0%, var(--brand-bright) 100%); color: #fff; cursor: pointer; transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast); }
+  .ow-form-row button[type="submit"]:hover { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-bright) 100%); transform: translateY(-1px) scale(1.04); box-shadow: 0 4px 16px rgba(15,122,90,0.24); }
+  .ow-form-row button[type="submit"] svg { width: 18px; height: 18px; }
+  .ow-disclosure-link { align-self: center; background: transparent; border: 0; color: var(--fg-muted); font: 500 12px/1.4 var(--sans); cursor: pointer; padding: 4px 8px; border-radius: 6px; }
+  .ow-disclosure-link:hover { color: var(--fg-strong); background: var(--bg-elevated); }
+  .ow-disclosure { display: flex; flex-direction: column; gap: 14px; color: var(--fg); font-size: 15px; line-height: 1.6; }
+  .ow-disclosure p { margin: 0; }
+  .ow-disclosure-links { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .ow-disclosure-links a { display: inline-flex; align-items: center; gap: 8px; color: var(--brand); font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .ow-disclosure-links a svg { width: 14px; height: 14px; }
+  @keyframes owFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes owPop { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .ow-backdrop, .ow-modal { animation: none; }
+  }
+  @media (max-width: 640px) {
+    .ow-modal-root { padding: 0; align-items: flex-end; }
+    .ow-modal { width: 100%; max-height: 92dvh; border-radius: 24px 24px 0 0; grid-template-rows: auto minmax(240px, 1fr) auto; }
+    .ow-modal-head { padding: 18px 20px; }
+    .ow-modal-titles h2 { font-size: 19px; }
+    .ow-modal-body { padding: 20px 22px; }
+    .ow-chips { grid-template-columns: 1fr; }
+    .ow-modal-form { padding: 12px 20px calc(18px + env(safe-area-inset-bottom, 0px)); }
+    .ow-msg { max-width: 94%; font-size: 14px; }
+  }
+  @media print {
+    .ow-nav-ai, .ow-ask-pill, .ow-modal-root { display: none !important; }
+  }
+
+  /* ── Nav active link via scroll-spy ── */
+  nav.links a.active { color: var(--brand); }
+  nav.links a.active::after { transform: scaleX(1); }
+
+  /* ── FAQ smooth height animation ── */
+  .faq details .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--t-med); }
+  .faq details[open] .faq-body { grid-template-rows: 1fr; }
+  .faq details .faq-body > div { overflow: hidden; }
+  .faq summary::after { content: "+"; font-family: var(--mono); color: var(--fg-subtle); font-size: 18px; transition: transform var(--t-med), color var(--t-fast); flex-shrink: 0; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--bg-elevated); }
+  .faq details[open] summary::after { content: "−"; color: var(--brand); background: var(--brand-soft); transform: rotate(180deg); }
+
+  /* ── Enhanced card glow on hover ── */
+  .plat-card:hover { box-shadow: var(--shadow-glow); }
+  .audience-card:hover { box-shadow: var(--shadow-glow); }
+  .token-card:hover { box-shadow: var(--shadow-glow); }
+  .milestone:hover { box-shadow: var(--shadow-glow); }
+
+  /* ── Animated CTA banner gradient ── */
+  @keyframes ctaShimmer { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  .cta-banner { background: linear-gradient(135deg, var(--fg-strong) 0%, #0b5f47 33%, #1a162a 66%, #0b5f47 100%); background-size: 300% 300%; animation: ctaShimmer 8s ease infinite; }
+
+  /* ── Roadmap timeline connector ── */
+  .roadmap { position: relative; }
+  .roadmap::before { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--brand), var(--brand-dim) 50%, var(--border) 50%); z-index: 0; }
+  .milestone { position: relative; z-index: 1; }
+  @media (max-width: 820px) { .roadmap::before { display: none; } }
+
+  /* ── Hero visual parallax depth ── */
+  .hero-visual { will-change: transform; }
+
+  /* ── Hero floating particles ── */
+  .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+  .hero-particles span { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); opacity: 0.15; animation: particleFloat 12s ease-in-out infinite; }
+  .hero-particles span:nth-child(2) { width: 6px; height: 6px; background: var(--violet-ref); opacity: 0.1; animation-delay: -3s; animation-duration: 15s; }
+  .hero-particles span:nth-child(3) { width: 3px; height: 3px; opacity: 0.12; animation-delay: -6s; animation-duration: 18s; }
+  .hero-particles span:nth-child(4) { width: 5px; height: 5px; background: var(--info); opacity: 0.08; animation-delay: -9s; animation-duration: 20s; }
+  .hero-particles span:nth-child(5) { width: 4px; height: 4px; background: var(--violet-ref); opacity: 0.12; animation-delay: -2s; animation-duration: 14s; }
+  .hero-particles span:nth-child(6) { width: 3px; height: 3px; opacity: 0.1; animation-delay: -7s; animation-duration: 16s; }
+  @keyframes particleFloat {
+    0%,100% { transform: translate(0, 0) scale(1); opacity: 0; }
+    10% { opacity: 0.15; }
+    50% { transform: translate(40px, -60px) scale(1.5); opacity: 0.2; }
+    90% { opacity: 0.15; }
+  }
+
+  /* ── Eyebrow animated dash ── */
+  .eyebrow::before { transition: width var(--t-med); }
+  .reveal.in .eyebrow::before { animation: dashGrow var(--t-slow) ease both; }
+  @keyframes dashGrow { from { width: 0; } to { width: 28px; } }
+
+  /* ── Trust counter animation ── */
+  .trust-num { display: inline-block; transition: color var(--t-fast); }
+  .trust-item:hover .trust-num { color: var(--brand-bright); }
+  .trust-item { transition: border-color var(--t-fast); }
+  .trust-item:hover { border-left-color: var(--brand); }
+
+  /* ── Step hover connector highlight ── */
+  .step:hover .n { color: var(--brand-bright); }
+
+  /* ── Smooth section entrance scale ── */
+  .reveal-scale { opacity: 0; transform: scale(0.97); transition: opacity var(--t-slow), transform var(--t-slow); }
+  .reveal-scale.in { opacity: 1; transform: none; }
+
+  /* (removed: enhanced mobile-sheet backdrop-filter override — caused
+     partial-render on mobile Safari. Sheet uses solid white in main rule.) */
+
+  /* ── Hero lede text gradient accent ── */
+  .hero h1 em { background: linear-gradient(135deg, var(--brand) 0%, #0ea47a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  /* ── Chip pulse dot ── */
+  @keyframes chipPulse { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
+  .chip::before { animation: chipPulse 3s ease-in-out infinite; }
+  .chip:nth-child(2)::before { animation-delay: 0.5s; }
+  .chip:nth-child(3)::before { animation-delay: 1s; }
+  .chip:nth-child(4)::before { animation-delay: 1.5s; }
+
+  /* ── Footer link hover underline ── */
+  .foot-col a { position: relative; }
+  .foot-col a::after { content: ""; position: absolute; bottom: 2px; left: 0; width: 0; height: 1px; background: var(--brand); transition: width var(--t-med); }
+  .foot-col a:hover::after { width: 100%; }
+
+  /* ── Mobile-first responsive polish ── */
+  @media (max-width: 600px) {
+    h1 { font-size: clamp(32px, 8.5vw, 44px); letter-spacing: -0.028em; line-height: 1.06; }
+    h2 { font-size: clamp(26px, 6.5vw, 36px); letter-spacing: -0.02em; }
+    section { padding: clamp(48px, 10vw, 72px) 0; }
+    section + section { padding-top: clamp(36px, 8vw, 56px); }
+    .sect-head p { font-size: 15px; }
+
+    /* Hero: image on top, text below, fit-in-one-viewport */
+    .hero { padding-top: 16px; padding-bottom: 32px; }
+    .hero-grid { gap: 20px; display: flex; flex-direction: column; }
+    .hero-grid > div:first-child { order: 2; }
+    .hero-grid > div.hero-visual { order: 1; max-width: 78vw; max-height: 38vh; aspect-ratio: 1/1; margin: 0 auto; }
+    .hero .eyebrow { margin-bottom: 12px; }
+    .hero .lede { font-size: 15px; margin: 12px 0 18px; }
+    .hero-ctas { gap: 10px; margin-bottom: 16px; }
+    .hero-ctas .btn { flex: 1 1 calc(50% - 5px); justify-content: center; padding: 12px 14px; font-size: 14px; min-width: 0; }
+    .proof-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; margin: 0 calc(-1 * var(--gutter)); padding: 0 0 4px; justify-content: flex-start; }
+    .proof-chips::before, .proof-chips::after { content: ""; flex-shrink: 0; width: var(--gutter); }
+    .proof-chips::-webkit-scrollbar { display: none; }
+
+    .cta-banner { flex-direction: column; text-align: center; align-items: stretch; gap: 20px; padding: 36px 28px; }
+    .cta-banner > div:last-child { display: flex; flex-direction: column; gap: 10px; }
+    .cta-banner > div:last-child .btn { justify-content: center; width: 100%; padding: 14px 20px; }
+    .faq summary { font-size: 15px; padding: 4px 0; }
+    .faq details { padding: 16px 0; }
+    .faq details p { padding-right: 0; font-size: 14px; }
+    .member .photo { width: 72px; height: 72px; border-radius: 14px; margin-bottom: 18px; }
+    .member .deco { width: 180px; height: 180px; top: -40px; right: -46px; }
+    .trust-grid { gap: 16px; }
+    .trust-item { padding: 16px 14px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 24px; }
+    .foot-bottom { flex-direction: column; gap: 8px; }
+    footer { padding: 48px 0 32px; margin-top: 64px; }
+
+    /* ── Mobile carousels — Circle pattern: horizontal scroll-snap with peek ── */
+    .platform-grid,
+    .token-grid,
+    .roadmap,
+    .team-wrap {
+      display: flex !important;
+      flex-direction: row !important;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      gap: 14px !important;
+      grid-template-columns: none !important;
+      margin: 28px calc(-1 * var(--gutter)) 0 !important;
+      padding: 4px var(--gutter) 12px !important;
+      scroll-padding-left: var(--gutter);
+    }
+    .platform-grid::-webkit-scrollbar,
+    .token-grid::-webkit-scrollbar,
+    .roadmap::-webkit-scrollbar,
+    .team-wrap::-webkit-scrollbar { display: none; }
+
+    /* Each card: 84% viewport, scroll-snap-start */
+    .platform-grid > .plat-card,
+    .token-grid > .token-card,
+    .roadmap > .milestone,
+    .team-wrap > .member {
+      flex: 0 0 84vw !important;
+      max-width: 84vw !important;
+      min-width: 0 !important;
+      grid-column: auto !important;
+      scroll-snap-align: start;
+    }
+    /* Compact card padding inside carousel */
+    .plat-card { padding: 24px; min-height: 280px; }
+    .token-card { padding: 24px 22px; }
+    .milestone { padding: 24px 22px; }
+    .member { padding: 28px 24px; }
+
+    /* Subtle scroll-hint indicator below each carousel */
+    .platform-grid + .scroll-hint,
+    .token-grid + .scroll-hint,
+    .roadmap + .scroll-hint,
+    .team-wrap + .scroll-hint { display: flex; }
+    .scroll-hint { display: none; justify-content: center; gap: 10px; margin-top: 14px; font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); letter-spacing: 0.14em; text-transform: uppercase; }
+    html[lang="ko"] .scroll-hint, html[lang="ja"] .scroll-hint, html[lang="zh"] .scroll-hint { font-family: inherit; letter-spacing: 0.04em; }
+    .scroll-hint::before { content: "←"; opacity: 0.5; }
+    .scroll-hint::after { content: "→"; opacity: 0.5; }
+  }
+  /* Scroll-hint hidden on desktop */
+  .scroll-hint { display: none; }
+
+  /* ── Tablet tweaks ── */
+  @media (max-width: 820px) and (min-width: 601px) {
+    .hero-grid { gap: 32px; }
+    .cta-banner { gap: 20px; }
+    .member { padding: 28px 24px; }
+    .foot-grid { gap: 24px; }
+  }
+
+  /* ── Touch device enhancements ── */
+  @media (hover: none) {
+    .plat-card:active { transform: scale(0.98); }
+    .member:active { transform: scale(0.98); }
+    .btn:active { transform: scale(0.97); }
+    .chip:active { border-color: var(--brand); color: var(--brand); }
+    .mobile-sheet a:active { background: var(--bg-elevated); }
+  }
+</style>
 </head>
 <body>
-  <!-- Pre-rendered SEO content — visible to crawlers, replaced by React on hydrate -->
-  <div id="root">
-    <div id="seo-fallback" style="max-width:1180px;margin:0 auto;padding:80px 24px;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1220;line-height:1.6;">
-      <header style="margin-bottom:48px;">
-        <p style="text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:#16A34A;font-weight:600;margin:0 0 12px;">Telegram Mini App Wallet</p>
-        <h1 style="font-size:56px;font-weight:800;margin:0 0 8px;line-height:1.05;"><span style="color:#16A34A;">ONE</span> Wallet</h1>
-        <p style="font-size:22px;font-weight:600;color:#1F2937;margin:0 0 16px;">Telegram-based Web3 Financial Platform</p>
-        <p style="font-size:17px;color:#4B5563;max-width:720px;margin:0 0 24px;">Create a wallet instantly in Telegram without installing any app. Secure without mnemonics using MPC Keyless Wallet, start immediately with social login. Support for P2P transfers, QR payments, and merchant payments on TON blockchain.</p>
-        <p><a href="https://t.me/onedollar_wallet_bot/app" style="display:inline-block;background:#16A34A;color:#fff;padding:14px 28px;border-radius:100px;font-weight:600;text-decoration:none;">Use App →</a></p>
-      </header>
 
-      <section>
-        <h2 style="font-size:34px;font-weight:800;margin:0 0 12px;">Why ONE Wallet?</h2>
-        <p style="color:#4B5563;margin:0 0 24px;">A mass-market crypto wallet for 1 billion Telegram users. Completely removing complex Web3 entry barriers.</p>
-        <h3 style="font-size:20px;font-weight:700;margin:24px 0 8px;">ONE Wallet Solution</h3>
-        <ul style="color:#1F2937;padding-left:20px;">
-          <li>Distributed key management with MPC (Multi-Party Computation)</li>
-          <li>Biometric approval — no seed phrases required</li>
-          <li>Social Login — Instant wallet creation via Telegram or email</li>
-        </ul>
-      </section>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+<a class="skip" href="#main" data-i18n="common.skipLink">Skip to content</a>
 
-      <section>
-        <h2 style="font-size:34px;font-weight:800;margin:48px 0 12px;">Core Technology</h2>
-        <p style="color:#4B5563;margin:0 0 24px;">MPC-based Keyless Wallet, social login, biometric authentication, and multi-recovery system transform Web3 wallets to Web2-level UX.</p>
-        <h3 style="font-size:18px;font-weight:700;margin:20px 0 4px;">MPC Keyless Wallet — Distributed Key Management</h3>
-        <p style="color:#4B5563;margin:0 0 12px;">Private keys are never stored on a single server. Instead, they are split into multiple encrypted Key Shares for distributed management. No mnemonic needed, high security.</p>
-        <h3 style="font-size:18px;font-weight:700;margin:20px 0 4px;">Social Login — Easy Onboarding</h3>
-        <p style="color:#4B5563;margin:0 0 12px;">Login with Telegram or email to automatically create a wallet. Complete removal of mnemonic backup and complex setup processes.</p>
-        <h3 style="font-size:18px;font-weight:700;margin:20px 0 4px;">Biometric Authentication — Security Enhancement</h3>
-        <p style="color:#4B5563;margin:0 0 12px;">Transaction approval via fingerprint, face recognition, and device security authentication. User-friendly security optimized for mobile.</p>
-        <h3 style="font-size:18px;font-weight:700;margin:20px 0 4px;">Multi-Recovery System</h3>
-        <p style="color:#4B5563;margin:0 0 12px;">Wallet access recovery through social account recovery, authenticated device recovery, and MPC key reconstruction. Completely solves the mnemonic loss problem.</p>
-      </section>
-
-      <section>
-        <h2 style="font-size:34px;font-weight:800;margin:48px 0 12px;">Key Features</h2>
-        <ul style="color:#1F2937;padding-left:20px;">
-          <li><strong>P2P Transfer</strong> — Send crypto easily between users in Telegram. Fast processing and low fees based on TON network.</li>
-          <li><strong>QR Payment</strong> — Complete payment by scanning merchant QR code. Small businesses can adopt instantly without payment terminals.</li>
-          <li><strong>Global Merchants</strong> — Anyone can easily register as a merchant. Store exposure, sales management, and receiving payments from global users.</li>
-          <li><strong>Mini App Store</strong> — Access Web3 games, financial services, commerce and more instantly from the in-wallet Mini App Store.</li>
-          <li><strong>Wallet Mining</strong> — Mine $1 tokens just by using the wallet, no mining equipment needed. Activity-based participatory reward system.</li>
-          <li><strong>Developer Platform</strong> — Environment for external developers to build Mini Apps and integrate Wallet API and payment features.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 style="font-size:34px;font-weight:800;margin:48px 0 12px;">Tokenomics</h2>
-        <p style="color:#4B5563;margin:0 0 12px;"><strong>Total Supply:</strong> 10,000,000 $1 — No additional issuance, a scarce digital dollar.</p>
-        <p style="color:#4B5563;margin:0 0 12px;"><strong>Token Name:</strong> 1DOLLAR ($1) · <strong>Network:</strong> TON Blockchain</p>
-        <h3 style="font-size:18px;font-weight:700;margin:20px 0 8px;">Distribution</h3>
-        <ul style="color:#1F2937;padding-left:20px;">
-          <li>Mining Pool — 25% (2,500,000)</li>
-          <li>Ecosystem Fund — 23% (2,300,000)</li>
-          <li>Team / Development — 17% (1,700,000)</li>
-          <li>Liquidity / Exchange — 15% (1,500,000)</li>
-          <li>Marketing / Partnerships — 10% (1,000,000)</li>
-          <li>Presale — 10% (1,000,000)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 style="font-size:34px;font-weight:800;margin:48px 0 12px;">Roadmap</h2>
-        <ul style="color:#1F2937;padding-left:20px;">
-          <li><strong>2025 Q4 — Project Start:</strong> Platform architecture design, token economy model, initial community formation.</li>
-          <li><strong>2026 Q1 — Wallet Development:</strong> Telegram Mini App wallet, MPC Keyless Wallet implementation, social login &amp; biometric auth.</li>
-          <li><strong>2026 Q2 — Wallet Launch:</strong> Official launch (April 2026), Wallet Mining system, referral growth.</li>
-          <li><strong>2026 Q3 — Payment Network:</strong> QR payment system, global merchant registration, Telegram payment ecosystem.</li>
-          <li><strong>2026 Q3-Q4 — Exchange Listing:</strong> $1 token TonX Web3 exchange listing (Sept-Oct 2026).</li>
-          <li><strong>2026 Q4 — Mini App Platform:</strong> Mini App Store launch, Web3 games &amp; financial services.</li>
-        </ul>
-      </section>
-
-      <!-- Multi-language summaries for international SEO -->
-      <section lang="ko" style="margin-top:48px;padding-top:24px;border-top:1px solid #E5E7EB;">
-        <h2 style="font-size:24px;font-weight:800;margin:0 0 8px;">한국어 요약</h2>
-        <p style="color:#4B5563;margin:0;">ONE Wallet은 텔레그램 기반 Web3 금융 플랫폼입니다. MPC Keyless 기술로 니모닉 없이 즉시 지갑을 생성하고, 소셜 로그인 및 생체 인증으로 안전하게 사용할 수 있습니다. TON 블록체인 기반 P2P 송금, QR 결제, 글로벌 가맹점 결제, 지갑 마이닝, 미니앱 스토어를 지원합니다.</p>
-      </section>
-      <section lang="ja" style="margin-top:24px;">
-        <h2 style="font-size:24px;font-weight:800;margin:0 0 8px;">日本語の概要</h2>
-        <p style="color:#4B5563;margin:0;">ONE Wallet は Telegram ベースの Web3 金融プラットフォームです。MPC Keyless 技術によりニーモニックなしで即座にウォレットを作成し、ソーシャルログインと生体認証により安全に利用できます。TON ブロックチェーン上の P2P 送金、QR 決済、グローバル加盟店決済、ウォレットマイニング、ミニアプリストアをサポートします。</p>
-      </section>
-      <section lang="zh" style="margin-top:24px;">
-        <h2 style="font-size:24px;font-weight:800;margin:0 0 8px;">中文摘要</h2>
-        <p style="color:#4B5563;margin:0;">ONE Wallet 是基于 Telegram 的 Web3 金融平台。通过 MPC 无密钥技术无需助记词即可即时创建钱包,通过社交登录和生物识别认证安全使用。支持基于 TON 区块链的 P2P 转账、QR 支付、全球商户支付、钱包挖矿和迷你应用商店。</p>
-      </section>
-
-      <footer style="margin-top:64px;padding-top:24px;border-top:1px solid #E5E7EB;color:#6B7280;font-size:14px;">
-        <p>© 2025 ONE Wallet. All rights reserved.</p>
-        <p>
-          <a href="/privacy.html" style="color:#16A34A;">Privacy Policy</a> ·
-          <a href="/terms.html" style="color:#16A34A;">Terms of Service</a> ·
-          <a href="https://t.me/onedollar_wallet_bot/app" style="color:#16A34A;">Telegram</a> ·
-          <a href="https://x.com/one_wallet_" style="color:#16A34A;">X (Twitter)</a>
-        </p>
-      </footer>
+<header class="nav" id="topNav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="ONEWALLET home" data-i18n-attr="aria-label:common.aria.home">
+      <img src="assets/logo.png" alt="" width="28" height="28" />
+      <span class="wordmark">ONEWALLET</span>
+    </a>
+    <nav class="links" aria-label="Primary" data-i18n-attr="aria-label:common.aria.primary">
+      <a href="#users" data-i18n="nav.users">For users</a>
+      <a href="#investors" data-i18n="nav.investors">For investors</a>
+      <a href="#partners" data-i18n="nav.partners">For merchants</a>
+      <a href="#security" data-i18n="nav.security">Security</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="whitepaper.html" data-i18n="nav.whitepaper">Whitepaper</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang-switch">
+        <button class="lang-trigger" type="button" id="langTrigger" aria-haspopup="menu" aria-expanded="false">
+          <span id="langLabel">EN</span>
+          <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langTrigger">
+          <button type="button" role="menuitemradio" data-lang="en" aria-checked="true">English<span class="code">EN</span></button>
+          <button type="button" role="menuitemradio" data-lang="ko" aria-checked="false">한국어<span class="code">KO</span></button>
+          <button type="button" role="menuitemradio" data-lang="ja" aria-checked="false">日本語<span class="code">JA</span></button>
+          <button type="button" role="menuitemradio" data-lang="zh" aria-checked="false">中文<span class="code">ZH</span></button>
+        </div>
+      </div>
+      <a href="https://t.me/onedollar_wallet_bot/app" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="common.openInTelegram">Open in Telegram</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" data-i18n-attr="aria-label:common.aria.menu" aria-expanded="false" aria-controls="mobileSheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
     </div>
   </div>
-
-  <noscript>
-    <div style="max-width:720px;margin:24px auto;padding:16px 20px;background:#FEF3C7;border:1px solid #F59E0B;border-radius:12px;font-family:sans-serif;color:#92400E;">
-      <strong>JavaScript is required for the full ONE Wallet experience.</strong>
-      <p style="margin:6px 0 0;">Please enable JavaScript to use the interactive wallet, language switcher, and buy modal. The page content above is shown as a static fallback.</p>
+  <div class="mobile-sheet" id="mobileSheet" data-open="false" hidden>
+    <a href="#users" data-i18n="nav.users">For users</a>
+    <a href="#investors" data-i18n="nav.investors">For investors</a>
+    <a href="#partners" data-i18n="nav.partners">For merchants</a>
+    <a href="#security" data-i18n="nav.security">Security</a>
+    <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="whitepaper.html" data-i18n="nav.whitepaper">Whitepaper</a>
+    <div class="sheet-cta">
+      <a href="https://t.me/onedollar_wallet_bot/app" target="_blank" rel="noopener" class="btn btn-primary"><span data-i18n="common.openInTelegram">Open in Telegram</span> <span class="arrow" aria-hidden="true">→</span></a>
     </div>
-  </noscript>
+    <div class="lang-row" role="radiogroup" aria-label="Language" data-i18n-attr="aria-label:common.aria.lang">
+      <button type="button" role="radio" data-lang="en" aria-checked="true">EN</button>
+      <button type="button" role="radio" data-lang="ko" aria-checked="false">KO</button>
+      <button type="button" role="radio" data-lang="ja" aria-checked="false">JA</button>
+      <button type="button" role="radio" data-lang="zh" aria-checked="false">ZH</button>
+    </div>
+  </div>
+</header>
 
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<main id="main">
 
-  <script type="text/babel" src="components/icons.jsx"></script>
-  <script type="text/babel" src="components/i18n.jsx"></script>
-  <script type="text/babel" src="components/toast.jsx"></script>
-  <script type="text/babel" src="components/nav.jsx"></script>
-  <script type="text/babel" src="components/hero.jsx"></script>
-  <script type="text/babel" src="components/about.jsx"></script>
-  <script type="text/babel" src="components/technology.jsx"></script>
-  <script type="text/babel" src="components/features.jsx"></script>
-  <script type="text/babel" src="components/ecosystem.jsx"></script>
-  <script type="text/babel" src="components/tokenomics.jsx"></script>
-  <script type="text/babel" src="components/roadmap.jsx"></script>
-  <script type="text/babel" src="components/testimonials.jsx"></script>
-  <script type="text/babel" src="components/team.jsx"></script>
-  <script type="text/babel" src="components/whitepaper.jsx"></script>
-  <script type="text/babel" src="components/footer.jsx"></script>
-  <script type="text/babel" src="components/legal.jsx"></script>
-  <script type="text/babel" src="app.jsx"></script>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-particles" aria-hidden="true"><span style="top:15%;left:10%"></span><span style="top:40%;left:80%"></span><span style="top:70%;left:25%"></span><span style="top:20%;left:65%"></span><span style="top:60%;left:50%"></span><span style="top:85%;left:90%"></span></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="hero.eb">A Telegram-native financial layer</span>
+        <h1 data-i18n="hero.h">Telegram-native finance,<br>built for the <em>$1 ecosystem</em>.</h1>
+        <p class="lede" data-i18n="hero.p">ONEWALLET brings keyless MPC wallets, QR payments, and token utility into Telegram — so users can open, pay, and participate without leaving the conversation.</p>
+        <div class="hero-ctas">
+          <a href="https://t.me/onedollar_wallet_bot/app" target="_blank" rel="noopener" class="btn btn-primary"><span data-i18n="common.openInTelegram">Open in Telegram</span> <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="whitepaper.html" class="btn btn-ghost" data-i18n="common.readWhitepaper">Read the whitepaper</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" aria-hidden="true">
+        <img src="assets/hero-mockup.webp" alt="" width="720" height="756" loading="eager" decoding="async" fetchpriority="high" />
+        <div class="hero-meta">
+          <span><b>v0.9</b> · prototype</span>
+          <span>build · <b>0x9a4f…2c1e</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="proof-chips reveal-stagger" style="margin-top:28px;">
+      <span class="chip" data-i18n="hero.chip1">Telegram-native</span>
+      <span class="chip" data-i18n="hero.chip2">2-of-3 MPC · target</span>
+      <span class="chip" data-i18n="hero.chip3">QR payments</span>
+      <span class="chip" data-i18n="hero.chip4">Multi-chain</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-eyebrow" data-i18n="trust.eb">Prototype scope · target architecture · subject to review</div>
+    <div class="trust-grid reveal-stagger">
+      <div class="trust-item"><span class="trust-num">01</span><h4 data-i18n="trust.1.h">Keyless by design</h4><p data-i18n="trust.1.p">Target 2-of-3 MPC custody. Keys split across device, server, and recovery — never reconstructed in full.</p></div>
+      <div class="trust-item"><span class="trust-num">02</span><h4 data-i18n="trust.2.h">Opens in Telegram</h4><p data-i18n="trust.2.p">Launches as a Mini App. No download, no app store gate, no password ceremony.</p></div>
+      <div class="trust-item"><span class="trust-num">03</span><h4 data-i18n="trust.3.h">Designed for payments</h4><p data-i18n="trust.3.p">Scan, send, settle. A QR rail designed for real merchant volume, not just holding.</p></div>
+      <div class="trust-item"><span class="trust-num">04</span><h4 data-i18n="trust.4.h">Ecosystem-ready</h4><p data-i18n="trust.4.p">$1 token utility, merchant tools, and mini-app distribution — designed from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM (Circle-style varied cards) -->
+<section id="platform">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="plat.eb">The platform</span>
+      <h2 data-i18n="plat.h">A complete stack for Telegram-native money.</h2>
+      <p data-i18n="plat.p">Five connected layers — wallet, payments, security, merchant tools, and token utility — designed to operate as one product.</p>
+    </div>
+    <div class="platform-grid reveal-stagger">
+      <a class="plat-card plat-lead" href="#product-flow">
+        <div class="plat-tag" data-i18n="plat.1.t">Wallet</div>
+        <h3 data-i18n="plat.1.h">Open a wallet inside a chat.</h3>
+        <p data-i18n="plat.1.p">Keyless onboarding via Telegram. No app store. No seed phrase. Multi-chain by default.</p>
+        <div class="plat-vis" aria-hidden="true"><img src="assets/platform/wallet.webp" alt="" loading="lazy" decoding="async" /></div>
+      </a>
+      <a class="plat-card plat-blue" href="#payments">
+        <div class="plat-tag" data-i18n="plat.2.t">Payments</div>
+        <h3 data-i18n="plat.2.h">QR rail, not a portfolio app.</h3>
+        <p data-i18n="plat.2.p">Scan, sign, settle. Stablecoin settlement and signed webhooks for POS reconciliation.</p>
+        <div class="plat-vis" aria-hidden="true"><img src="assets/platform/payments.webp" alt="" loading="lazy" decoding="async" /></div>
+      </a>
+      <a class="plat-card plat-mint" href="#security">
+        <div class="plat-tag" data-i18n="plat.3.t">Security</div>
+        <h3 data-i18n="plat.3.h">2-of-3 MPC.<br>No single point of failure.</h3>
+        <p data-i18n="plat.3.p">Threshold signing across device, server, and recovery. Server share alone never moves funds.</p>
+        <div class="plat-vis" aria-hidden="true"><img src="assets/platform/security.webp" alt="" loading="lazy" decoding="async" /></div>
+      </a>
+      <a class="plat-card plat-lavender" href="#payments">
+        <div class="plat-tag" data-i18n="plat.4.t">Merchant tools</div>
+        <h3 data-i18n="plat.4.h">Web3 acceptance, Web2 ergonomics.</h3>
+        <p data-i18n="plat.4.p">REST + webhooks, stablecoin payout, refunds first-class. Built for stores, not whitepapers.</p>
+        <div class="plat-vis" aria-hidden="true"><img src="assets/platform/merchant-tools.webp" alt="" loading="lazy" decoding="async" /></div>
+      </a>
+      <a class="plat-card plat-wide" href="#token">
+        <div class="plat-tag" data-i18n="plat.5.t">Ecosystem utility</div>
+        <h3 data-i18n="plat.5.h">$1 powers the working layer.</h3>
+        <p data-i18n="plat.5.p">Fees, rewards, merchant incentives, and access — designed as a utility token, not a price story.</p>
+        <div class="plat-vis plat-vis-dark"><img src="assets/platform/ecosystem-utility-token.webp" alt="3D $1 utility token orbiting BTC, ETH, SOL, USDT, TON, and TRX ecosystem coins" data-i18n-attr="alt:plat.5.alt" width="1536" height="1024" loading="lazy" decoding="async" /></div>
+      </a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span data-i18n="common.swipe">Swipe</span></div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="aud.eb">Three paths</span>
+      <h2 data-i18n="aud.h">One product. Three reasons to care.</h2>
+      <p data-i18n="aud.p">ONEWALLET serves users, investors, and merchants differently. Pick the path that matches your role.</p>
+    </div>
+    <div class="audience-grid reveal-stagger">
+      <a class="audience-card" href="#product-flow" id="users"><span class="tag" data-i18n="aud.users.tag">For users</span><h3 data-i18n="aud.users.h">A wallet that just opens.</h3><p data-i18n="aud.users.p">Keyless onboarding inside Telegram. Plain-language recovery. Send, pay, and earn without managing a seed phrase.</p><span class="more" data-i18n="aud.users.m">See the product flow →</span></a>
+      <a class="audience-card" href="whitepaper.html" id="investors"><span class="tag" data-i18n="aud.inv.tag">For investors</span><h3 data-i18n="aud.inv.h">Telegram-scale distribution.</h3><p data-i18n="aud.inv.p">A clear market gap, MPC-secured custody architecture, token utility tied to real activity, and a referral-driven growth model.</p><span class="more" data-i18n="aud.inv.m">Read the whitepaper →</span></a>
+      <a class="audience-card" href="#partners" id="partners"><span class="tag" data-i18n="aud.part.tag">For merchants</span><h3 data-i18n="aud.part.h">Web3 payments, without the Web3 work.</h3><p data-i18n="aud.part.p">QR invoicing, stablecoin settlement, webhooks, and ecosystem rewards — ready to plug into your point of sale.</p><span class="more" data-i18n="aud.part.m">See merchant tools →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="product-flow">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="flow.eb">Product flow</span>
+      <h2 data-i18n="flow.h">From chat to wallet in four steps.</h2>
+      <p data-i18n="flow.p">Telegram is the runtime. No app stores. No seed phrase ceremony. No broken redirects.</p>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-banner" aria-hidden="true">
+        <img src="assets/product-flow-banner.webp" alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="flow-steps reveal-stagger">
+        <div class="step"><span class="n" data-i18n="flow.1.n">STEP 01</span><h4 data-i18n="flow.1.h">Open from Telegram</h4><p data-i18n="flow.1.p">Launch ONEWALLET as a Mini App. Nothing to download.</p></div>
+        <div class="step"><span class="n" data-i18n="flow.2.n">STEP 02</span><h4 data-i18n="flow.2.h">Verify your device</h4><p data-i18n="flow.2.p">Lightweight Telegram session + device share check.</p></div>
+        <div class="step"><span class="n" data-i18n="flow.3.n">STEP 03</span><h4 data-i18n="flow.3.h">Wallet is created</h4><p data-i18n="flow.3.p">MPC shares split across device, server, and recovery.</p></div>
+        <div class="step"><span class="n" data-i18n="flow.4.n">STEP 04</span><h4 data-i18n="flow.4.h">Send, pay, earn</h4><p data-i18n="flow.4.p">QR payments, swaps, and ecosystem rewards from day one.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="sec.eb">Security model</span>
+      <h2 data-i18n="sec.h">Keyless by design.<br>Recoverable by default.</h2>
+      <p data-i18n="sec.p">2-of-3 multi-party computation eliminates the single point of failure that breaks most consumer wallets. Any two shares can sign a transaction. No single share — including the server — ever can.</p>
+    </div>
+    <div class="security-grid">
+      <div class="reveal">
+        <figure class="sec-diag" aria-label="2-of-3 MPC signing flow" data-i18n-attr="aria-label:sec.diag.title">
+          <div class="sec-diag-head">
+            <div>
+              <div class="sec-diag-title" data-i18n="sec.diag.title">2-of-3 MPC signing flow</div>
+              <div class="sec-diag-sub" data-i18n="sec.diag.sub">device · server · recovery → signed transaction</div>
+            </div>
+          </div>
+          <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <marker id="sec-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a5a"/></marker>
+              <marker id="sec-arr-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
+            </defs>
+            <g><rect class="node" x="20" y="30" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="58" text-anchor="middle" data-i18n-svg="wp.c5.d.n1">Device share</text></g>
+            <g><rect class="node" x="20" y="118" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="146" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Server share</text></g>
+            <g><rect class="node alt" x="20" y="206" width="150" height="44" rx="10"/><text class="node-lbl alt" x="95" y="234" text-anchor="middle" data-i18n-svg="wp.c5.d.n3">Recovery share</text></g>
+            <g><rect class="node" x="270" y="100" width="170" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="355" y="138" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">threshold signing</text></g>
+            <path class="edge" d="M 170 52 L 270 130" marker-end="url(#sec-arr)"/>
+            <path class="edge" d="M 170 140 L 270 145" marker-end="url(#sec-arr)"/>
+            <path class="edge alt" d="M 170 228 L 270 160" marker-end="url(#sec-arr-w)"/>
+            <g><rect class="node" x="470" y="118" width="110" height="44" rx="10"/><text class="node-lbl" x="525" y="146" text-anchor="middle" data-i18n-svg="wp.c5.d.out">signed tx</text></g>
+            <path class="edge" d="M 440 140 L 470 140" marker-end="url(#sec-arr)"/>
+          </svg>
+        </figure>
+        <div class="sec-diag-props" data-i18n="sec.diag.props">Key properties · no full key in memory · no seed phrase · any 2 shares sign · any 1 share rotatable</div>
+        <div class="t-wrap" style="margin-top:22px;">
+          <table class="threat-table">
+            <thead><tr><th scope="col" data-i18n="sec.thr.vec">Threat</th><th scope="col" data-i18n="sec.thr.mit">Mitigation</th><th scope="col" data-i18n="sec.thr.sta">Status</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="sec.thr.1.v">Device lost</td><td data-i18n="sec.thr.1.m">Rotate device share via server + recovery cooperation.</td><td><span class="badge badge-ok" data-i18n="sec.thr.1.s">Mitigated</span></td></tr>
+              <tr><td data-i18n="sec.thr.2.v">Server compromise or Telegram session hijack</td><td data-i18n="sec.thr.2.m">Server share alone cannot sign — the same protection applies if a Telegram session is hijacked. High-value transfers add re-auth + cooldown.</td><td><span class="badge badge-ok" data-i18n="sec.thr.2.s">Mitigated</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 data-i18n="sec.rec.h">Recovery, not lockout.</h3>
+        <p data-i18n="sec.rec.p">If a device is lost, ONEWALLET issues a fresh device share, validated against the recovery share. The server share alone cannot sign, so a server breach does not move funds.</p>
+        <h3 style="margin-top:32px;" data-i18n="sec.aud.h">Audit-targeted, not audit-claimed.</h3>
+        <p data-i18n="sec.aud.p">Custody and settlement contracts are scheduled for independent review before mainnet. The whitepaper documents the threat model, share-rotation policy, and operational boundaries — including what we deliberately won't promise.</p>
+        <a href="whitepaper.html#ch5" class="btn btn-ghost" style="margin-top:18px;"><span data-i18n="sec.btn">Security chapter</span> <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENTS -->
+<section class="payments" id="payments">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="pay.eb">Payments and merchants</span>
+      <h2 data-i18n="pay.h">Payments, not portfolio screenshots.</h2>
+      <p data-i18n="pay.p">Pay by QR. Settle in stablecoin. Reward in-ecosystem. Built for merchants who need predictability, not speculation.</p>
+    </div>
+    <div class="pay-grid">
+      <div class="reveal">
+        <div class="pay-visual" aria-hidden="true">
+          <img src="assets/payments-rail.webp" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="pay-flow"><ol>
+        <li><div><b data-i18n="pay.1.b">Merchant generates an invoice</b><span data-i18n="pay.1.s">Static or per-order QR with chain, amount, and memo.</span></div></li>
+        <li><div><b data-i18n="pay.2.b">User scans inside Telegram</b><span data-i18n="pay.2.s">ONEWALLET resolves chain, displays receiver, fees, and FX preview.</span></div></li>
+        <li><div><b data-i18n="pay.3.b">MPC signs and broadcasts</b><span data-i18n="pay.3.s">Threshold signature on the chosen chain. No seed prompt.</span></div></li>
+        <li><div><b data-i18n="pay.4.b">Settlement webhook fires</b><span data-i18n="pay.4.s">Merchant receives stablecoin and a signed event for POS reconciliation.</span></div></li>
+      </ol></div>
+      </div>
+      <div class="reveal">
+        <h3 data-i18n="pay.mg.h">Merchant-grade, not crypto-grade.</h3>
+        <p data-i18n="pay.mg.p">A REST + webhook stack lets stores accept Web3 without learning Web3. Settlement defaults to stablecoin, fees are predictable, and refunds are first-class.</p>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="whitepaper.html#ch8" class="btn btn-ghost" data-i18n="pay.b2">Business model</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKEN -->
+<section id="token">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="tok.eb">$1 token utility</span>
+      <h2 data-i18n="tok.h">Utility first. Allocation second.</h2>
+      <p data-i18n="tok.p">$1 powers the ONEWALLET economy — fees, rewards, merchant incentives, and ecosystem access. Designed as a working asset, not a price story.</p>
+    </div>
+    <div class="token-grid reveal-stagger">
+      <!-- Icons: Lucide / Heroicons-inspired strokes, currentColor for theming -->
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l3-9 4 6 4-6 3 9"/><path d="M3 12h18"/><path d="M5 12l2 8h10l2-8"/></svg></div><h4 data-i18n="tok.1.h">Fee discounts</h4><p data-i18n="tok.1.p">Pay payment and swap fees with $1 at preferential rates.</p></div>
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.39 5.36 5.61.51-4.27 3.93 1.27 5.7L12 14.77 6.99 17.5l1.27-5.7L4 7.87l5.61-.51z"/></svg></div><h4 data-i18n="tok.2.h">User rewards</h4><p data-i18n="tok.2.p">Earn $1 for active payments, referrals, and on-chain activity.</p></div>
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-6h6v6"/><circle cx="12" cy="13" r="1"/></svg></div><h4 data-i18n="tok.3.h">Merchant incentives</h4><p data-i18n="tok.3.p">Settle in stablecoin; top-up $1 to lower acceptance fees.</p></div>
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h4 data-i18n="tok.4.h">Ecosystem access</h4><p data-i18n="tok.4.p">Unlock premium mini-apps, partner perks, and early features.</p></div>
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M5 21v-1a4 4 0 014-4h6a4 4 0 014 4v1"/><path d="M9 11l-2 4M15 11l2 4"/></svg></div><h4 data-i18n="tok.5.h">Governance signals</h4><p data-i18n="tok.5.p">Vote on rewards, fee curves, and ecosystem listings.</p></div>
+      <div class="token-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><rect x="5" y="13" width="14" height="8" rx="1"/><path d="M9 17h6"/></svg></div><h4 data-i18n="tok.6.h">Supply discipline</h4><p data-i18n="tok.6.p">Capped supply, transparent vesting, and a milestone-locked ecosystem reserve.</p></div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span data-i18n="common.swipe">Swipe</span></div>
+    <p class="legal-note reveal"><b data-i18n="tok.disc.t">Disclaimer</b><span data-i18n="tok.disc.p">$1 is a utility token. ONEWALLET makes no promises of price appreciation, returns, or exchange listings. Final tokenomics are subject to legal review.</span></p>
+  </div>
+</section>
+
+<!-- ECOSYSTEM FLYWHEEL -->
+<section id="ecosystem">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="fly.eb">Ecosystem flywheel</span>
+      <h2 data-i18n="fly.h">Wallets become commerce.<br>Commerce becomes ecosystem.</h2>
+      <p data-i18n="fly.p">Each layer compounds the next. Users open wallets, wallets create merchant demand, merchants generate $1 utility, $1 utility rewards users.</p>
+    </div>
+
+    <figure class="fly-wrap reveal">
+      <div class="fly-head">
+        <div>
+          <div class="fly-title" data-i18n="fly.title">$1 ecosystem flywheel</div>
+          <div class="fly-sub" data-i18n="fly.sub">Users · Wallet · Merchants · Mini-apps · $1 utility</div>
+        </div>
+        <div class="fly-legend">
+          <span><i style="background:var(--brand)"></i><span data-i18n="fly.leg.1">Primary loop</span></span>
+          <span><i style="background:var(--warning)"></i><span data-i18n="fly.leg.2">Mini-app branch</span></span>
+          <span><i style="background:var(--brand-dim);background-image:linear-gradient(90deg,var(--brand-dim) 50%, transparent 0);background-size:8px 2px"></i><span data-i18n="fly.leg.3">Feedback</span></span>
+        </div>
+      </div>
+      <svg class="fly-svg" viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ecosystem flywheel" data-i18n-attr="aria-label:fly.title">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a5a"/></marker>
+          <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
+          <marker id="arrowDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="rgba(15,122,90,0.55)"/></marker>
+        </defs>
+        <!-- Telegram runtime frame -->
+        <g>
+          <rect x="60" y="20" width="840" height="92" rx="14" fill="#f4f6f9" stroke="#c8cfd9" stroke-width="1" stroke-dasharray="4 4"/>
+          <text class="frame-lbl" x="80" y="46" data-i18n-svg="fly.layer">LAYER · TELEGRAM RUNTIME</text>
+          <text class="frame-lbl" x="80" y="62" style="fill:#54627a" data-i18n-svg="fly.layer.sub">distribution · onboarding · session</text>
+        </g>
+        <!-- Users -->
+        <g>
+          <rect class="node" x="370" y="40" width="220" height="60" rx="10"/>
+          <text class="node-lbl" x="480" y="68" text-anchor="middle" data-i18n-svg="fly.users.h">Users</text>
+          <text class="node-sub" x="480" y="88" text-anchor="middle" data-i18n-svg="fly.users.s">Telegram-native onboarding</text>
+        </g>
+        <!-- Users → Wallet -->
+        <path class="edge" d="M 480 116 L 480 168" marker-end="url(#arrow)"/>
+        <text class="edge-lbl" x="492" y="146" data-i18n-svg="fly.edge.1">open + sign-up</text>
+        <!-- Wallet -->
+        <g>
+          <rect class="node" x="385" y="178" width="190" height="64" rx="10"/>
+          <text class="node-lbl" x="480" y="208" text-anchor="middle" data-i18n-svg="fly.wallet.h">Wallet</text>
+          <text class="node-sub" x="480" y="228" text-anchor="middle" data-i18n-svg="fly.wallet.s">MPC custody · QR · swaps</text>
+        </g>
+        <!-- Wallet split: primary → Merchants (left); branch → Mini-apps (right). Labels positioned ABOVE their paths in clear space. -->
+        <path class="edge" d="M 430 242 L 430 302 L 230 302 L 230 358" marker-end="url(#arrow)"/>
+        <path class="edge sec" d="M 530 242 L 530 302 L 730 302 L 730 358" marker-end="url(#arrowAmber)"/>
+        <text class="edge-lbl" x="290" y="294" data-i18n-svg="fly.edge.2">primary · pay</text>
+        <text class="edge-lbl" x="600" y="294" style="fill:#b45309" data-i18n-svg="fly.edge.3">branch · discover</text>
+        <!-- Merchants -->
+        <g>
+          <rect class="node" x="130" y="368" width="200" height="64" rx="10"/>
+          <text class="node-lbl" x="230" y="396" text-anchor="middle" data-i18n-svg="fly.merch.h">Merchants</text>
+          <text class="node-sub" x="230" y="416" text-anchor="middle" data-i18n-svg="fly.merch.s">QR settlement · webhooks</text>
+        </g>
+        <!-- Mini-apps -->
+        <g>
+          <rect class="node sec" x="630" y="368" width="200" height="64" rx="10"/>
+          <text class="node-lbl sec" x="730" y="396" text-anchor="middle" data-i18n-svg="fly.mini.h">Mini-apps</text>
+          <text class="node-sub" x="730" y="416" text-anchor="middle" data-i18n-svg="fly.mini.s">partner integrations</text>
+        </g>
+        <!-- cross-link between Merchants & Mini-apps -->
+        <path class="edge" d="M 330 400 L 630 400" stroke-dasharray="2 4" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+        <text class="edge-lbl" x="480" y="392" text-anchor="middle" style="fill:#54627a" data-i18n-svg="fly.edge.4">cross-link</text>
+        <!-- Both feed into $1 utility -->
+        <path class="edge" d="M 230 432 L 230 492 L 370 492" marker-end="url(#arrow)"/>
+        <path class="edge sec" d="M 730 432 L 730 492 L 590 492" marker-end="url(#arrowAmber)"/>
+        <!-- $1 utility ecosystem -->
+        <g>
+          <rect class="node" x="290" y="480" width="380" height="72" rx="12" fill="rgba(15,122,90,0.06)"/>
+          <text class="node-lbl" x="480" y="512" text-anchor="middle" style="font-size:14px" data-i18n-svg="fly.util.h">$1 utility · ecosystem</text>
+          <text class="node-sub" x="480" y="532" text-anchor="middle" data-i18n-svg="fly.util.s">fees · rewards · governance · access</text>
+        </g>
+        <!-- Feedback loop: $1 utility back to Users — square right-angle routing with dashed segments, no curves. Routed FAR LEFT, well clear of all text labels. -->
+        <path class="edge back" d="M 290 516 L 30 516 L 30 70 L 370 70" stroke-dasharray="6 6" marker-end="url(#arrowDim)"/>
+        <!-- Feedback label in clear far-left whitespace, well away from path -->
+        <text class="edge-lbl" x="46" y="296" style="fill:#54627a" data-i18n-svg="fly.back">feeds back</text>
+        <text class="edge-lbl" x="46" y="312" style="fill:#54627a" data-i18n-svg="fly.back.sub">referrals · rewards</text>
+        <!-- Compound loop footer -->
+        <g transform="translate(60,610)">
+          <rect width="840" height="80" rx="14" fill="#f4f6f9" stroke="#e5e8ed" stroke-width="1"/>
+          <text class="frame-lbl" x="20" y="26" data-i18n-svg="fly.compound.h">COMPOUND LOOP</text>
+          <text class="node-sub" x="20" y="46" style="font-size:12px;fill:#54627a" data-i18n-svg="fly.compound.p1">Each layer increases volume in the next. The loop reinforces:</text>
+          <text class="node-sub" x="20" y="64" style="font-size:12px;fill:#06112b" data-i18n-svg="fly.compound.p2">more users → more wallets → more merchant volume → more $1 utility → more user rewards.</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <span class="eyebrow" data-i18n="road.eb">Roadmap</span>
+      <h2 data-i18n="road.h">Public status, no marketing dates.</h2>
+      <p data-i18n="road.p">We publish where we are, not where we wish we were. Dates remain off the page until product, security, and legal owners commit.</p>
+    </div>
+    <div class="roadmap reveal-stagger">
+      <div class="milestone"><span class="ms-status ms-done" data-i18n="road.s.done">DONE</span><span class="q" data-i18n="road.1.q">Phase 1</span><h4 data-i18n="road.1.h">Core wallet</h4><ul><li data-i18n="road.1.li1">MPC custody</li><li data-i18n="road.1.li2">Telegram Mini App</li><li data-i18n="road.1.li3">Multi-chain send / receive</li></ul></div>
+      <div class="milestone"><span class="ms-status ms-prog" data-i18n="road.s.prog">IN PROGRESS</span><span class="q" data-i18n="road.2.q">Phase 2</span><h4 data-i18n="road.2.h">Payments rail</h4><ul><li data-i18n="road.2.li1">QR invoice spec</li><li data-i18n="road.2.li2">Settlement webhooks</li><li data-i18n="road.2.li3">Merchant dashboard</li></ul></div>
+      <div class="milestone"><span class="ms-status ms-plan" data-i18n="road.s.plan">PLANNED</span><span class="q" data-i18n="road.3.q">Phase 3</span><h4 data-i18n="road.3.h">$1 utility</h4><ul><li data-i18n="road.3.li1">Fee discount layer</li><li data-i18n="road.3.li2">Reward engine</li><li data-i18n="road.3.li3">Governance signal</li></ul></div>
+      <div class="milestone"><span class="ms-status ms-plan" data-i18n="road.s.plan">PLANNED</span><span class="q" data-i18n="road.4.q">Phase 4</span><h4 data-i18n="road.4.h">Ecosystem</h4><ul><li data-i18n="road.4.li1">Mini-app store</li><li data-i18n="road.4.li2">Partner program</li><li data-i18n="road.4.li3">Localized launches</li></ul></div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span data-i18n="common.swipe">Swipe</span></div>
+  </div>
+</section>
+
+<!-- TEAM (centered, rendered by JS for language switching) -->
+<section id="team">
+  <div class="wrap">
+    <div class="sect-head sect-head-center reveal">
+      <span class="eyebrow" data-i18n="team.eb">Team</span>
+      <h2 data-i18n="team.h">The people building ONEWALLET.</h2>
+      <p data-i18n="team.p">Operators with shipping history across consumer fintech, exchange infrastructure, and Web3 product. We list responsibilities, not slogans.</p>
+    </div>
+    <div class="team-wrap reveal-stagger" id="teamGrid"></div>
+    <div class="scroll-hint" aria-hidden="true"><span data-i18n="common.swipe">Swipe</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sect-head sect-head-center reveal">
+      <span class="eyebrow" data-i18n="faq.eb">FAQ</span>
+      <h2 data-i18n="faq.h">The questions that block sign-ups.</h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary data-i18n="faq.1.q">Is ONEWALLET custodial?</summary><div class="faq-body"><div><p data-i18n="faq.1.a">No single party can move funds. Custody is shared via 2-of-3 MPC across device, server, and recovery. Any single share — including the server — cannot sign a transaction.</p></div></div></details>
+      <details><summary data-i18n="faq.2.q">What happens if I lose my Telegram account?</summary><div class="faq-body"><div><p data-i18n="faq.2.a">You can still recover. The recovery share, paired with a fresh device share, restores wallet access without needing the original Telegram session.</p></div></div></details>
+      <details><summary data-i18n="faq.3.q">Do I need a seed phrase?</summary><div class="faq-body"><div><p data-i18n="faq.3.a">Not by default. ONEWALLET uses MPC custody, so there is no single seed to manage. Advanced users may export an encrypted backup.</p></div></div></details>
+      <details><summary data-i18n="faq.4.q">Which networks are supported?</summary><div class="faq-body"><div><p data-i18n="faq.4.a">Initial support targets TON, Ethereum, BNB Chain, and major stablecoins. The final network list will be confirmed before public launch.</p></div></div></details>
+      <details><summary data-i18n="faq.5.q">What are the fees?</summary><div class="faq-body"><div><p data-i18n="faq.5.a">Network gas plus a transparent ONEWALLET fee for swaps and merchant payments. Holding $1 reduces fees at preferential rates.</p></div></div></details>
+      <details><summary data-i18n="faq.6.q">What is the $1 token used for?</summary><div class="faq-body"><div><p data-i18n="faq.6.a">Fee discounts, user rewards, merchant incentives, ecosystem access, and governance signals. $1 is a utility token — not a price promise.</p></div></div></details>
+      <details><summary data-i18n="faq.7.q">Is ONEWALLET live?</summary><div class="faq-body"><div><p data-i18n="faq.7.a">The core wallet is in private testing. The payments rail is in progress. See the public roadmap above for status.</p></div></div></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <div>
+        <h3 data-i18n="cta.h">Open a wallet in a few taps.</h3>
+        <p data-i18n="cta.p">No app store. No seed phrase. Just Telegram.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://t.me/onedollar_wallet_bot/app" target="_blank" rel="noopener" class="btn btn-primary"><span data-i18n="common.openInTelegram">Open in Telegram</span> <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="whitepaper.html" class="btn btn-ghost" data-i18n="common.whitepaper">Whitepaper</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-about">
+        <a class="brand" href="/" aria-label="ONEWALLET home" data-i18n-attr="aria-label:common.aria.home"><img src="assets/logo.png" alt="" width="36" height="36" /><span class="wordmark">ONEWALLET</span></a>
+        <p data-i18n="foot.about">The Telegram-native Web3 wallet and payment rail for users, merchants, and the $1 ecosystem.</p>
+      </div>
+      <div class="foot-col"><h5 data-i18n="foot.col1.h">Product</h5><a href="#users" data-i18n="foot.col1.1">For users</a><a href="#partners" data-i18n="foot.col1.2">For merchants</a><a href="#security" data-i18n="foot.col1.3">Security</a><a href="whitepaper.html" data-i18n="foot.col1.4">Whitepaper</a></div>
+      <div class="foot-col"><h5 data-i18n="foot.col2.h">Company</h5><a href="#team" data-i18n="foot.col2.1">Team</a><a href="#roadmap" data-i18n="foot.col2.2">Roadmap</a><a href="https://t.me/onedollar_project" target="_blank" rel="noopener noreferrer" data-i18n="foot.col2.3">Community</a></div>
+      <div class="foot-col"><h5 data-i18n="foot.col3.h">Legal</h5><a href="whitepaper.html#ch11" data-i18n="foot.col3.1">Risk notice</a><a href="whitepaper.html#ch12" data-i18n="foot.col3.2">Disclosures</a></div>
+    </div>
+    <div class="foot-social" aria-label="ONEWALLET community channels" data-i18n-attr="aria-label:foot.social.aria">
+      <span class="lbl" data-i18n="foot.social.h">Community</span>
+      <a class="sns" href="https://t.me/onedollar_project" target="_blank" rel="noopener noreferrer" aria-label="ONEWALLET on Telegram" data-i18n-attr="aria-label:foot.social.tg">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.42 18.6 20.18c-.25 1.12-.92 1.39-1.87.86l-5.17-3.82-2.49 2.4c-.28.28-.51.51-1.04.51l.37-5.26 9.55-8.63c.41-.37-.09-.58-.65-.21L5.5 13.05.43 11.46c-1.1-.34-1.13-1.1.23-1.62L20.51 3c.92-.34 1.72.22 1.43 1.42z"/></svg>
+      </a>
+      <a class="sns" href="https://x.com/one_wallet_" target="_blank" rel="noopener noreferrer" aria-label="ONEWALLET on X" data-i18n-attr="aria-label:foot.social.x">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.523 8.59L22.5 22h-6.828l-5.345-6.99L4.2 22H.94l8.045-9.19L1.5 2h6.97l4.83 6.39L18.244 2zm-2.39 18h1.86L7.23 4H5.27l10.584 16z"/></svg>
+      </a>
+      <a class="sns" href="https://www.youtube.com/@One_Wallet_Official" target="_blank" rel="noopener noreferrer" aria-label="ONEWALLET on YouTube" data-i18n-attr="aria-label:foot.social.yt">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.58A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.58a3 3 0 0 0 2.12-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+      </a>
+      <a class="sns" href="https://www.facebook.com/profile.php?id=61589009140069" target="_blank" rel="noopener noreferrer" aria-label="ONEWALLET on Facebook" data-i18n-attr="aria-label:foot.social.fb">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.5h2.86l.43-3.33H13.5V8.04c0-.96.27-1.62 1.65-1.62h1.76V3.44A23.6 23.6 0 0 0 14.34 3.3c-2.55 0-4.3 1.56-4.3 4.42v2.45H7.17v3.33h2.87V22h3.46z"/></svg>
+      </a>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 ONEWALLET · v0.9 prototype</span>
+      <span data-i18n="common.langStrip">EN · 한국어 · 日本語 · 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/assistant-knowledge.js"></script>
+<script src="assets/assistant-intents.js"></script>
+<script>window.ONEWALLET_ASSISTANT_API_URL = "https://onewallet-assistant-api.pu-hungphu.workers.dev";</script>
+<script src="assets/assistant.js" defer></script>
+<script>
+  /* ============ i18n apply ============ */
+  (function(){
+    const KEY = 'onewallet_lang';
+    const LABEL = { en: 'EN', ko: 'KO', ja: 'JA', zh: 'ZH' };
+    const trigger = document.getElementById('langTrigger');
+    const menu = document.getElementById('langMenu');
+    const label = document.getElementById('langLabel');
+    const buttons = document.querySelectorAll('[data-lang]');
+
+    function getLang() {
+      try { return localStorage.getItem(KEY) || 'en'; } catch(e) { return 'en'; }
+    }
+    function setStored(lang) { try { localStorage.setItem(KEY, lang); } catch(e) {} }
+
+    function renderTeam(lang) {
+      const grid = document.getElementById('teamGrid');
+      if (!grid || !window.I18N || !window.I18N.TEAM) return;
+      const members = window.I18N.TEAM[lang] || window.I18N.TEAM.en;
+      const photos = ['james-kim','kim-jae-mo','khoo-yih-shian','park-ju-jin','lee-jun-bong'];
+      grid.innerHTML = members.map((m, i) => {
+        const lis = m.li.map(t => `<li>${t}</li>`).join('');
+        const kr = m.krName ? `<span class="kr">${m.krName}</span>` : '';
+        return `<article class="member">
+          <div class="deco" aria-hidden="true"><img src="assets/team-deco/${i+1}.webp" alt="" loading="lazy" decoding="async" /></div>
+          <div class="photo"><img src="assets/team/${photos[i]}.webp" alt="${m.name}" width="88" height="88" loading="lazy" decoding="async" /></div>
+          <div class="role">${m.role}</div>
+          <div class="name">${kr}${m.name}</div>
+          <ul>${lis}</ul>
+        </article>`;
+      }).join('');
+    }
+
+    function apply(lang) {
+      if (!window.I18N || !window.I18N[lang]) lang = 'en';
+      const dict = window.I18N[lang];
+      document.documentElement.lang = lang;
+      label.textContent = LABEL[lang];
+      // Update meta description per language? Keep EN for SEO consistency.
+      // Replace [data-i18n] innerHTML
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+      // Replace SVG <text> via [data-i18n-svg] (textContent only)
+      document.querySelectorAll('[data-i18n-svg]').forEach(el => {
+        const key = el.getAttribute('data-i18n-svg');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      // [data-i18n-attr="attrName:key,attrName2:key2"] — localize attributes (aria-label, title, etc.)
+      document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+        const spec = el.getAttribute('data-i18n-attr');
+        spec.split(',').forEach(pair => {
+          const [attr, key] = pair.trim().split(':');
+          if (attr && key && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+        });
+      });
+      // aria-checked on radio buttons
+      buttons.forEach(b => b.setAttribute('aria-checked', b.dataset.lang === lang ? 'true' : 'false'));
+      // Render team grid in selected language
+      renderTeam(lang);
+      setStored(lang);
+      window.dispatchEvent(new CustomEvent('onewallet:lang', { detail: { lang } }));
+    }
+
+    // Init
+    apply(getLang());
+
+    // Dropdown
+    if (trigger && menu) {
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', open);
+      });
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !trigger.contains(e.target)) {
+          menu.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { menu.classList.remove('open'); trigger.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+    buttons.forEach(b => b.addEventListener('click', () => {
+      apply(b.dataset.lang);
+      if (menu) { menu.classList.remove('open'); trigger && trigger.setAttribute('aria-expanded', 'false'); }
+    }));
+  })();
+
+  /* Mobile sheet */
+  (function(){
+    const btn = document.getElementById('menuBtn');
+    const sheet = document.getElementById('mobileSheet');
+    if (!btn || !sheet) return;
+    const setOpen = (open) => {
+      sheet.dataset.open = open ? 'true' : 'false';
+      // Use the `hidden` attribute so descendants are not focusable when closed.
+      // Avoids hidden-focusable a11y violation that aria-hidden alone causes.
+      if (open) sheet.removeAttribute('hidden');
+      else sheet.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    btn.addEventListener('click', () => setOpen(sheet.dataset.open !== 'true'));
+    // Close the sheet when a nav link OR a language radio is activated.
+    sheet.querySelectorAll('a, [data-lang]').forEach(el => el.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sheet.dataset.open === 'true') setOpen(false); });
+  })();
+
+  /* Scroll reveal */
+  (function(){
+    if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal,.reveal-stagger').forEach(el => el.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }}), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal,.reveal-stagger').forEach(el => io.observe(el));
+  })();
+
+  /* Nav scroll state */
+  (function(){
+    const nav = document.getElementById('topNav');
+    if (!nav) return;
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  /* Scroll progress bar */
+  (function(){
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    const update = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+
+  /* Back-to-top FAB */
+  (function(){
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    const check = () => btn.classList.toggle('visible', window.scrollY > 600);
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+
+  /* Nav scroll-spy — highlight active nav link */
+  (function(){
+    const links = document.querySelectorAll('nav.links a[href^="#"]');
+    const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    if (!sections.length) return;
+    const update = () => {
+      const y = window.scrollY + 140;
+      let activeId = sections[0].id;
+      for (const s of sections) { if (s.offsetTop <= y) activeId = s.id; }
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + activeId));
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+
+  /* Hero parallax depth */
+  (function(){
+    const hero = document.querySelector('.hero-visual');
+    if (!hero || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(() => {
+        const r = hero.getBoundingClientRect();
+        if (r.bottom > 0 && r.top < window.innerHeight) {
+          const p = (r.top / window.innerHeight) * 12;
+          hero.style.transform = 'translateY(' + p + 'px)';
+        }
+        ticking = false;
+      }); ticking = true; }
+    }, { passive: true });
+  })();
+</script>
+
 </body>
 </html>

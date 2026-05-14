@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://1dollar.me/sitemap.xml
