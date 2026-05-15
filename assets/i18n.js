@@ -178,17 +178,17 @@ window.I18N = (function () {
     'foot.col1.h': 'Product', 'foot.col1.1': 'For users', 'foot.col1.2': 'For merchants', 'foot.col1.3': 'Security', 'foot.col1.4': 'Whitepaper',
     'foot.col2.h': 'Company', 'foot.col2.1': 'Team', 'foot.col2.2': 'Roadmap', 'foot.col2.3': 'Community',
     'foot.col3.h': 'Legal', 'foot.col3.1': 'Risk notice', 'foot.col3.2': 'Disclosures',
-    'foot.copy': '© 2026 ONEWALLET · v0.9 prototype',
+    'foot.copy': '© 2026 ONEWALLET · v1.0 Official Release',
     'foot.social.h': 'Community', 'foot.social.aria': 'ONEWALLET community channels',
     'foot.social.tg': 'ONEWALLET on Telegram', 'foot.social.x': 'ONEWALLET on X', 'foot.social.yt': 'ONEWALLET on YouTube', 'foot.social.fb': 'ONEWALLET on Facebook',
 
     /* === Whitepaper === */
-    'wp.bar.wpv': 'Whitepaper · v0.9 draft',
+    'wp.bar.wpv': 'Whitepaper · v1.0',
     'wp.bar.updated': 'Updated May 2026',
-    'wp.title.eb': 'Technical &amp; product whitepaper · v0.9',
+    'wp.title.eb': 'Technical &amp; product whitepaper · v1.0',
     'wp.title.h': 'The Telegram-native <em>wallet</em>,<br>payment rail, and ecosystem.',
     'wp.title.sub': 'ONEWALLET is a keyless MPC wallet, payment network, and token economy designed to make Web3 finance work like sending a message inside Telegram.',
-    'wp.m.v': 'Version', 'wp.mv': '0.9 draft · 2026-05',
+    'wp.m.v': 'Version', 'wp.mv': '1.0 · May 2026',
     'wp.m.a': 'Audience', 'wp.ma': 'Users · Investors · Partners',
     'wp.m.s': 'Status', 'wp.ms': 'Pre-mainnet · Private testing',
     'wp.m.l': 'Languages', 'wp.ml': 'EN · KO · JA · ZH',
@@ -370,9 +370,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC academic literature — threshold cryptography fundamentals.',
     'wp.c12.r3': 'ONEWALLET homepage and product brief — companion materials.',
     'wp.c12.h3': 'Document control',
-    'wp.c12.ctl': 'v0.9 · 2026-05 · prototype draft · review owners: product, security, legal, partners',
+    'wp.c12.ctl': 'v1.0 · May 2026 · Official Release · Approved by Product, Security, Legal, and Partnerships',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · Whitepaper v0.9 draft · Not financial advice.'
+    'wp.foot.copy': '© 2026 ONEWALLET · Whitepaper v1.0 · Not financial advice.'
   };
 
   /* ============ KOREAN ============ */
@@ -517,17 +517,17 @@ window.I18N = (function () {
     'foot.col1.h': '제품', 'foot.col1.1': '사용자', 'foot.col1.2': '가맹점', 'foot.col1.3': '보안', 'foot.col1.4': '백서',
     'foot.col2.h': '회사', 'foot.col2.1': '팀', 'foot.col2.2': '로드맵', 'foot.col2.3': '커뮤니티',
     'foot.col3.h': '법무', 'foot.col3.1': '위험 고지', 'foot.col3.2': '공시',
-    'foot.copy': '© 2026 ONEWALLET · v0.9 프로토타입',
+    'foot.copy': '© 2026 ONEWALLET · v1.0 공식 출시',
     'foot.social.h': '커뮤니티', 'foot.social.aria': 'ONEWALLET 커뮤니티 채널',
     'foot.social.tg': 'Telegram의 ONEWALLET', 'foot.social.x': 'X의 ONEWALLET', 'foot.social.yt': 'YouTube의 ONEWALLET', 'foot.social.fb': 'Facebook의 ONEWALLET',
 
     /* Whitepaper KO */
-    'wp.bar.wpv': '백서 · v0.9 초안',
+    'wp.bar.wpv': '백서 · v1.0',
     'wp.bar.updated': '2026년 5월 업데이트',
-    'wp.title.eb': '기술 및 제품 백서 · v0.9',
+    'wp.title.eb': '기술 및 제품 백서 · v1.0',
     'wp.title.h': '텔레그램 네이티브 <em>지갑</em>,<br>결제 레일, 그리고 에코시스템.',
     'wp.title.sub': 'ONEWALLET은 시드 구문 없는 MPC 지갑, 결제 네트워크, 토큰 경제를 결합해 Web3 금융을 텔레그램에서 메시지를 보내듯 단순하게 만듭니다.',
-    'wp.m.v': '버전', 'wp.mv': '0.9 초안 · 2026-05',
+    'wp.m.v': '버전', 'wp.mv': '1.0 · 2026년 5월',
     'wp.m.a': '대상', 'wp.ma': '사용자 · 투자자 · 파트너',
     'wp.m.s': '상태', 'wp.ms': '메인넷 이전 · 비공개 테스트',
     'wp.m.l': '언어', 'wp.ml': 'EN · KO · JA · ZH',
@@ -693,9 +693,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC 학술 문헌 — 임계 암호학 기초.',
     'wp.c12.r3': 'ONEWALLET 홈페이지 및 제품 브리프 — 동반 자료.',
     'wp.c12.h3': '문서 관리',
-    'wp.c12.ctl': 'v0.9 · 2026-05 · 프로토타입 초안 · 검토 책임: 제품·보안·법무·파트너',
+    'wp.c12.ctl': 'v1.0 · 2026년 5월 · 공식 출시 · 제품·보안·법무·파트너십 승인',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · 백서 v0.9 초안 · 투자 자문이 아닙니다.'
+    'wp.foot.copy': '© 2026 ONEWALLET · 백서 v1.0 · 투자 자문이 아닙니다.'
   };
 
   /* ============ JAPANESE ============ */
@@ -840,17 +840,17 @@ window.I18N = (function () {
     'foot.col1.h': 'プロダクト', 'foot.col1.1': '個人', 'foot.col1.2': '加盟店', 'foot.col1.3': 'セキュリティ', 'foot.col1.4': 'ホワイトペーパー',
     'foot.col2.h': '会社', 'foot.col2.1': 'チーム', 'foot.col2.2': 'ロードマップ', 'foot.col2.3': 'コミュニティ',
     'foot.col3.h': '法務', 'foot.col3.1': 'リスク告知', 'foot.col3.2': '開示',
-    'foot.copy': '© 2026 ONEWALLET · v0.9 プロトタイプ',
+    'foot.copy': '© 2026 ONEWALLET · v1.0 正式リリース',
     'foot.social.h': 'コミュニティ', 'foot.social.aria': 'ONEWALLET コミュニティチャンネル',
     'foot.social.tg': 'Telegram の ONEWALLET', 'foot.social.x': 'X の ONEWALLET', 'foot.social.yt': 'YouTube の ONEWALLET', 'foot.social.fb': 'Facebook の ONEWALLET',
 
     /* Whitepaper JA */
-    'wp.bar.wpv': 'ホワイトペーパー · v0.9 ドラフト',
+    'wp.bar.wpv': 'ホワイトペーパー · v1.0',
     'wp.bar.updated': '2026年5月更新',
-    'wp.title.eb': '技術・製品ホワイトペーパー · v0.9',
+    'wp.title.eb': '技術・製品ホワイトペーパー · v1.0',
     'wp.title.h': 'Telegram ネイティブの<br><em>ウォレット</em>・決済レール、<br>そしてエコシステム。',
     'wp.title.sub': 'ONEWALLETは、シードフレーズ不要のMPCウォレット、決済ネットワーク、トークンエコノミーを組み合わせ、Web3金融をTelegramのメッセージのように扱えるようにします。',
-    'wp.m.v': 'バージョン', 'wp.mv': '0.9 ドラフト · 2026-05',
+    'wp.m.v': 'バージョン', 'wp.mv': '1.0 · 2026年5月',
     'wp.m.a': '対象', 'wp.ma': 'ユーザー · 投資家 · パートナー',
     'wp.m.s': 'ステータス', 'wp.ms': 'メインネット前 · 非公開テスト',
     'wp.m.l': '言語', 'wp.ml': 'EN · KO · JA · ZH',
@@ -1016,9 +1016,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC学術文献 — 閾値暗号の基礎。',
     'wp.c12.r3': 'ONEWALLETホームページとプロダクトブリーフ — 関連資料。',
     'wp.c12.h3': '文書管理',
-    'wp.c12.ctl': 'v0.9 · 2026-05 · プロトタイプドラフト · レビュー責任: プロダクト・セキュリティ・法務・パートナー',
+    'wp.c12.ctl': 'v1.0 · 2026年5月 · 正式リリース · プロダクト・セキュリティ・法務・パートナーシップ承認',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · ホワイトペーパー v0.9 ドラフト · 投資助言ではありません。'
+    'wp.foot.copy': '© 2026 ONEWALLET · ホワイトペーパー v1.0 · 投資助言ではありません。'
   };
 
   /* ============ CHINESE (Simplified) ============ */
@@ -1163,17 +1163,17 @@ window.I18N = (function () {
     'foot.col1.h': '产品', 'foot.col1.1': '用户', 'foot.col1.2': '商户', 'foot.col1.3': '安全', 'foot.col1.4': '白皮书',
     'foot.col2.h': '公司', 'foot.col2.1': '团队', 'foot.col2.2': '路线图', 'foot.col2.3': '社区',
     'foot.col3.h': '法律', 'foot.col3.1': '风险提示', 'foot.col3.2': '披露',
-    'foot.copy': '© 2026 ONEWALLET · v0.9 原型',
+    'foot.copy': '© 2026 ONEWALLET · v1.0 正式发布',
     'foot.social.h': '社区', 'foot.social.aria': 'ONEWALLET 社区频道',
     'foot.social.tg': 'Telegram 上的 ONEWALLET', 'foot.social.x': 'X 上的 ONEWALLET', 'foot.social.yt': 'YouTube 上的 ONEWALLET', 'foot.social.fb': 'Facebook 上的 ONEWALLET',
 
     /* Whitepaper ZH */
-    'wp.bar.wpv': '白皮书 · v0.9 草稿',
+    'wp.bar.wpv': '白皮书 · v1.0',
     'wp.bar.updated': '2026 年 5 月更新',
-    'wp.title.eb': '技术与产品白皮书 · v0.9',
+    'wp.title.eb': '技术与产品白皮书 · v1.0',
     'wp.title.h': '原生于 Telegram 的<em>钱包</em>、<br>支付通道与生态系统。',
     'wp.title.sub': 'ONEWALLET 将无种子短语的 MPC 钱包、支付网络与代币经济结合,让 Web3 金融像在 Telegram 中发送消息一样简单。',
-    'wp.m.v': '版本', 'wp.mv': '0.9 草稿 · 2026-05',
+    'wp.m.v': '版本', 'wp.mv': '1.0 · 2026年5月',
     'wp.m.a': '受众', 'wp.ma': '用户 · 投资者 · 合作伙伴',
     'wp.m.s': '状态', 'wp.ms': '主网前 · 私测中',
     'wp.m.l': '语言', 'wp.ml': 'EN · KO · JA · ZH',
@@ -1339,9 +1339,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC 学术文献 — 阈值密码学基础。',
     'wp.c12.r3': 'ONEWALLET 首页与产品简报 — 配套资料。',
     'wp.c12.h3': '文档管理',
-    'wp.c12.ctl': 'v0.9 · 2026-05 · 原型草稿 · 审阅负责人:产品、安全、法务、合作伙伴',
+    'wp.c12.ctl': 'v1.0 · 2026年5月 · 正式发布 · 经产品、安全、法务和合作伙伴关系审批',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · 白皮书 v0.9 草稿 · 不构成投资建议。'
+    'wp.foot.copy': '© 2026 ONEWALLET · 白皮书 v1.0 · 不构成投资建议。'
   };
 
   return { en, ko, ja, zh, TEAM };

@@ -3,7 +3,7 @@ ONEWALLET — Full reference for LLMs
 
 Source: https://onewallet.store/
 Whitepaper: https://onewallet.store/whitepaper.html
-Version: prototype draft v0.9 · 2026-05
+Version: v1.0 · May 2026 · Official Release · Approved by Product, Security, Legal, and Partnerships
 Disclaimer: Forward-looking statements remain subject to product, security, and legal review. Not financial, legal, tax, or investment advice.
 
 SECTION 1 — What ONEWALLET is
