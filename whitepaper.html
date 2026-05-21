@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>ONEWALLET Whitepaper v1.0 — Technical &amp; Product Reference</title>
+<title>ONEWALLET Whitepaper v1.1 Draft — Technical &amp; Product Reference</title>
 <meta name="description" content="Technical and product whitepaper for ONEWALLET — a Telegram-native Web3 wallet, payment rail, and $1 token economy. MPC custody, threat model, growth and business model, risks." />
 <meta name="theme-color" content="#ffffff" />
 <link rel="canonical" href="https://onewallet.store/whitepaper.html" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="ONEWALLET" />
-<meta property="og:title" content="ONEWALLET Whitepaper v1.0" />
+<meta property="og:title" content="ONEWALLET Whitepaper v1.1 Draft" />
 <meta property="og:description" content="Technical and product whitepaper: MPC custody, payments rail, token model, risks." />
 <meta property="og:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 <meta property="og:image:width" content="1200" />
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://onewallet.store/whitepaper.html" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ONEWALLET Whitepaper v1.0" />
+<meta name="twitter:title" content="ONEWALLET Whitepaper v1.1 Draft" />
 <meta name="twitter:description" content="MPC custody, payments rail, token model, risks." />
 <meta name="twitter:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 
@@ -30,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@500;600;700;800&family=Noto+Sans+JP:wght@500;600;700;800&family=Noto+Sans+SC:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TechArticle","headline":"ONEWALLET Whitepaper v1.0","description":"Technical and product whitepaper for ONEWALLET — Telegram-native Web3 wallet, payment rail, and token economy.","author":{"@type":"Organization","name":"ONEWALLET"},"publisher":{"@type":"Organization","name":"ONEWALLET","logo":{"@type":"ImageObject","url":"https://onewallet.store/assets/logo.png"}},"datePublished":"2026-05-13","inLanguage":"en"}
+{"@context":"https://schema.org","@type":"TechArticle","headline":"ONEWALLET Whitepaper v1.1 Draft","description":"Technical and product whitepaper for ONEWALLET — Telegram-native Web3 wallet, payment rail, and token economy.","author":{"@type":"Organization","name":"ONEWALLET"},"publisher":{"@type":"Organization","name":"ONEWALLET","logo":{"@type":"ImageObject","url":"https://onewallet.store/assets/logo.png"}},"datePublished":"2026-05-13","inLanguage":"en"}
 </script>
 
 <style>
@@ -191,6 +191,15 @@
   figure.svg-fig svg { width: 100%; height: auto; display: block; }
   figure.svg-fig figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-subtle); margin-top: 14px; }
   @media (max-width: 720px) { figure.svg-fig { overflow-x: auto; } figure.svg-fig svg { min-width: 540px; } }
+
+  /* Tokenomics donut figure + distribution swatches */
+  figure.svg-fig.tkx-fig { display: flex; flex-direction: column; align-items: center; }
+  figure.svg-fig.tkx-fig svg { width: 260px; max-width: 100%; min-width: 0; }
+  @media (max-width: 720px) { figure.svg-fig.tkx-fig { overflow-x: visible; } figure.svg-fig.tkx-fig svg { min-width: 0; } }
+  .tkx-ctr-1 { font-family: var(--mono); font-size: 18px; font-weight: 600; fill: var(--fg-strong); }
+  .tkx-ctr-2 { font-family: var(--mono); font-size: 12px; fill: var(--fg-subtle); }
+  .tkx-sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+  .tkx-vest { font-size: 13.5px; color: var(--fg-muted); margin: 6px 0 0; }
 
   /* Team cards inside whitepaper (mirrors homepage style) */
   .wp-team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px auto; max-width: 100%; }
@@ -407,7 +416,7 @@
   <div class="bar-inner">
     <a class="brand" href="index.html" aria-label="ONEWALLET home" data-i18n-attr="aria-label:common.aria.home"><img src="assets/logo.png" alt="" width="26" height="26" /><span class="wordmark">ONEWALLET</span></a>
     <div class="doc-meta">
-      <span data-i18n="wp.bar.wpv">Whitepaper · v1.0</span>
+      <span data-i18n="wp.bar.wpv">Whitepaper · v1.1 Draft</span>
       <span data-i18n="wp.bar.updated">Updated May 2026</span>
     </div>
     <div class="lang-switch">
@@ -429,11 +438,11 @@
 <section class="title-block">
   <div class="title-particles" aria-hidden="true"><span style="top:20%;left:15%"></span><span style="top:50%;left:75%"></span><span style="top:70%;left:30%"></span><span style="top:30%;left:85%"></span></div>
   <div class="title-inner">
-    <span class="eyebrow" data-i18n="wp.title.eb">Technical &amp; product whitepaper · v1.0</span>
+    <span class="eyebrow" data-i18n="wp.title.eb">Technical &amp; product whitepaper · v1.1 Draft</span>
     <h1 data-i18n="wp.title.h">The Telegram-native <em>wallet</em>,<br>payment rail, and ecosystem.</h1>
     <p class="sub" data-i18n="wp.title.sub">ONEWALLET is a keyless MPC wallet, payment network, and token economy designed to make Web3 finance work like sending a message inside Telegram.</p>
     <div class="title-meta">
-      <div><b data-i18n="wp.m.v">Version</b><span data-i18n="wp.mv">1.0 · May 2026</span></div>
+      <div><b data-i18n="wp.m.v">Version</b><span data-i18n="wp.mv">1.1 Draft · May 2026</span></div>
       <div><b data-i18n="wp.m.a">Audience</b><span data-i18n="wp.ma">Users · Investors · Partners</span></div>
       <div><b data-i18n="wp.m.s">Status</b><span data-i18n="wp.ms">Pre-mainnet · Private testing</span></div>
       <div><b data-i18n="wp.m.l">Languages</b><span data-i18n="wp.ml">EN · KO · JA · ZH</span></div>
@@ -645,7 +654,7 @@
 
     <section class="chap reveal" id="ch6">
       <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 06</div>
-      <h2 data-i18n="wp.ch.6">Token model</h2>
+      <h2 data-i18n="wp.ch.6">Token model &amp; Tokenomics</h2>
       <div class="summary-card"><b data-i18n="wp.c6.sum.t">$1 utility</b><span data-i18n="wp.c6.sum.p">Fee discounts, user rewards, merchant incentives, ecosystem access, governance signals.</span></div>
       <h3 data-i18n="wp.c6.h1">Utility before allocation</h3>
       <div class="t-wrap"><table class="t">
@@ -658,6 +667,49 @@
           <tr><td data-i18n="wp.c6.t1.5.1">Governance signal</td><td data-i18n="wp.c6.t1.5.2">Vote on rewards, fees.</td><td data-i18n="wp.c6.t1.5.3">Planned</td></tr>
         </tbody>
       </table></div>
+
+      <h3 data-i18n="wp.c6.h2">Tokenomics</h3>
+      <p data-i18n="wp.c6.tk.p">$1 has a fixed maximum supply of 10,000,000 tokens on the TON blockchain, with no additional issuance. The supply is allocated across six buckets as shown below.</p>
+      <div class="t-wrap"><table class="t">
+        <thead><tr><th scope="col" data-i18n="wp.c6.bt.h1">Field</th><th scope="col" data-i18n="wp.c6.bt.h2">Value</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="wp.c6.bt.1.1">Token name</td><td>1DOLLAR ($1)</td></tr>
+          <tr><td data-i18n="wp.c6.bt.2.1">Network</td><td>TON Blockchain</td></tr>
+          <tr><td data-i18n="wp.c6.bt.3.1">Total supply</td><td>10,000,000 $1</td></tr>
+          <tr><td data-i18n="wp.c6.bt.4.1">Issuance</td><td data-i18n="wp.c6.bt.4.2">No additional issuance — a scarce digital dollar</td></tr>
+        </tbody>
+      </table></div>
+      <div class="t-wrap"><table class="t">
+        <thead><tr><th scope="col" data-i18n="wp.c6.t2.h1">Bucket</th><th scope="col" data-i18n="wp.c6.t2.h2">Share</th><th scope="col" data-i18n="wp.c6.t2.h3">Quantity</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tkx-sw" style="background:#16A34A"></span><span data-i18n="wp.c6.t2.1.1">Mining Pool</span></td><td class="mono">25%</td><td class="mono">2,500,000</td></tr>
+          <tr><td><span class="tkx-sw" style="background:#F5B547"></span><span data-i18n="wp.c6.t2.2.1">Ecosystem Fund</span></td><td class="mono">23%</td><td class="mono">2,300,000</td></tr>
+          <tr><td><span class="tkx-sw" style="background:#22C2C0"></span><span data-i18n="wp.c6.t2.3.1">Team / Development</span></td><td class="mono">17%</td><td class="mono">1,700,000</td></tr>
+          <tr><td><span class="tkx-sw" style="background:#3B82F6"></span><span data-i18n="wp.c6.t2.4.1">Liquidity / Exchange</span></td><td class="mono">15%</td><td class="mono">1,500,000</td></tr>
+          <tr><td><span class="tkx-sw" style="background:#A87CF5"></span><span data-i18n="wp.c6.t2.5.1">Marketing / Partnerships</span></td><td class="mono">10%</td><td class="mono">1,000,000</td></tr>
+          <tr><td><span class="tkx-sw" style="background:#FF6B5B"></span><span data-i18n="wp.c6.t2.6.1">Presale</span></td><td class="mono">10%</td><td class="mono">1,000,000</td></tr>
+        </tbody>
+      </table></div>
+      <p class="tkx-vest" data-i18n="wp.c6.vest">Vesting and release schedules are published as each bucket activates.</p>
+
+      <figure class="svg-fig tkx-fig">
+        <svg viewBox="0 0 200 200" role="img" aria-labelledby="tkx-wp-t tkx-wp-d">
+          <title id="tkx-wp-t" data-i18n-svg="wp.c6.fig">Figure 6.1 — Token distribution</title>
+          <desc id="tkx-wp-d" data-i18n-svg="wp.c6.fig.desc">Donut chart of the 10,000,000 $1 supply: Mining Pool 25%, Ecosystem Fund 23%, Team / Development 17%, Liquidity / Exchange 15%, Marketing / Partnerships 10%, Presale 10%.</desc>
+          <g transform="rotate(-90 100 100)" fill="none" stroke-width="30">
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#16A34A" stroke-dasharray="25 75" stroke-dashoffset="0"/>
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#F5B547" stroke-dasharray="23 77" stroke-dashoffset="-25"/>
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#22C2C0" stroke-dasharray="17 83" stroke-dashoffset="-48"/>
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#3B82F6" stroke-dasharray="15 85" stroke-dashoffset="-65"/>
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#A87CF5" stroke-dasharray="10 90" stroke-dashoffset="-80"/>
+            <circle cx="100" cy="100" r="80" pathLength="100" stroke="#FF6B5B" stroke-dasharray="10 90" stroke-dashoffset="-90"/>
+          </g>
+          <text class="tkx-ctr-1" x="100" y="95" text-anchor="middle">10,000,000</text>
+          <text class="tkx-ctr-2" x="100" y="112" text-anchor="middle">$1</text>
+        </svg>
+        <figcaption data-i18n="wp.c6.fig">Figure 6.1 — Token distribution</figcaption>
+      </figure>
+
       <div class="callout c-risk"><b data-i18n="wp.c6.cal.t">Disclaimer</b><span data-i18n="wp.c6.cal.p">$1 is a utility token.</span></div>
     </section>
 
@@ -775,7 +827,7 @@
         <li data-i18n="wp.c12.r3">ONEWALLET homepage and product brief — companion materials.</li>
       </ul>
       <h3 data-i18n="wp.c12.h3">Document control</h3>
-      <p class="mono" style="font-size:13px;color:var(--fg-subtle);" data-i18n="wp.c12.ctl">v1.0 · May 2026 · Official Release · Approved by Product, Security, Legal, and Partnerships</p>
+      <p class="mono" style="font-size:13px;color:var(--fg-subtle);" data-i18n="wp.c12.ctl">v1.1 Draft · May 2026 · Tokenomics pending token / legal sign-off</p>
     </section>
 
   </article>
@@ -783,7 +835,7 @@
 
 <footer class="doc-foot">
   <div class="foot-inner">
-    <span data-i18n="wp.foot.copy">© 2026 ONEWALLET · Whitepaper v1.0 · Not financial advice.</span>
+    <span data-i18n="wp.foot.copy">© 2026 ONEWALLET · Whitepaper v1.1 Draft · Not financial advice.</span>
     <span class="foot-social" aria-label="ONEWALLET community channels" data-i18n-attr="aria-label:foot.social.aria">
       <a class="sns" href="https://t.me/onedollar_project" target="_blank" rel="noopener noreferrer" aria-label="ONEWALLET on Telegram" data-i18n-attr="aria-label:foot.social.tg">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.42 18.6 20.18c-.25 1.12-.92 1.39-1.87.86l-5.17-3.82-2.49 2.4c-.28.28-.51.51-1.04.51l.37-5.26 9.55-8.63c.41-.37-.09-.58-.65-.21L5.5 13.05.43 11.46c-1.1-.34-1.13-1.1.23-1.62L20.51 3c.92-.34 1.72.22 1.43 1.42z"/></svg>
