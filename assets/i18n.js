@@ -55,7 +55,7 @@ window.I18N = (function () {
 
     /* === Homepage === */
     'nav.users': 'For users', 'nav.investors': 'For investors', 'nav.partners': 'For merchants',
-    'nav.security': 'Security', 'nav.roadmap': 'Roadmap', 'nav.whitepaper': 'Whitepaper',
+    'nav.security': 'Security', 'nav.tokenomics': 'Tokenomics', 'nav.roadmap': 'Roadmap', 'nav.whitepaper': 'Whitepaper',
 
     'hero.eb': 'A Telegram-native financial layer',
     'hero.h': 'Telegram-native finance,<br>built for the <em>$1 ecosystem</em>.',
@@ -125,9 +125,17 @@ window.I18N = (function () {
     'tok.3.h': 'Merchant incentives', 'tok.3.p': 'Settle in stablecoin; top-up $1 to lower acceptance fees.',
     'tok.4.h': 'Ecosystem access', 'tok.4.p': 'Unlock premium mini-apps, partner perks, and early features.',
     'tok.5.h': 'Governance signals', 'tok.5.p': 'Vote on rewards, fee curves, and ecosystem listings.',
-    'tok.6.h': 'Supply discipline', 'tok.6.p': 'Capped supply, transparent vesting, and a milestone-locked ecosystem reserve.',
+    'tok.6.h': 'Supply discipline', 'tok.6.p': 'Fixed cap of 10,000,000 $1 with no additional issuance; release schedules are published as each allocation activates.',
     'tok.disc.t': 'Disclaimer',
     'tok.disc.p': '$1 is a utility token. ONEWALLET makes no promises of price appreciation, returns, or exchange listings. Final tokenomics are subject to legal review.',
+    'tok.tk.eb': '$1 Tokenomics',
+    'tok.tk.h': 'A fixed-supply digital dollar.',
+    'tok.tk.supply': 'Fixed cap of 10,000,000 $1 with no additional issuance — a scarce digital dollar built on the TON blockchain.',
+    'tok.basics.name': 'Token name', 'tok.basics.net': 'Network', 'tok.basics.total': 'Total supply', 'tok.basics.issue': 'Issuance',
+    'tok.issue.val': 'No additional issuance',
+    'tok.dist.h': 'Token distribution',
+    'tok.dist.sub': 'Allocation of the fixed 10,000,000 $1 supply.',
+    'tok.dist.mining': 'Mining Pool', 'tok.dist.eco': 'Ecosystem Fund', 'tok.dist.team': 'Team / Development', 'tok.dist.liquidity': 'Liquidity / Exchange', 'tok.dist.marketing': 'Marketing / Partnerships', 'tok.dist.presale': 'Presale',
 
     'fly.eb': 'Ecosystem flywheel',
     'fly.h': 'Wallets become commerce.<br>Commerce becomes ecosystem.',
@@ -183,12 +191,12 @@ window.I18N = (function () {
     'foot.social.tg': 'ONEWALLET on Telegram', 'foot.social.x': 'ONEWALLET on X', 'foot.social.yt': 'ONEWALLET on YouTube', 'foot.social.fb': 'ONEWALLET on Facebook',
 
     /* === Whitepaper === */
-    'wp.bar.wpv': 'Whitepaper · v1.0',
+    'wp.bar.wpv': 'Whitepaper · v1.1 Draft',
     'wp.bar.updated': 'Updated May 2026',
-    'wp.title.eb': 'Technical &amp; product whitepaper · v1.0',
+    'wp.title.eb': 'Technical &amp; product whitepaper · v1.1 Draft',
     'wp.title.h': 'The Telegram-native <em>wallet</em>,<br>payment rail, and ecosystem.',
     'wp.title.sub': 'ONEWALLET is a keyless MPC wallet, payment network, and token economy designed to make Web3 finance work like sending a message inside Telegram.',
-    'wp.m.v': 'Version', 'wp.mv': '1.0 · May 2026',
+    'wp.m.v': 'Version', 'wp.mv': '1.1 Draft · May 2026',
     'wp.m.a': 'Audience', 'wp.ma': 'Users · Investors · Partners',
     'wp.m.s': 'Status', 'wp.ms': 'Pre-mainnet · Private testing',
     'wp.m.l': 'Languages', 'wp.ml': 'EN · KO · JA · ZH',
@@ -197,7 +205,7 @@ window.I18N = (function () {
     'wp.notice.text': 'Whitepaper body translation is supported on this page — content is now showing in the selected language.',
 
     'wp.ch.1': 'Executive summary', 'wp.ch.2': 'Product thesis', 'wp.ch.3': 'User experience',
-    'wp.ch.4': 'Technical architecture', 'wp.ch.5': 'Security model', 'wp.ch.6': 'Token model',
+    'wp.ch.4': 'Technical architecture', 'wp.ch.5': 'Security model', 'wp.ch.6': 'Token model & Tokenomics',
     'wp.ch.7': 'Growth model', 'wp.ch.8': 'Business model', 'wp.ch.9': 'Roadmap',
     'wp.ch.10': 'Team & governance', 'wp.ch.11': 'Risks & mitigations', 'wp.ch.12': 'Appendix',
 
@@ -295,15 +303,21 @@ window.I18N = (function () {
     'wp.c6.t1.3.1': 'Merchant incentives', 'wp.c6.t1.3.2': '$1 top-up lowers acceptance fees.', 'wp.c6.t1.3.3': 'Designed',
     'wp.c6.t1.4.1': 'Ecosystem access', 'wp.c6.t1.4.2': 'Unlock premium mini-apps and partner perks.', 'wp.c6.t1.4.3': 'Planned',
     'wp.c6.t1.5.1': 'Governance signal', 'wp.c6.t1.5.2': 'Vote on rewards, fee curves, listings.', 'wp.c6.t1.5.3': 'Planned',
-    'wp.c6.h2': 'Indicative allocation',
-    'wp.c6.note': 'Percentages are placeholder until token / legal review completes.',
-    'wp.c6.t2.h1': 'Bucket', 'wp.c6.t2.h2': 'Share', 'wp.c6.t2.h3': 'Vesting',
-    'wp.c6.t2.1.1': 'Ecosystem & rewards', 'wp.c6.t2.1.3': 'Released against verifiable on-chain activity',
-    'wp.c6.t2.2.1': 'Team & advisors', 'wp.c6.t2.2.3': '4-year vest, 1-year cliff',
-    'wp.c6.t2.3.1': 'Treasury', 'wp.c6.t2.3.3': 'DAO-controlled after governance live',
-    'wp.c6.t2.4.1': 'Strategic partners', 'wp.c6.t2.4.3': 'Bespoke, milestone-locked',
-    'wp.c6.t2.5.1': 'Liquidity', 'wp.c6.t2.5.3': 'Pool seeding and market depth',
-    'wp.c6.t2.6.1': 'Public & community', 'wp.c6.t2.6.3': 'Phased distribution',
+    'wp.c6.h2': 'Tokenomics',
+    'wp.c6.tk.p': '$1 has a fixed maximum supply of 10,000,000 tokens on the TON blockchain, with no additional issuance. The supply is allocated across six buckets as shown below.',
+    'wp.c6.bt.h1': 'Field', 'wp.c6.bt.h2': 'Value',
+    'wp.c6.bt.1.1': 'Token name', 'wp.c6.bt.2.1': 'Network', 'wp.c6.bt.3.1': 'Total supply',
+    'wp.c6.bt.4.1': 'Issuance', 'wp.c6.bt.4.2': 'No additional issuance — a scarce digital dollar',
+    'wp.c6.t2.h1': 'Bucket', 'wp.c6.t2.h2': 'Share', 'wp.c6.t2.h3': 'Quantity',
+    'wp.c6.t2.1.1': 'Mining Pool',
+    'wp.c6.t2.2.1': 'Ecosystem Fund',
+    'wp.c6.t2.3.1': 'Team / Development',
+    'wp.c6.t2.4.1': 'Liquidity / Exchange',
+    'wp.c6.t2.5.1': 'Marketing / Partnerships',
+    'wp.c6.t2.6.1': 'Presale',
+    'wp.c6.vest': 'Vesting and release schedules are published as each bucket activates.',
+    'wp.c6.fig': 'Figure 6.1 — Token distribution',
+    'wp.c6.fig.desc': 'Donut chart of the 10,000,000 $1 supply: Mining Pool 25%, Ecosystem Fund 23%, Team / Development 17%, Liquidity / Exchange 15%, Marketing / Partnerships 10%, Presale 10%.',
     'wp.c6.cal.t': 'Disclaimer',
     'wp.c6.cal.p': '$1 is a utility token. ONEWALLET does not promise price appreciation, returns, exchange listings, or any specific economic outcome. Final tokenomics are subject to legal review.',
 
@@ -370,9 +384,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC academic literature — threshold cryptography fundamentals.',
     'wp.c12.r3': 'ONEWALLET homepage and product brief — companion materials.',
     'wp.c12.h3': 'Document control',
-    'wp.c12.ctl': 'v1.0 · May 2026 · Official Release · Approved by Product, Security, Legal, and Partnerships',
+    'wp.c12.ctl': 'v1.1 Draft · May 2026 · Tokenomics pending token / legal sign-off',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · Whitepaper v1.0 · Not financial advice.'
+    'wp.foot.copy': '© 2026 ONEWALLET · Whitepaper v1.1 Draft · Not financial advice.'
   };
 
   /* ============ KOREAN ============ */
@@ -394,7 +408,7 @@ window.I18N = (function () {
     'lang.en': 'English', 'lang.ko': '한국어', 'lang.ja': '日本語', 'lang.zh': '中文',
 
     'nav.users': '사용자', 'nav.investors': '투자자', 'nav.partners': '가맹점',
-    'nav.security': '보안', 'nav.roadmap': '로드맵', 'nav.whitepaper': '백서',
+    'nav.security': '보안', 'nav.tokenomics': '토크노믹스', 'nav.roadmap': '로드맵', 'nav.whitepaper': '백서',
 
     'hero.eb': '텔레그램 네이티브 금융 레이어',
     'hero.h': '텔레그램에서 시작하는 금융,<br><em>$1 에코시스템</em>을 위한 설계.',
@@ -464,9 +478,17 @@ window.I18N = (function () {
     'tok.3.h': '가맹점 인센티브', 'tok.3.p': '스테이블코인으로 정산, $1 충전으로 가맹점 수수료 절감.',
     'tok.4.h': '에코시스템 접근', 'tok.4.p': '프리미엄 미니 앱, 파트너 혜택, 얼리 액세스 잠금 해제.',
     'tok.5.h': '거버넌스 시그널', 'tok.5.p': '보상, 수수료 곡선, 에코시스템 상장에 투표.',
-    'tok.6.h': '공급 규율', 'tok.6.p': '제한된 공급, 투명한 베스팅, 마일스톤 기반 에코시스템 리저브.',
+    'tok.6.h': '공급 규율', 'tok.6.p': '10,000,000 $1의 고정 상한, 추가 발행 없음; 해제 일정은 각 배분이 활성화될 때 공개됩니다.',
     'tok.disc.t': '면책',
     'tok.disc.p': '$1은 유틸리티 토큰입니다. ONEWALLET은 가격 상승, 수익, 거래소 상장을 약속하지 않습니다. 최종 토코노믹스는 법률 검토 대상입니다.',
+    'tok.tk.eb': '$1 토크노믹스',
+    'tok.tk.h': '고정 공급량의 디지털 달러.',
+    'tok.tk.supply': '10,000,000 $1의 고정 상한, 추가 발행 없음 — TON 블록체인 위에 구축된 희소한 디지털 달러입니다.',
+    'tok.basics.name': '토큰 이름', 'tok.basics.net': '네트워크', 'tok.basics.total': '총 공급량', 'tok.basics.issue': '발행',
+    'tok.issue.val': '추가 발행 없음',
+    'tok.dist.h': '토큰 배분',
+    'tok.dist.sub': '고정된 10,000,000 $1 공급량의 배분.',
+    'tok.dist.mining': '마이닝 풀', 'tok.dist.eco': '에코시스템 펀드', 'tok.dist.team': '팀 / 개발', 'tok.dist.liquidity': '유동성 / 거래소', 'tok.dist.marketing': '마케팅 / 파트너십', 'tok.dist.presale': '프리세일',
 
     'fly.eb': '에코시스템 플라이휠',
     'fly.h': '지갑은 커머스가 되고,<br>커머스는 에코시스템이 됩니다.',
@@ -522,12 +544,12 @@ window.I18N = (function () {
     'foot.social.tg': 'Telegram의 ONEWALLET', 'foot.social.x': 'X의 ONEWALLET', 'foot.social.yt': 'YouTube의 ONEWALLET', 'foot.social.fb': 'Facebook의 ONEWALLET',
 
     /* Whitepaper KO */
-    'wp.bar.wpv': '백서 · v1.0',
+    'wp.bar.wpv': '백서 · v1.1 Draft',
     'wp.bar.updated': '2026년 5월 업데이트',
-    'wp.title.eb': '기술 및 제품 백서 · v1.0',
+    'wp.title.eb': '기술 및 제품 백서 · v1.1 Draft',
     'wp.title.h': '텔레그램 네이티브 <em>지갑</em>,<br>결제 레일, 그리고 에코시스템.',
     'wp.title.sub': 'ONEWALLET은 시드 구문 없는 MPC 지갑, 결제 네트워크, 토큰 경제를 결합해 Web3 금융을 텔레그램에서 메시지를 보내듯 단순하게 만듭니다.',
-    'wp.m.v': '버전', 'wp.mv': '1.0 · 2026년 5월',
+    'wp.m.v': '버전', 'wp.mv': '1.1 Draft · 2026년 5월',
     'wp.m.a': '대상', 'wp.ma': '사용자 · 투자자 · 파트너',
     'wp.m.s': '상태', 'wp.ms': '메인넷 이전 · 비공개 테스트',
     'wp.m.l': '언어', 'wp.ml': 'EN · KO · JA · ZH',
@@ -536,7 +558,7 @@ window.I18N = (function () {
     'wp.notice.text': '본 페이지는 백서 본문 다국어 보기를 지원합니다 — 선택한 언어로 표시 중입니다.',
 
     'wp.ch.1': '요약', 'wp.ch.2': '제품 논거', 'wp.ch.3': '사용자 경험',
-    'wp.ch.4': '기술 아키텍처', 'wp.ch.5': '보안 모델', 'wp.ch.6': '토큰 모델',
+    'wp.ch.4': '기술 아키텍처', 'wp.ch.5': '보안 모델', 'wp.ch.6': '토큰 모델 및 토크노믹스',
     'wp.ch.7': '성장 모델', 'wp.ch.8': '사업 모델', 'wp.ch.9': '로드맵',
     'wp.ch.10': '팀 및 거버넌스', 'wp.ch.11': '위험 및 대응', 'wp.ch.12': '부록',
     'wp.chnum': '챕터',
@@ -625,15 +647,21 @@ window.I18N = (function () {
     'wp.c6.t1.3.1': '가맹점 인센티브', 'wp.c6.t1.3.2': '$1 충전으로 수락 수수료 감면.', 'wp.c6.t1.3.3': '설계됨',
     'wp.c6.t1.4.1': '에코시스템 접근', 'wp.c6.t1.4.2': '프리미엄 미니 앱 및 파트너 혜택 잠금 해제.', 'wp.c6.t1.4.3': '예정',
     'wp.c6.t1.5.1': '거버넌스 시그널', 'wp.c6.t1.5.2': '보상, 수수료 곡선, 상장 투표.', 'wp.c6.t1.5.3': '예정',
-    'wp.c6.h2': '잠정 배분',
-    'wp.c6.note': '비율은 토큰·법률 검토 완료 시까지 임시 값입니다.',
-    'wp.c6.t2.h1': '구분', 'wp.c6.t2.h2': '비중', 'wp.c6.t2.h3': '베스팅',
-    'wp.c6.t2.1.1': '에코시스템 및 보상', 'wp.c6.t2.1.3': '검증 가능한 온체인 활동에 따라 해제',
-    'wp.c6.t2.2.1': '팀 및 자문', 'wp.c6.t2.2.3': '4년 베스팅, 1년 클리프',
-    'wp.c6.t2.3.1': '재무', 'wp.c6.t2.3.3': '거버넌스 가동 후 DAO 통제',
-    'wp.c6.t2.4.1': '전략 파트너', 'wp.c6.t2.4.3': '맞춤형 · 마일스톤 잠금',
-    'wp.c6.t2.5.1': '유동성', 'wp.c6.t2.5.3': '풀 시딩 및 시장 심도',
-    'wp.c6.t2.6.1': '공개 및 커뮤니티', 'wp.c6.t2.6.3': '단계적 분배',
+    'wp.c6.h2': '토크노믹스',
+    'wp.c6.tk.p': '$1은 TON 블록체인에서 최대 공급량이 10,000,000 토큰으로 고정되어 있으며, 추가 발행은 없습니다. 공급량은 아래와 같이 6개 버킷에 배분됩니다.',
+    'wp.c6.bt.h1': '항목', 'wp.c6.bt.h2': '값',
+    'wp.c6.bt.1.1': '토큰 이름', 'wp.c6.bt.2.1': '네트워크', 'wp.c6.bt.3.1': '총 공급량',
+    'wp.c6.bt.4.1': '발행', 'wp.c6.bt.4.2': '추가 발행 없음 — 희소한 디지털 달러',
+    'wp.c6.t2.h1': '구분', 'wp.c6.t2.h2': '비중', 'wp.c6.t2.h3': '수량',
+    'wp.c6.t2.1.1': '마이닝 풀',
+    'wp.c6.t2.2.1': '에코시스템 펀드',
+    'wp.c6.t2.3.1': '팀 / 개발',
+    'wp.c6.t2.4.1': '유동성 / 거래소',
+    'wp.c6.t2.5.1': '마케팅 / 파트너십',
+    'wp.c6.t2.6.1': '프리세일',
+    'wp.c6.vest': '베스팅 및 해제 일정은 각 버킷이 활성화될 때 공개됩니다.',
+    'wp.c6.fig': '그림 6.1 — 토큰 배분',
+    'wp.c6.fig.desc': '10,000,000 $1 공급량의 도넛 차트: 마이닝 풀 25%, 에코시스템 펀드 23%, 팀 / 개발 17%, 유동성 / 거래소 15%, 마케팅 / 파트너십 10%, 프리세일 10%.',
     'wp.c6.cal.t': '면책',
     'wp.c6.cal.p': '$1은 유틸리티 토큰입니다. ONEWALLET은 가격 상승, 수익, 거래소 상장, 특정 경제적 결과를 약속하지 않습니다. 최종 토코노믹스는 법률 검토 대상입니다.',
 
@@ -693,9 +721,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC 학술 문헌 — 임계 암호학 기초.',
     'wp.c12.r3': 'ONEWALLET 홈페이지 및 제품 브리프 — 동반 자료.',
     'wp.c12.h3': '문서 관리',
-    'wp.c12.ctl': 'v1.0 · 2026년 5월 · 공식 출시 · 제품·보안·법무·파트너십 승인',
+    'wp.c12.ctl': 'v1.1 Draft · 2026년 5월 · 토크노믹스 토큰·법무 승인 대기 중',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · 백서 v1.0 · 투자 자문이 아닙니다.'
+    'wp.foot.copy': '© 2026 ONEWALLET · 백서 v1.1 Draft · 투자 자문이 아닙니다.'
   };
 
   /* ============ JAPANESE ============ */
@@ -717,7 +745,7 @@ window.I18N = (function () {
     'lang.en': 'English', 'lang.ko': '한국어', 'lang.ja': '日本語', 'lang.zh': '中文',
 
     'nav.users': '個人', 'nav.investors': '投資家', 'nav.partners': '加盟店',
-    'nav.security': 'セキュリティ', 'nav.roadmap': 'ロードマップ', 'nav.whitepaper': 'ホワイトペーパー',
+    'nav.security': 'セキュリティ', 'nav.tokenomics': 'トケノミクス', 'nav.roadmap': 'ロードマップ', 'nav.whitepaper': 'ホワイトペーパー',
 
     'hero.eb': 'Telegramネイティブの金融レイヤー',
     'hero.h': 'Telegram発の金融を、<br><em>$1エコシステム</em>のために。',
@@ -787,9 +815,17 @@ window.I18N = (function () {
     'tok.3.h': '加盟店インセンティブ', 'tok.3.p': 'ステーブルコイン決済、$1チャージで受領手数料を削減。',
     'tok.4.h': 'エコシステムアクセス', 'tok.4.p': 'プレミアムミニアプリ、パートナー特典、早期機能を解放。',
     'tok.5.h': 'ガバナンスシグナル', 'tok.5.p': '報酬、手数料カーブ、上場に投票。',
-    'tok.6.h': '供給規律', 'tok.6.p': '上限付き供給、透明なベスティング、マイルストーン連動のエコシステム準備金。',
+    'tok.6.h': '供給規律', 'tok.6.p': '10,000,000 $1の固定上限、追加発行なし。解放スケジュールは各配分の稼働時に公開されます。',
     'tok.disc.t': '免責事項',
     'tok.disc.p': '$1はユーティリティトークンです。ONEWALLETは価格上昇、利益、取引所上場を約束しません。最終的なトケノミクスは法務レビューの対象です。',
+    'tok.tk.eb': '$1 トケノミクス',
+    'tok.tk.h': '供給量が固定されたデジタルドル。',
+    'tok.tk.supply': '10,000,000 $1の固定上限、追加発行なし — TONブロックチェーン上に構築された希少なデジタルドルです。',
+    'tok.basics.name': 'トークン名', 'tok.basics.net': 'ネットワーク', 'tok.basics.total': '総供給量', 'tok.basics.issue': '発行',
+    'tok.issue.val': '追加発行なし',
+    'tok.dist.h': 'トークン配分',
+    'tok.dist.sub': '固定された10,000,000 $1供給量の配分。',
+    'tok.dist.mining': 'マイニングプール', 'tok.dist.eco': 'エコシステムファンド', 'tok.dist.team': 'チーム / 開発', 'tok.dist.liquidity': '流動性 / 取引所', 'tok.dist.marketing': 'マーケティング / パートナーシップ', 'tok.dist.presale': 'プレセール',
 
     'fly.eb': 'エコシステムフライホイール',
     'fly.h': 'ウォレットは商取引になり、<br>商取引はエコシステムになる。',
@@ -845,12 +881,12 @@ window.I18N = (function () {
     'foot.social.tg': 'Telegram の ONEWALLET', 'foot.social.x': 'X の ONEWALLET', 'foot.social.yt': 'YouTube の ONEWALLET', 'foot.social.fb': 'Facebook の ONEWALLET',
 
     /* Whitepaper JA */
-    'wp.bar.wpv': 'ホワイトペーパー · v1.0',
+    'wp.bar.wpv': 'ホワイトペーパー · v1.1 Draft',
     'wp.bar.updated': '2026年5月更新',
-    'wp.title.eb': '技術・製品ホワイトペーパー · v1.0',
+    'wp.title.eb': '技術・製品ホワイトペーパー · v1.1 Draft',
     'wp.title.h': 'Telegram ネイティブの<br><em>ウォレット</em>・決済レール、<br>そしてエコシステム。',
     'wp.title.sub': 'ONEWALLETは、シードフレーズ不要のMPCウォレット、決済ネットワーク、トークンエコノミーを組み合わせ、Web3金融をTelegramのメッセージのように扱えるようにします。',
-    'wp.m.v': 'バージョン', 'wp.mv': '1.0 · 2026年5月',
+    'wp.m.v': 'バージョン', 'wp.mv': '1.1 Draft · 2026年5月',
     'wp.m.a': '対象', 'wp.ma': 'ユーザー · 投資家 · パートナー',
     'wp.m.s': 'ステータス', 'wp.ms': 'メインネット前 · 非公開テスト',
     'wp.m.l': '言語', 'wp.ml': 'EN · KO · JA · ZH',
@@ -859,7 +895,7 @@ window.I18N = (function () {
     'wp.notice.text': 'このページはホワイトペーパー本文の多言語表示に対応しています — 選択した言語で表示されています。',
 
     'wp.ch.1': 'エグゼクティブサマリー', 'wp.ch.2': 'プロダクト論', 'wp.ch.3': 'ユーザー体験',
-    'wp.ch.4': '技術アーキテクチャ', 'wp.ch.5': 'セキュリティモデル', 'wp.ch.6': 'トークンモデル',
+    'wp.ch.4': '技術アーキテクチャ', 'wp.ch.5': 'セキュリティモデル', 'wp.ch.6': 'トークンモデルとトケノミクス',
     'wp.ch.7': '成長モデル', 'wp.ch.8': '事業モデル', 'wp.ch.9': 'ロードマップ',
     'wp.ch.10': 'チームとガバナンス', 'wp.ch.11': 'リスクと対策', 'wp.ch.12': '付録',
     'wp.chnum': '章',
@@ -948,15 +984,21 @@ window.I18N = (function () {
     'wp.c6.t1.3.1': '加盟店インセンティブ', 'wp.c6.t1.3.2': '$1チャージで受領手数料を削減。', 'wp.c6.t1.3.3': '設計済',
     'wp.c6.t1.4.1': 'エコシステムアクセス', 'wp.c6.t1.4.2': 'プレミアムミニアプリやパートナー特典を解放。', 'wp.c6.t1.4.3': '予定',
     'wp.c6.t1.5.1': 'ガバナンスシグナル', 'wp.c6.t1.5.2': '報酬、手数料カーブ、上場に投票。', 'wp.c6.t1.5.3': '予定',
-    'wp.c6.h2': '暫定配分',
-    'wp.c6.note': 'パーセンテージはトークン・法務レビュー完了までの暫定値です。',
-    'wp.c6.t2.h1': 'バケット', 'wp.c6.t2.h2': 'シェア', 'wp.c6.t2.h3': 'ベスティング',
-    'wp.c6.t2.1.1': 'エコシステムと報酬', 'wp.c6.t2.1.3': '検証可能なオンチェーン活動に応じて解放',
-    'wp.c6.t2.2.1': 'チームとアドバイザー', 'wp.c6.t2.2.3': '4年ベスティング・1年クリフ',
-    'wp.c6.t2.3.1': 'トレジャリー', 'wp.c6.t2.3.3': 'ガバナンス稼働後DAO制御',
-    'wp.c6.t2.4.1': '戦略パートナー', 'wp.c6.t2.4.3': '個別 · マイルストーンロック',
-    'wp.c6.t2.5.1': '流動性', 'wp.c6.t2.5.3': 'プールシーディングと市場深度',
-    'wp.c6.t2.6.1': '公開・コミュニティ', 'wp.c6.t2.6.3': '段階的配布',
+    'wp.c6.h2': 'トケノミクス',
+    'wp.c6.tk.p': '$1はTONブロックチェーン上で最大供給量が10,000,000トークンに固定されており、追加発行はありません。供給量は以下のとおり6つのバケットに配分されます。',
+    'wp.c6.bt.h1': '項目', 'wp.c6.bt.h2': '値',
+    'wp.c6.bt.1.1': 'トークン名', 'wp.c6.bt.2.1': 'ネットワーク', 'wp.c6.bt.3.1': '総供給量',
+    'wp.c6.bt.4.1': '発行', 'wp.c6.bt.4.2': '追加発行なし — 希少なデジタルドル',
+    'wp.c6.t2.h1': 'バケット', 'wp.c6.t2.h2': 'シェア', 'wp.c6.t2.h3': '数量',
+    'wp.c6.t2.1.1': 'マイニングプール',
+    'wp.c6.t2.2.1': 'エコシステムファンド',
+    'wp.c6.t2.3.1': 'チーム / 開発',
+    'wp.c6.t2.4.1': '流動性 / 取引所',
+    'wp.c6.t2.5.1': 'マーケティング / パートナーシップ',
+    'wp.c6.t2.6.1': 'プレセール',
+    'wp.c6.vest': 'ベスティングおよび解放スケジュールは各バケットの稼働時に公開されます。',
+    'wp.c6.fig': '図6.1 — トークン配分',
+    'wp.c6.fig.desc': '10,000,000 $1供給量のドーナツチャート：マイニングプール25%、エコシステムファンド23%、チーム / 開発17%、流動性 / 取引所15%、マーケティング / パートナーシップ10%、プレセール10%。',
     'wp.c6.cal.t': '免責事項',
     'wp.c6.cal.p': '$1はユーティリティトークンです。ONEWALLETは価格上昇、利益、取引所上場、特定の経済結果を約束しません。最終的なトケノミクスは法務レビューの対象です。',
 
@@ -1016,9 +1058,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC学術文献 — 閾値暗号の基礎。',
     'wp.c12.r3': 'ONEWALLETホームページとプロダクトブリーフ — 関連資料。',
     'wp.c12.h3': '文書管理',
-    'wp.c12.ctl': 'v1.0 · 2026年5月 · 正式リリース · プロダクト・セキュリティ・法務・パートナーシップ承認',
+    'wp.c12.ctl': 'v1.1 Draft · 2026年5月 · トケノミクスはトークン・法務承認待ち',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · ホワイトペーパー v1.0 · 投資助言ではありません。'
+    'wp.foot.copy': '© 2026 ONEWALLET · ホワイトペーパー v1.1 Draft · 投資助言ではありません。'
   };
 
   /* ============ CHINESE (Simplified) ============ */
@@ -1040,7 +1082,7 @@ window.I18N = (function () {
     'lang.en': 'English', 'lang.ko': '한국어', 'lang.ja': '日本語', 'lang.zh': '中文',
 
     'nav.users': '个人用户', 'nav.investors': '投资者', 'nav.partners': '商户',
-    'nav.security': '安全', 'nav.roadmap': '路线图', 'nav.whitepaper': '白皮书',
+    'nav.security': '安全', 'nav.tokenomics': '代币经济学', 'nav.roadmap': '路线图', 'nav.whitepaper': '白皮书',
 
     'hero.eb': '面向 Telegram 的金融层',
     'hero.h': '源自 Telegram 的金融,<br>为 <em>$1 生态</em> 而生。',
@@ -1110,9 +1152,17 @@ window.I18N = (function () {
     'tok.3.h': '商户激励', 'tok.3.p': '以稳定币结算;充值 $1 以降低受理费。',
     'tok.4.h': '生态访问', 'tok.4.p': '解锁高级小程序、合作伙伴福利与抢先功能。',
     'tok.5.h': '治理信号', 'tok.5.p': '对奖励、费用曲线与生态上线进行投票。',
-    'tok.6.h': '供应纪律', 'tok.6.p': '总量封顶、透明归属与按里程碑锁仓的生态储备。',
+    'tok.6.h': '供应纪律', 'tok.6.p': '固定上限 10,000,000 $1,无额外发行;释放计划将在各分配启动时公布。',
     'tok.disc.t': '免责声明',
     'tok.disc.p': '$1 是效用型代币。ONEWALLET 不承诺价格上涨、收益或交易所上线。最终代币经济学受法律审查。',
+    'tok.tk.eb': '$1 代币经济学',
+    'tok.tk.h': '供应量固定的数字美元。',
+    'tok.tk.supply': '固定上限 10,000,000 $1,无额外发行 — 构建于 TON 区块链之上的稀缺数字美元。',
+    'tok.basics.name': '代币名称', 'tok.basics.net': '网络', 'tok.basics.total': '总供应量', 'tok.basics.issue': '发行',
+    'tok.issue.val': '无额外发行',
+    'tok.dist.h': '代币分配',
+    'tok.dist.sub': '固定 10,000,000 $1 供应量的分配。',
+    'tok.dist.mining': '挖矿池', 'tok.dist.eco': '生态基金', 'tok.dist.team': '团队 / 开发', 'tok.dist.liquidity': '流动性 / 交易所', 'tok.dist.marketing': '市场 / 合作伙伴', 'tok.dist.presale': '预售',
 
     'fly.eb': '生态飞轮',
     'fly.h': '钱包变成商业,<br>商业变成生态。',
@@ -1168,12 +1218,12 @@ window.I18N = (function () {
     'foot.social.tg': 'Telegram 上的 ONEWALLET', 'foot.social.x': 'X 上的 ONEWALLET', 'foot.social.yt': 'YouTube 上的 ONEWALLET', 'foot.social.fb': 'Facebook 上的 ONEWALLET',
 
     /* Whitepaper ZH */
-    'wp.bar.wpv': '白皮书 · v1.0',
+    'wp.bar.wpv': '白皮书 · v1.1 Draft',
     'wp.bar.updated': '2026 年 5 月更新',
-    'wp.title.eb': '技术与产品白皮书 · v1.0',
+    'wp.title.eb': '技术与产品白皮书 · v1.1 Draft',
     'wp.title.h': '原生于 Telegram 的<em>钱包</em>、<br>支付通道与生态系统。',
     'wp.title.sub': 'ONEWALLET 将无种子短语的 MPC 钱包、支付网络与代币经济结合,让 Web3 金融像在 Telegram 中发送消息一样简单。',
-    'wp.m.v': '版本', 'wp.mv': '1.0 · 2026年5月',
+    'wp.m.v': '版本', 'wp.mv': '1.1 Draft · 2026年5月',
     'wp.m.a': '受众', 'wp.ma': '用户 · 投资者 · 合作伙伴',
     'wp.m.s': '状态', 'wp.ms': '主网前 · 私测中',
     'wp.m.l': '语言', 'wp.ml': 'EN · KO · JA · ZH',
@@ -1182,7 +1232,7 @@ window.I18N = (function () {
     'wp.notice.text': '本页支持白皮书正文多语言显示 — 当前正按所选语言显示。',
 
     'wp.ch.1': '执行摘要', 'wp.ch.2': '产品论点', 'wp.ch.3': '用户体验',
-    'wp.ch.4': '技术架构', 'wp.ch.5': '安全模型', 'wp.ch.6': '代币模型',
+    'wp.ch.4': '技术架构', 'wp.ch.5': '安全模型', 'wp.ch.6': '代币模型与代币经济学',
     'wp.ch.7': '增长模型', 'wp.ch.8': '商业模型', 'wp.ch.9': '路线图',
     'wp.ch.10': '团队与治理', 'wp.ch.11': '风险与缓解', 'wp.ch.12': '附录',
     'wp.chnum': '章节',
@@ -1271,15 +1321,21 @@ window.I18N = (function () {
     'wp.c6.t1.3.1': '商户激励', 'wp.c6.t1.3.2': '充值 $1 可降低受理费。', 'wp.c6.t1.3.3': '已设计',
     'wp.c6.t1.4.1': '生态访问', 'wp.c6.t1.4.2': '解锁高级小程序与合作福利。', 'wp.c6.t1.4.3': '计划中',
     'wp.c6.t1.5.1': '治理信号', 'wp.c6.t1.5.2': '对奖励、费用曲线与上线进行投票。', 'wp.c6.t1.5.3': '计划中',
-    'wp.c6.h2': '示意性分配',
-    'wp.c6.note': '比例为占位值,待代币 / 法律审查完成后确定。',
-    'wp.c6.t2.h1': '类别', 'wp.c6.t2.h2': '占比', 'wp.c6.t2.h3': '归属',
-    'wp.c6.t2.1.1': '生态与奖励', 'wp.c6.t2.1.3': '依据可验证链上活动释放',
-    'wp.c6.t2.2.1': '团队与顾问', 'wp.c6.t2.2.3': '4 年归属、1 年悬崖',
-    'wp.c6.t2.3.1': '金库', 'wp.c6.t2.3.3': '治理上线后由 DAO 管控',
-    'wp.c6.t2.4.1': '战略合作伙伴', 'wp.c6.t2.4.3': '定制 · 按里程碑锁定',
-    'wp.c6.t2.5.1': '流动性', 'wp.c6.t2.5.3': '池启动与市场深度',
-    'wp.c6.t2.6.1': '公开与社区', 'wp.c6.t2.6.3': '分阶段发放',
+    'wp.c6.h2': '代币经济学',
+    'wp.c6.tk.p': '$1 在 TON 区块链上的最大供应量固定为 10,000,000 枚,无额外发行。供应量按以下六个类别分配。',
+    'wp.c6.bt.h1': '项目', 'wp.c6.bt.h2': '数值',
+    'wp.c6.bt.1.1': '代币名称', 'wp.c6.bt.2.1': '网络', 'wp.c6.bt.3.1': '总供应量',
+    'wp.c6.bt.4.1': '发行', 'wp.c6.bt.4.2': '无额外发行 — 稀缺数字美元',
+    'wp.c6.t2.h1': '类别', 'wp.c6.t2.h2': '占比', 'wp.c6.t2.h3': '数量',
+    'wp.c6.t2.1.1': '挖矿池',
+    'wp.c6.t2.2.1': '生态基金',
+    'wp.c6.t2.3.1': '团队 / 开发',
+    'wp.c6.t2.4.1': '流动性 / 交易所',
+    'wp.c6.t2.5.1': '市场 / 合作伙伴',
+    'wp.c6.t2.6.1': '预售',
+    'wp.c6.vest': '归属与释放计划将在各类别启动时公布。',
+    'wp.c6.fig': '图 6.1 — 代币分配',
+    'wp.c6.fig.desc': '10,000,000 $1 供应量的圆环图:挖矿池 25%、生态基金 23%、团队 / 开发 17%、流动性 / 交易所 15%、市场 / 合作伙伴 10%、预售 10%。',
     'wp.c6.cal.t': '免责声明',
     'wp.c6.cal.p': '$1 是效用型代币。ONEWALLET 不承诺价格上涨、收益、交易所上线或任何具体经济结果。最终代币经济学受法律审查。',
 
@@ -1339,9 +1395,9 @@ window.I18N = (function () {
     'wp.c12.r2': 'MPC 学术文献 — 阈值密码学基础。',
     'wp.c12.r3': 'ONEWALLET 首页与产品简报 — 配套资料。',
     'wp.c12.h3': '文档管理',
-    'wp.c12.ctl': 'v1.0 · 2026年5月 · 正式发布 · 经产品、安全、法务和合作伙伴关系审批',
+    'wp.c12.ctl': 'v1.1 Draft · 2026年5月 · 代币经济学待代币 / 法务批准',
 
-    'wp.foot.copy': '© 2026 ONEWALLET · 白皮书 v1.0 · 不构成投资建议。'
+    'wp.foot.copy': '© 2026 ONEWALLET · 白皮书 v1.1 Draft · 不构成投资建议。'
   };
 
   return { en, ko, ja, zh, TEAM };
