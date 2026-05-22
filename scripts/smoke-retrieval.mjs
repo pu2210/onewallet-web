@@ -57,7 +57,7 @@ function search(query, locale = 'en') {
 
 const cases = [
   { q: 'what does onewallet do', locale: 'en',  expectIdLike: /qa-what|hp-platform|wp-ch1/ },
-  { q: 'how do mpc shares work', locale: 'en',  expectIdLike: /qa-custody|wp-ch5/ },
+  { q: 'how do shamir shares work', locale: 'en',  expectIdLike: /qa-custody|wp-ch5/ },
   { q: 'do i need a seed phrase', locale: 'en', expectIdLike: /qa-seed|wp-ch3|hp-security/ },
   { q: 'merchant qr payment',     locale: 'en', expectIdLike: /qa-payments|hp-payments/ },
   { q: 'roadmap status',          locale: 'en', expectIdLike: /qa-roadmap|wp-ch9/ },
@@ -168,8 +168,8 @@ const intentCases = [
   { q: 'what can you do?',                   locale: 'en', expect: 'capability' },
   { q: 'help',                               locale: 'en', expect: 'capability' },
   { q: 'tell me about ONEWALLET',            locale: 'en', expect: 'supportedProductQuestion' },
-  { q: 'how does MPC recovery work?',        locale: 'en', expect: 'supportedProductQuestion' },
-  { q: 'do I need a seed phrase?',           locale: 'en', expect: 'supportedProductQuestion' }, // question form — curated MPC answer handles this
+  { q: 'how does Shamir recovery work?',     locale: 'en', expect: 'supportedProductQuestion' },
+  { q: 'do I need a seed phrase?',           locale: 'en', expect: 'supportedProductQuestion' }, // question form — curated Shamir answer handles this
   { q: 'here is my seed phrase abandon abandon abandon', locale: 'en', expect: 'privateData' },
   { q: 'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about', locale: 'en', expect: 'privateData' }, // bare BIP39-style paste
   { q: '제 시드 구문 공유합니다',              locale: 'ko', expect: 'privateData' },
@@ -179,7 +179,7 @@ const intentCases = [
   { q: 'guaranteed yield from $1',           locale: 'en', expect: 'unsafeFinancial' },
   { q: 'are you HSM-backed?',                locale: 'en', expect: 'unsafeFinancial' },
   { q: 'does the server share live in an isolated VPC?', locale: 'en', expect: 'unsafeFinancial' },
-  { q: 'how does mpc recovery work without seed phrase please', locale: 'en', expect: 'supportedProductQuestion' },
+  { q: 'how does shamir recovery work without seed phrase please', locale: 'en', expect: 'supportedProductQuestion' },
   { q: 'weather in seoul?',                  locale: 'en', expectOfftopic: 'unsupportedDomain' },
   { q: 'tell me a joke',                     locale: 'en', expectOfftopic: 'benignOfftopic' },
   { q: 'how are you?',                       locale: 'en', expectOfftopic: 'benignOfftopic' }
