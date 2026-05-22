@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>ONEWALLET Whitepaper v1.0 — Technical &amp; Product Reference</title>
-<meta name="description" content="Technical and product whitepaper for ONEWALLET — a Telegram-native Web3 wallet, payment rail, and $1 token economy. MPC custody, threat model, growth and business model, risks." />
+<meta name="description" content="Technical and product whitepaper for ONEWALLET — a Telegram-native Web3 wallet, payment rail, and $1 token economy. Multi-Share custody, threat model, growth and business model, risks." />
 <meta name="theme-color" content="#ffffff" />
 <link rel="canonical" href="https://onewallet.store/whitepaper.html" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="ONEWALLET" />
 <meta property="og:title" content="ONEWALLET Whitepaper v1.0" />
-<meta property="og:description" content="Technical and product whitepaper: MPC custody, payments rail, token model, risks." />
+<meta property="og:description" content="Technical and product whitepaper: Multi-Share custody, payments rail, token model, risks." />
 <meta property="og:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="1260" />
@@ -19,7 +19,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="ONEWALLET Whitepaper v1.0" />
-<meta name="twitter:description" content="MPC custody, payments rail, token model, risks." />
+<meta name="twitter:description" content="Multi-Share custody, payments rail, token model, risks." />
 <meta name="twitter:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 
 <link rel="icon" type="image/png" href="assets/logo.png" />
@@ -440,7 +440,7 @@
   <div class="title-inner">
     <span class="eyebrow" data-i18n="wp.title.eb">Technical &amp; product whitepaper · v1.0</span>
     <h1 data-i18n="wp.title.h">The Telegram-native <em>wallet</em>,<br>payment rail, and ecosystem.</h1>
-    <p class="sub" data-i18n="wp.title.sub">ONEWALLET is a keyless MPC wallet, payment network, and token economy designed to make Web3 finance work like sending a message inside Telegram.</p>
+    <p class="sub" data-i18n="wp.title.sub">ONEWALLET is a keyless Multi-Share wallet, payment network, and token economy designed to make Web3 finance work like sending a message inside Telegram.</p>
     <div class="title-meta">
       <div><b data-i18n="wp.m.v">Version</b><span data-i18n="wp.mv">1.0 · May 2026</span></div>
       <div><b data-i18n="wp.m.a">Audience</b><span data-i18n="wp.ma">Users · Investors · Partners</span></div>
@@ -479,7 +479,7 @@
     <section class="chap reveal" id="ch1">
       <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 01</div>
       <h2 data-i18n="wp.ch.1">Executive summary</h2>
-      <div class="summary-card"><b data-i18n="wp.c1.sum.t">In one paragraph</b><span data-i18n="wp.c1.sum.p">ONEWALLET is a Telegram-native Web3 wallet that replaces seed phrases with 2-of-3 MPC custody…</span></div>
+      <div class="summary-card"><b data-i18n="wp.c1.sum.t">In one paragraph</b><span data-i18n="wp.c1.sum.p">ONEWALLET is a Telegram-native Web3 wallet that replaces seed phrases with 2-of-3 Shamir custody…</span></div>
       <p data-i18n="wp.c1.p1">Most consumer crypto products still ask users to memorize twelve words…</p>
       <p data-i18n="wp.c1.p2">This document covers product, architecture, security…</p>
       <div class="callout c-approved"><b data-i18n="wp.c1.cal.t">Approved</b><span data-i18n="wp.c1.cal.p">Brand name, product positioning…</span></div>
@@ -492,7 +492,7 @@
       <h3 data-i18n="wp.c2.h1">Why now</h3>
       <ul>
         <li data-i18n="wp.c2.li1">Telegram Mini Apps run native-feeling UIs without app-store gatekeeping.</li>
-        <li data-i18n="wp.c2.li2">MPC custody has matured from research to production-grade libraries.</li>
+        <li data-i18n="wp.c2.li2">Shamir-based custody has matured from research to production-grade libraries.</li>
         <li data-i18n="wp.c2.li3">Stablecoin volume has become structurally meaningful for merchant payments.</li>
         <li data-i18n="wp.c2.li4">Consumer fatigue with seed-phrase ceremonies opens the field for keyless wallets.</li>
       </ul>
@@ -527,7 +527,7 @@
           <g><rect class="node" x="20" y="60" width="180" height="64" rx="10"/><text class="node-lbl" x="110" y="90" text-anchor="middle" data-i18n-svg="wp.c3.d.n1">Telegram</text><text class="node-sub" x="110" y="108" text-anchor="middle" data-i18n-svg="wp.c3.d.n1s">chat runtime</text></g>
           <g><rect class="node" x="240" y="60" width="180" height="64" rx="10"/><text class="node-lbl" x="330" y="90" text-anchor="middle" data-i18n-svg="wp.c3.d.n2">Open Mini App</text><text class="node-sub" x="330" y="108" text-anchor="middle" data-i18n-svg="wp.c3.d.n2s">launch in-app</text></g>
           <g><rect class="node" x="460" y="60" width="180" height="64" rx="10"/><text class="node-lbl" x="550" y="90" text-anchor="middle" data-i18n-svg="wp.c3.d.n3">Device check</text><text class="node-sub" x="550" y="108" text-anchor="middle" data-i18n-svg="wp.c3.d.n3s">session · device share</text></g>
-          <g><rect class="node" x="680" y="60" width="180" height="64" rx="10" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="770" y="90" text-anchor="middle" data-i18n-svg="wp.c3.d.n4">Create wallet</text><text class="node-sub" x="770" y="108" text-anchor="middle" data-i18n-svg="wp.c3.d.n4s">MPC shares split</text></g>
+          <g><rect class="node" x="680" y="60" width="180" height="64" rx="10" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="770" y="90" text-anchor="middle" data-i18n-svg="wp.c3.d.n4">Create wallet</text><text class="node-sub" x="770" y="108" text-anchor="middle" data-i18n-svg="wp.c3.d.n4s">Shamir shares split</text></g>
           <path class="edge" d="M 200 92 L 240 92" marker-end="url(#ob-arr)"/>
           <path class="edge" d="M 420 92 L 460 92" marker-end="url(#ob-arr)"/>
           <path class="edge" d="M 640 92 L 680 92" marker-end="url(#ob-arr)"/>
@@ -572,12 +572,12 @@
           <text class="sub" x="36" y="78" data-i18n-svg="wp.c4.l1.s">UI · session · device share · UX state</text>
           <rect class="lane" x="20" y="100" width="760" height="62" rx="10"/>
           <text class="tag" x="36" y="120" data-i18n-svg="wp.c4.l2.t">LAYER 02 · EDGE</text>
-          <text class="lbl" x="36" y="142" data-i18n-svg="wp.c4.l2.h">Auth · MPC orchestration · price feeds · webhooks</text>
-          <text class="sub" x="36" y="158" data-i18n-svg="wp.c4.l2.s">stateless functions · zero-knowledge of full keys</text>
+          <text class="lbl" x="36" y="142" data-i18n-svg="wp.c4.l2.h">Auth · Shamir signing orchestration · price feeds · webhooks</text>
+          <text class="sub" x="36" y="158" data-i18n-svg="wp.c4.l2.s">stateless functions · holds no share · key reconstructed only transiently on-device during signing</text>
           <rect class="lane" x="20" y="180" width="760" height="62" rx="10"/>
           <text class="tag" x="36" y="200" data-i18n-svg="wp.c4.l3.t">LAYER 03 · CUSTODY (target architecture)</text>
-          <text class="lbl" x="36" y="222" data-i18n-svg="wp.c4.l3.h">MPC server share · signer service · recovery share registry</text>
-          <text class="sub" x="36" y="238" data-i18n-svg="wp.c4.l3.s">isolated environment · hardware-protected key storage (planned) · cannot sign alone</text>
+          <text class="lbl" x="36" y="222" data-i18n-svg="wp.c4.l3.h">Signer service · recovery share registry · Telegram-share binding</text>
+          <text class="sub" x="36" y="238" data-i18n-svg="wp.c4.l3.s">isolated environment · hardware-protected share custody (planned) · holds no single signable key</text>
           <rect class="lane" x="20" y="260" width="760" height="62" rx="10"/>
           <text class="tag" x="36" y="280" data-i18n-svg="wp.c4.l4.t">LAYER 04 · SETTLEMENT</text>
           <text class="lbl" x="36" y="302" data-i18n-svg="wp.c4.l4.h">Chain adapters · payment processor · indexer · merchant API</text>
@@ -590,8 +590,8 @@
       </figure>
       <h3 data-i18n="wp.c4.h1">Trust boundaries</h3>
       <ul>
-        <li data-i18n="wp.c4.li2">Edge services see signing requests but never the complete key material.</li>
-        <li data-i18n="wp.c4.li3">Custody stores only one MPC share and cannot sign unilaterally.</li>
+        <li data-i18n="wp.c4.li2">Edge services orchestrate signing requests and hold no share.</li>
+        <li data-i18n="wp.c4.li3">Each holder stores only one Shamir share and cannot sign unilaterally.</li>
         <li data-i18n="wp.c4.li4">Settlement broadcasts only after a valid threshold signature returns.</li>
       </ul>
       <div class="callout c-assume"><b data-i18n="wp.c4.cal.t">Assumption</b><span data-i18n="wp.c4.cal.p">Custody isolation and hardware-protected key storage are stated as target architecture.</span></div>
@@ -601,13 +601,13 @@
       <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 05</div>
       <h2 data-i18n="wp.ch.5">Security model</h2>
       <div class="summary-card"><b data-i18n="wp.c5.sum.t">Custody promise</b><span data-i18n="wp.c5.sum.p">No single party can move user funds.</span></div>
-      <h3 data-i18n="wp.c5.h1">MPC threshold signing</h3>
+      <h3 data-i18n="wp.c5.h1">Shamir threshold signing</h3>
 
       <figure class="diagram">
         <div class="diagram-head">
           <div>
-            <div class="diagram-title" data-i18n="wp.c5.d.t">2-of-3 MPC topology</div>
-            <div class="diagram-sub" data-i18n="wp.c5.d.s">device · server · recovery → threshold signature</div>
+            <div class="diagram-title" data-i18n="wp.c5.d.t">2-of-3 Shamir topology</div>
+            <div class="diagram-sub" data-i18n="wp.c5.d.s">device · Telegram · recovery → threshold signature</div>
           </div>
           <div class="diagram-legend">
             <span><i style="background:var(--brand)"></i><span data-i18n="wp.c5.d.l1">Active share</span></span>
@@ -620,7 +620,7 @@
             <marker id="mp-arr-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
           </defs>
           <rect x="20" y="20" width="840" height="280" rx="14" fill="#f4f6f9" stroke="#e5e8ed" stroke-dasharray="4 4"/>
-          <text style="font:500 10px 'JetBrains Mono',monospace;letter-spacing:1.4px;fill:#54627a" x="40" y="44" data-i18n-svg="wp.c5.d.frame">MPC · 2-of-3 THRESHOLD</text>
+          <text style="font:500 10px 'JetBrains Mono',monospace;letter-spacing:1.4px;fill:#54627a" x="40" y="44" data-i18n-svg="wp.c5.d.frame">SHAMIR · 2-of-3 THRESHOLD</text>
           <g><rect class="node" x="60" y="78" width="200" height="50" rx="10"/><text class="node-lbl" x="160" y="108" text-anchor="middle" data-i18n-svg="wp.c5.d.n1">Device share</text></g>
           <g><rect class="node" x="60" y="148" width="200" height="50" rx="10"/><text class="node-lbl" x="160" y="178" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Telegram auth</text></g>
           <g><rect class="node alt" x="60" y="218" width="200" height="50" rx="10"/><text class="node-lbl alt" x="160" y="248" text-anchor="middle" data-i18n-svg="wp.c5.d.n3">Recovery share</text></g>
@@ -637,15 +637,15 @@
             <text class="node-sub" x="396" y="272" data-i18n-svg="wp.c5.d.r2">·  shares are rotatable</text>
           </g>
         </svg>
-        <figcaption data-i18n="wp.c5.fig">Figure 5.1 — 2-of-3 MPC topology</figcaption>
+        <figcaption data-i18n="wp.c5.fig">Figure 5.1 — 2-of-3 Shamir threshold signing topology</figcaption>
       </figure>
 
       <h3 data-i18n="wp.c5.h2">Threat model</h3>
       <div class="t-wrap"><table class="t">
         <thead><tr><th scope="col" data-i18n="wp.c5.t.h1">Vector</th><th scope="col" data-i18n="wp.c5.t.h2">Impact</th><th scope="col" data-i18n="wp.c5.t.h3">Mitigation</th></tr></thead>
         <tbody>
-          <tr><td data-i18n="wp.c5.t.1.1">Device theft</td><td data-i18n="wp.c5.t.1.2">Loss of one share</td><td data-i18n="wp.c5.t.1.3">Rotate device share via server + recovery cooperation.</td></tr>
-          <tr><td data-i18n="wp.c5.t.2.1">Server compromise or Telegram session hijack</td><td data-i18n="wp.c5.t.2.2">Loss of one share or account-level access</td><td data-i18n="wp.c5.t.2.3">Server share alone cannot sign — the same protection applies if a Telegram session is hijacked. High-value transfers add re-auth + cooldown.</td></tr>
+          <tr><td data-i18n="wp.c5.t.1.1">Device theft</td><td data-i18n="wp.c5.t.1.2">Loss of one share</td><td data-i18n="wp.c5.t.1.3">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td></tr>
+          <tr><td data-i18n="wp.c5.t.2.1">Telegram account or session hijack</td><td data-i18n="wp.c5.t.2.2">Access to the Telegram share only (one share)</td><td data-i18n="wp.c5.t.2.3">The Telegram share alone cannot reconstruct the key or sign; an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td></tr>
           <tr><td data-i18n="wp.c5.t.5.1">Recovery social engineering</td><td data-i18n="wp.c5.t.5.2">Coerced recovery share</td><td data-i18n="wp.c5.t.5.3">Time-locked recovery.</td></tr>
         </tbody>
       </table></div>
@@ -779,7 +779,7 @@
       <div class="t-wrap"><table class="t">
         <thead><tr><th scope="col" data-i18n="wp.c9.t.h1">Phase</th><th scope="col" data-i18n="wp.c9.t.h2">Deliverable</th><th scope="col" data-i18n="wp.c9.t.h3">Status</th></tr></thead>
         <tbody>
-          <tr><td data-i18n="wp.c9.t.1.1">Phase 1 — Core wallet</td><td data-i18n="wp.c9.t.1.2">MPC custody, TMA, multi-chain</td><td data-i18n="wp.c9.t.1.3">Completed</td></tr>
+          <tr><td data-i18n="wp.c9.t.1.1">Phase 1 — Core wallet</td><td data-i18n="wp.c9.t.1.2">Multi-Share custody, TMA, multi-chain</td><td data-i18n="wp.c9.t.1.3">Completed</td></tr>
           <tr><td data-i18n="wp.c9.t.2.1">Phase 2 — Payments rail</td><td data-i18n="wp.c9.t.2.2">QR invoices, settlement webhooks</td><td data-i18n="wp.c9.t.2.3">In progress</td></tr>
           <tr><td data-i18n="wp.c9.t.3.1">Phase 3 — $1 utility</td><td data-i18n="wp.c9.t.3.2">Fee discount layer, reward engine</td><td data-i18n="wp.c9.t.3.3">Planned</td></tr>
           <tr><td data-i18n="wp.c9.t.4.1">Phase 4 — Ecosystem</td><td data-i18n="wp.c9.t.4.2">Mini-app store, partner program</td><td data-i18n="wp.c9.t.4.3">Planned</td></tr>
@@ -800,7 +800,7 @@
       <h2 data-i18n="wp.ch.11">Risks &amp; mitigations</h2>
       <div class="summary-card"><b data-i18n="wp.c11.sum.t">Honesty as credibility</b><span data-i18n="wp.c11.sum.p">Disclosing risks is part of the product.</span></div>
       <div class="risk-grid">
-        <div class="risk-cell"><span class="lvl lvl-h" data-i18n="wp.c11.r1.lvl">HIGH</span><h4 data-i18n="wp.c11.r1.h">Custody compromise</h4><p data-i18n="wp.c11.r1.p">Any flaw in MPC share rotation could expose funds.</p><small data-i18n="wp.c11.r1.s">Planned mitigation…</small></div>
+        <div class="risk-cell"><span class="lvl lvl-h" data-i18n="wp.c11.r1.lvl">HIGH</span><h4 data-i18n="wp.c11.r1.h">Custody compromise</h4><p data-i18n="wp.c11.r1.p">Shamir reconstructs the key at signing time, creating a brief in-memory exposure window on the device; a flaw in share rotation, reconstruction, or key wipe could expose funds.</p><small data-i18n="wp.c11.r1.s">Planned mitigation…</small></div>
         <div class="risk-cell"><span class="lvl lvl-h" data-i18n="wp.c11.r2.lvl">HIGH</span><h4 data-i18n="wp.c11.r2.h">Platform dependency</h4><p data-i18n="wp.c11.r2.p">Telegram is the runtime.</p><small data-i18n="wp.c11.r2.s">Mitigation: progressive web fallback.</small></div>
         <div class="risk-cell"><span class="lvl lvl-m" data-i18n="wp.c11.r3.lvl">MED</span><h4 data-i18n="wp.c11.r3.h">Regulatory shift</h4><p data-i18n="wp.c11.r3.p">Rules vary by region.</p><small data-i18n="wp.c11.r3.s">Mitigation: legal counsel.</small></div>
         <div class="risk-cell"><span class="lvl lvl-m" data-i18n="wp.c11.r4.lvl">MED</span><h4 data-i18n="wp.c11.r4.h">Merchant adoption</h4><p data-i18n="wp.c11.r4.p">Requires integration density.</p><small data-i18n="wp.c11.r4.s">Mitigation: anchor partners.</small></div>
@@ -814,16 +814,16 @@
       <h2 data-i18n="wp.ch.12">Appendix</h2>
       <h3 data-i18n="wp.c12.h1">Glossary</h3>
       <dl class="glossary">
-        <dt data-i18n="wp.c12.g.mpc.t">MPC</dt><dd data-i18n="wp.c12.g.mpc.d">Multi-party computation.</dd>
+        <dt data-i18n="wp.c12.g.sss.t">Shamir's Secret Sharing (SSS)</dt><dd data-i18n="wp.c12.g.sss.d">Shamir's Secret Sharing.</dd>
         <dt data-i18n="wp.c12.g.thr.t">Threshold signature</dt><dd data-i18n="wp.c12.g.thr.d">A signature produced by any qualifying subset of share-holders.</dd>
         <dt data-i18n="wp.c12.g.tma.t">TMA</dt><dd data-i18n="wp.c12.g.tma.d">Telegram Mini App.</dd>
         <dt data-i18n="wp.c12.g.set.t">Settlement webhook</dt><dd data-i18n="wp.c12.g.set.d">A signed HTTP callback.</dd>
-        <dt data-i18n="wp.c12.g.rec.t">Recovery share</dt><dd data-i18n="wp.c12.g.rec.d">A non-online MPC share.</dd>
+        <dt data-i18n="wp.c12.g.rec.t">Recovery share</dt><dd data-i18n="wp.c12.g.rec.d">An offline Shamir share.</dd>
       </dl>
       <h3 data-i18n="wp.c12.h2">References</h3>
       <ul>
         <li data-i18n="wp.c12.r1">Telegram Mini Apps documentation — platform reference.</li>
-        <li data-i18n="wp.c12.r2">MPC academic literature — threshold cryptography fundamentals.</li>
+        <li data-i18n="wp.c12.r2">Shamir's Secret Sharing &amp; threshold cryptography literature — fundamentals.</li>
         <li data-i18n="wp.c12.r3">ONEWALLET homepage and product brief — companion materials.</li>
       </ul>
       <h3 data-i18n="wp.c12.h3">Document control</h3>

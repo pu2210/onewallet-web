@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>ONEWALLET — The Telegram-Native Web3 Wallet &amp; Payment Rail</title>
-<meta name="description" content="Open a keyless MPC wallet inside Telegram in a few taps. Pay, send, and earn across chains. Built for users, merchants, and the $1 ecosystem." />
+<meta name="description" content="Open a keyless Multi-Share wallet inside Telegram in a few taps. Pay, send, and earn across chains. Built for users, merchants, and the $1 ecosystem." />
 <meta name="theme-color" content="#ffffff" />
 <link rel="canonical" href="https://onewallet.store/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ONEWALLET" />
 <meta property="og:title" content="ONEWALLET — The Telegram-Native Web3 Wallet &amp; Payment Rail" />
-<meta property="og:description" content="Keyless MPC custody, Telegram onboarding, and real-world Web3 payments." />
+<meta property="og:description" content="Keyless Multi-Share custody, Telegram onboarding, and real-world Web3 payments." />
 <meta property="og:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="1260" />
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="ONEWALLET — Web3 finance, opened like a Telegram chat." />
-<meta name="twitter:description" content="Keyless MPC custody, Telegram onboarding, and real-world Web3 payments." />
+<meta name="twitter:description" content="Keyless Multi-Share custody, Telegram onboarding, and real-world Web3 payments." />
 <meta name="twitter:image" content="https://onewallet.store/assets/hero-circle-grade.webp" />
 
 <link rel="icon" type="image/png" href="assets/logo.png" />
@@ -940,7 +940,7 @@
       <div class="reveal">
         <span class="eyebrow" data-i18n="hero.eb">A Telegram-native financial layer</span>
         <h1 data-i18n="hero.h">Telegram-native finance,<br>built for the <em>$1 ecosystem</em>.</h1>
-        <p class="lede" data-i18n="hero.p">ONEWALLET brings keyless MPC wallets, QR payments, and token utility into Telegram — so users can open, pay, and participate without leaving the conversation.</p>
+        <p class="lede" data-i18n="hero.p">ONEWALLET brings keyless Multi-Share wallets, QR payments, and token utility into Telegram — so users can open, pay, and participate without leaving the conversation.</p>
         <div class="hero-ctas">
           <a href="https://t.me/onedollar_wallet_bot/app" target="_blank" rel="noopener" class="btn btn-primary"><span data-i18n="common.openInTelegram">Open in Telegram</span> <span class="arrow" aria-hidden="true">→</span></a>
           <a href="whitepaper.html" class="btn btn-ghost" data-i18n="common.readWhitepaper">Read the whitepaper</a>
@@ -956,7 +956,7 @@
     </div>
     <div class="proof-chips reveal-stagger" style="margin-top:28px;">
       <span class="chip" data-i18n="hero.chip1">Telegram-native</span>
-      <span class="chip" data-i18n="hero.chip2">2-of-3 MPC · target</span>
+      <span class="chip" data-i18n="hero.chip2">2-of-3 Shamir · target</span>
       <span class="chip" data-i18n="hero.chip3">QR payments</span>
       <span class="chip" data-i18n="hero.chip4">Multi-chain</span>
     </div>
@@ -968,7 +968,7 @@
   <div class="wrap">
     <div class="trust-eyebrow" data-i18n="trust.eb">Prototype scope · target architecture · subject to review</div>
     <div class="trust-grid reveal-stagger">
-      <div class="trust-item"><span class="trust-num">01</span><h4 data-i18n="trust.1.h">Keyless by design</h4><p data-i18n="trust.1.p">Target 2-of-3 MPC custody. Keys split across device, server, and recovery — never reconstructed in full.</p></div>
+      <div class="trust-item"><span class="trust-num">01</span><h4 data-i18n="trust.1.h">Keyless by design</h4><p data-i18n="trust.1.p">Target 2-of-3 Shamir custody. The key is split into 3 shares across device, Telegram, and recovery; any 2 are combined on your device in an isolated context to sign, then wiped — never stored reassembled and never held by our servers.</p></div>
       <div class="trust-item"><span class="trust-num">02</span><h4 data-i18n="trust.2.h">Opens in Telegram</h4><p data-i18n="trust.2.p">Launches as a Mini App. No download, no app store gate, no password ceremony.</p></div>
       <div class="trust-item"><span class="trust-num">03</span><h4 data-i18n="trust.3.h">Designed for payments</h4><p data-i18n="trust.3.p">Scan, send, settle. A QR rail designed for real merchant volume, not just holding.</p></div>
       <div class="trust-item"><span class="trust-num">04</span><h4 data-i18n="trust.4.h">Ecosystem-ready</h4><p data-i18n="trust.4.p">$1 token utility, merchant tools, and mini-app distribution — designed from day one.</p></div>
@@ -999,8 +999,8 @@
       </a>
       <a class="plat-card plat-mint" href="#security">
         <div class="plat-tag" data-i18n="plat.3.t">Security</div>
-        <h3 data-i18n="plat.3.h">2-of-3 MPC.<br>No single point of failure.</h3>
-        <p data-i18n="plat.3.p">Threshold signing across device, server, and recovery. Server share alone never moves funds.</p>
+        <h3 data-i18n="plat.3.h">2-of-3 Shamir.<br>No single point of failure.</h3>
+        <p data-i18n="plat.3.p">Threshold signing across device, Telegram, and recovery. The Telegram share alone never moves funds.</p>
         <div class="plat-vis" aria-hidden="true"><img src="assets/platform/security.webp" alt="" loading="lazy" decoding="async" /></div>
       </a>
       <a class="plat-card plat-lavender" href="#payments">
@@ -1030,7 +1030,7 @@
     </div>
     <div class="audience-grid reveal-stagger">
       <a class="audience-card" href="#product-flow" id="users"><span class="tag" data-i18n="aud.users.tag">For users</span><h3 data-i18n="aud.users.h">A wallet that just opens.</h3><p data-i18n="aud.users.p">Keyless onboarding inside Telegram. Plain-language recovery. Send, pay, and earn without managing a seed phrase.</p><span class="more" data-i18n="aud.users.m">See the product flow →</span></a>
-      <a class="audience-card" href="whitepaper.html" id="investors"><span class="tag" data-i18n="aud.inv.tag">For investors</span><h3 data-i18n="aud.inv.h">Telegram-scale distribution.</h3><p data-i18n="aud.inv.p">A clear market gap, MPC-secured custody architecture, token utility tied to real activity, and a referral-driven growth model.</p><span class="more" data-i18n="aud.inv.m">Read the whitepaper →</span></a>
+      <a class="audience-card" href="whitepaper.html" id="investors"><span class="tag" data-i18n="aud.inv.tag">For investors</span><h3 data-i18n="aud.inv.h">Telegram-scale distribution.</h3><p data-i18n="aud.inv.p">A clear market gap, Multi-Share custody architecture, token utility tied to real activity, and a referral-driven growth model.</p><span class="more" data-i18n="aud.inv.m">Read the whitepaper →</span></a>
       <a class="audience-card" href="#partners" id="partners"><span class="tag" data-i18n="aud.part.tag">For merchants</span><h3 data-i18n="aud.part.h">Web3 payments, without the Web3 work.</h3><p data-i18n="aud.part.p">QR invoicing, stablecoin settlement, webhooks, and ecosystem rewards — ready to plug into your point of sale.</p><span class="more" data-i18n="aud.part.m">See merchant tools →</span></a>
     </div>
   </div>
@@ -1051,7 +1051,7 @@
       <div class="flow-steps reveal-stagger">
         <div class="step"><span class="n" data-i18n="flow.1.n">STEP 01</span><h4 data-i18n="flow.1.h">Open from Telegram</h4><p data-i18n="flow.1.p">Launch ONEWALLET as a Mini App. Nothing to download.</p></div>
         <div class="step"><span class="n" data-i18n="flow.2.n">STEP 02</span><h4 data-i18n="flow.2.h">Verify your device</h4><p data-i18n="flow.2.p">Lightweight Telegram session + device share check.</p></div>
-        <div class="step"><span class="n" data-i18n="flow.3.n">STEP 03</span><h4 data-i18n="flow.3.h">Wallet is created</h4><p data-i18n="flow.3.p">MPC shares split across device, server, and recovery.</p></div>
+        <div class="step"><span class="n" data-i18n="flow.3.n">STEP 03</span><h4 data-i18n="flow.3.h">Wallet is created</h4><p data-i18n="flow.3.p">Shamir shares split across device, Telegram, and recovery.</p></div>
         <div class="step"><span class="n" data-i18n="flow.4.n">STEP 04</span><h4 data-i18n="flow.4.h">Send, pay, earn</h4><p data-i18n="flow.4.p">QR payments, swaps, and ecosystem rewards from day one.</p></div>
       </div>
     </div>
@@ -1064,15 +1064,15 @@
     <div class="sect-head reveal">
       <span class="eyebrow" data-i18n="sec.eb">Security model</span>
       <h2 data-i18n="sec.h">Keyless by design.<br>Recoverable by default.</h2>
-      <p data-i18n="sec.p">2-of-3 multi-party computation eliminates the single point of failure that breaks most consumer wallets. Any two shares can sign a transaction. No single share — including the server — ever can.</p>
+      <p data-i18n="sec.p">2-of-3 Shamir's Secret Sharing eliminates the single point of failure that breaks most consumer wallets. Any two of the three shares are combined on your device in an isolated context to sign, then wiped. No single share — including the Telegram share — can reconstruct the key or sign alone.</p>
     </div>
     <div class="security-grid">
       <div class="reveal">
-        <figure class="sec-diag" aria-label="2-of-3 MPC signing flow" data-i18n-attr="aria-label:sec.diag.title">
+        <figure class="sec-diag" aria-label="2-of-3 Shamir signing flow" data-i18n-attr="aria-label:sec.diag.title">
           <div class="sec-diag-head">
             <div>
-              <div class="sec-diag-title" data-i18n="sec.diag.title">2-of-3 MPC signing flow</div>
-              <div class="sec-diag-sub" data-i18n="sec.diag.sub">device · server · recovery → signed transaction</div>
+              <div class="sec-diag-title" data-i18n="sec.diag.title">2-of-3 Shamir signing flow</div>
+              <div class="sec-diag-sub" data-i18n="sec.diag.sub">device · Telegram · recovery → signed transaction</div>
             </div>
           </div>
           <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img">
@@ -1081,7 +1081,7 @@
               <marker id="sec-arr-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
             </defs>
             <g><rect class="node" x="20" y="30" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="58" text-anchor="middle" data-i18n-svg="wp.c5.d.n1">Device share</text></g>
-            <g><rect class="node" x="20" y="118" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="146" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Server share</text></g>
+            <g><rect class="node" x="20" y="118" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="146" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Telegram auth</text></g>
             <g><rect class="node alt" x="20" y="206" width="150" height="44" rx="10"/><text class="node-lbl alt" x="95" y="234" text-anchor="middle" data-i18n-svg="wp.c5.d.n3">Recovery share</text></g>
             <g><rect class="node" x="270" y="100" width="170" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="355" y="138" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">threshold signing</text></g>
             <path class="edge" d="M 170 52 L 270 130" marker-end="url(#sec-arr)"/>
@@ -1096,15 +1096,15 @@
           <table class="threat-table">
             <thead><tr><th scope="col" data-i18n="sec.thr.vec">Threat</th><th scope="col" data-i18n="sec.thr.mit">Mitigation</th><th scope="col" data-i18n="sec.thr.sta">Status</th></tr></thead>
             <tbody>
-              <tr><td data-i18n="sec.thr.1.v">Device lost</td><td data-i18n="sec.thr.1.m">Rotate device share via server + recovery cooperation.</td><td><span class="badge badge-ok" data-i18n="sec.thr.1.s">Mitigated</span></td></tr>
-              <tr><td data-i18n="sec.thr.2.v">Server compromise or Telegram session hijack</td><td data-i18n="sec.thr.2.m">Server share alone cannot sign — the same protection applies if a Telegram session is hijacked. High-value transfers add re-auth + cooldown.</td><td><span class="badge badge-ok" data-i18n="sec.thr.2.s">Mitigated</span></td></tr>
+              <tr><td data-i18n="sec.thr.1.v">Device lost</td><td data-i18n="sec.thr.1.m">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td><td><span class="badge badge-ok" data-i18n="sec.thr.1.s">Mitigated</span></td></tr>
+              <tr><td data-i18n="sec.thr.2.v">Telegram account or session hijack</td><td data-i18n="sec.thr.2.m">The Telegram share alone cannot reconstruct the key or sign — an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td><td><span class="badge badge-ok" data-i18n="sec.thr.2.s">Mitigated</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="reveal">
         <h3 data-i18n="sec.rec.h">Recovery, not lockout.</h3>
-        <p data-i18n="sec.rec.p">If a device is lost, ONEWALLET issues a fresh device share, validated against the recovery share. The server share alone cannot sign, so a server breach does not move funds.</p>
+        <p data-i18n="sec.rec.p">If a device is lost, ONEWALLET issues a fresh device share, validated against the recovery share. The Telegram share alone cannot sign, so a hijacked Telegram account does not move funds.</p>
         <h3 style="margin-top:32px;" data-i18n="sec.aud.h">Audit-targeted, not audit-claimed.</h3>
         <p data-i18n="sec.aud.p">Custody and settlement contracts are scheduled for independent review before mainnet. The whitepaper documents the threat model, share-rotation policy, and operational boundaries — including what we deliberately won't promise.</p>
         <a href="whitepaper.html#ch5" class="btn btn-ghost" style="margin-top:18px;"><span data-i18n="sec.btn">Security chapter</span> <span class="arrow" aria-hidden="true">→</span></a>
@@ -1129,7 +1129,7 @@
         <div class="pay-flow"><ol>
         <li><div><b data-i18n="pay.1.b">Merchant generates an invoice</b><span data-i18n="pay.1.s">Static or per-order QR with chain, amount, and memo.</span></div></li>
         <li><div><b data-i18n="pay.2.b">User scans inside Telegram</b><span data-i18n="pay.2.s">ONEWALLET resolves chain, displays receiver, fees, and FX preview.</span></div></li>
-        <li><div><b data-i18n="pay.3.b">MPC signs and broadcasts</b><span data-i18n="pay.3.s">Threshold signature on the chosen chain. No seed prompt.</span></div></li>
+        <li><div><b data-i18n="pay.3.b">Shamir signs and broadcasts</b><span data-i18n="pay.3.s">Threshold signature on the chosen chain. No seed prompt.</span></div></li>
         <li><div><b data-i18n="pay.4.b">Settlement webhook fires</b><span data-i18n="pay.4.s">Merchant receives stablecoin and a signed event for POS reconciliation.</span></div></li>
       </ol></div>
       </div>
@@ -1258,7 +1258,7 @@
         <g>
           <rect class="node" x="385" y="178" width="190" height="64" rx="10"/>
           <text class="node-lbl" x="480" y="208" text-anchor="middle" data-i18n-svg="fly.wallet.h">Wallet</text>
-          <text class="node-sub" x="480" y="228" text-anchor="middle" data-i18n-svg="fly.wallet.s">MPC custody · QR · swaps</text>
+          <text class="node-sub" x="480" y="228" text-anchor="middle" data-i18n-svg="fly.wallet.s">Multi-Share custody · QR · swaps</text>
         </g>
         <!-- Wallet split: primary → Merchants (left); branch → Mini-apps (right). Labels positioned ABOVE their paths in clear space. -->
         <path class="edge" d="M 430 242 L 430 302 L 230 302 L 230 358" marker-end="url(#arrow)"/>
@@ -1315,7 +1315,7 @@
       <p data-i18n="road.p">We publish where we are, not where we wish we were. Dates remain off the page until product, security, and legal owners commit.</p>
     </div>
     <div class="roadmap reveal-stagger">
-      <div class="milestone"><span class="ms-status ms-done" data-i18n="road.s.done">DONE</span><span class="q" data-i18n="road.1.q">Phase 1</span><h4 data-i18n="road.1.h">Core wallet</h4><ul><li data-i18n="road.1.li1">MPC custody</li><li data-i18n="road.1.li2">Telegram Mini App</li><li data-i18n="road.1.li3">Multi-chain send / receive</li></ul></div>
+      <div class="milestone"><span class="ms-status ms-done" data-i18n="road.s.done">DONE</span><span class="q" data-i18n="road.1.q">Phase 1</span><h4 data-i18n="road.1.h">Core wallet</h4><ul><li data-i18n="road.1.li1">Multi-Share custody</li><li data-i18n="road.1.li2">Telegram Mini App</li><li data-i18n="road.1.li3">Multi-chain send / receive</li></ul></div>
       <div class="milestone"><span class="ms-status ms-prog" data-i18n="road.s.prog">IN PROGRESS</span><span class="q" data-i18n="road.2.q">Phase 2</span><h4 data-i18n="road.2.h">Payments rail</h4><ul><li data-i18n="road.2.li1">QR invoice spec</li><li data-i18n="road.2.li2">Settlement webhooks</li><li data-i18n="road.2.li3">Merchant dashboard</li></ul></div>
       <div class="milestone"><span class="ms-status ms-plan" data-i18n="road.s.plan">PLANNED</span><span class="q" data-i18n="road.3.q">Phase 3</span><h4 data-i18n="road.3.h">$1 utility</h4><ul><li data-i18n="road.3.li1">Fee discount layer</li><li data-i18n="road.3.li2">Reward engine</li><li data-i18n="road.3.li3">Governance signal</li></ul></div>
       <div class="milestone"><span class="ms-status ms-plan" data-i18n="road.s.plan">PLANNED</span><span class="q" data-i18n="road.4.q">Phase 4</span><h4 data-i18n="road.4.h">Ecosystem</h4><ul><li data-i18n="road.4.li1">Mini-app store</li><li data-i18n="road.4.li2">Partner program</li><li data-i18n="road.4.li3">Localized launches</li></ul></div>
@@ -1345,9 +1345,9 @@
       <h2 data-i18n="faq.h">The questions that block sign-ups.</h2>
     </div>
     <div class="faq reveal">
-      <details open><summary data-i18n="faq.1.q">Is ONEWALLET custodial?</summary><div class="faq-body"><div><p data-i18n="faq.1.a">No single party can move funds. Custody is shared via 2-of-3 MPC across device, server, and recovery. Any single share — including the server — cannot sign a transaction.</p></div></div></details>
+      <details open><summary data-i18n="faq.1.q">Is ONEWALLET custodial?</summary><div class="faq-body"><div><p data-i18n="faq.1.a">No single party can move funds. Custody is shared via 2-of-3 Shamir across device, Telegram, and recovery. Any single share — including the Telegram share — cannot reconstruct the key or sign a transaction alone.</p></div></div></details>
       <details><summary data-i18n="faq.2.q">What happens if I lose my Telegram account?</summary><div class="faq-body"><div><p data-i18n="faq.2.a">You can still recover. The recovery share, paired with a fresh device share, restores wallet access without needing the original Telegram session.</p></div></div></details>
-      <details><summary data-i18n="faq.3.q">Do I need a seed phrase?</summary><div class="faq-body"><div><p data-i18n="faq.3.a">Not by default. ONEWALLET uses MPC custody, so there is no single seed to manage. Advanced users may export an encrypted backup.</p></div></div></details>
+      <details><summary data-i18n="faq.3.q">Do I need a seed phrase?</summary><div class="faq-body"><div><p data-i18n="faq.3.a">Not by default. ONEWALLET uses Multi-Share (Shamir) custody, so there is no single seed to manage. Advanced users may export an encrypted backup.</p></div></div></details>
       <details><summary data-i18n="faq.4.q">Which networks are supported?</summary><div class="faq-body"><div><p data-i18n="faq.4.a">Initial support targets TON, Ethereum, BNB Chain, and major stablecoins. The final network list will be confirmed before public launch.</p></div></div></details>
       <details><summary data-i18n="faq.5.q">What are the fees?</summary><div class="faq-body"><div><p data-i18n="faq.5.a">Network gas plus a transparent ONEWALLET fee for swaps and merchant payments. Holding $1 reduces fees at preferential rates.</p></div></div></details>
       <details><summary data-i18n="faq.6.q">What is the $1 token used for?</summary><div class="faq-body"><div><p data-i18n="faq.6.a">Fee discounts, user rewards, merchant incentives, ecosystem access, and governance signals. $1 is a utility token — not a price promise.</p></div></div></details>
