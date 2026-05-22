@@ -577,7 +577,7 @@
           <rect class="lane" x="20" y="180" width="760" height="62" rx="10"/>
           <text class="tag" x="36" y="200" data-i18n-svg="wp.c4.l3.t">LAYER 03 · CUSTODY (target architecture)</text>
           <text class="lbl" x="36" y="222" data-i18n-svg="wp.c4.l3.h">Signer service · recovery share registry · Telegram-share binding</text>
-          <text class="sub" x="36" y="238" data-i18n-svg="wp.c4.l3.s">isolated environment · hardware-protected share custody (planned) · holds no single signable key</text>
+          <text class="sub" x="36" y="238" data-i18n-svg="wp.c4.l3.s">hardened environment · planned hardware-backed share protection · holds no single signable key</text>
           <rect class="lane" x="20" y="260" width="760" height="62" rx="10"/>
           <text class="tag" x="36" y="280" data-i18n-svg="wp.c4.l4.t">LAYER 04 · SETTLEMENT</text>
           <text class="lbl" x="36" y="302" data-i18n-svg="wp.c4.l4.h">Chain adapters · payment processor · indexer · merchant API</text>
@@ -592,7 +592,7 @@
       <ul>
         <li data-i18n="wp.c4.li2">Edge services orchestrate signing requests and hold no share.</li>
         <li data-i18n="wp.c4.li3">Each holder stores only one Shamir share and cannot sign unilaterally.</li>
-        <li data-i18n="wp.c4.li4">Settlement broadcasts only after a valid threshold signature returns.</li>
+        <li data-i18n="wp.c4.li4">Settlement broadcasts only after a valid signature returns.</li>
       </ul>
       <div class="callout c-assume"><b data-i18n="wp.c4.cal.t">Assumption</b><span data-i18n="wp.c4.cal.p">Custody isolation and hardware-protected key storage are stated as target architecture.</span></div>
     </section>
@@ -601,13 +601,13 @@
       <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 05</div>
       <h2 data-i18n="wp.ch.5">Security model</h2>
       <div class="summary-card"><b data-i18n="wp.c5.sum.t">Custody promise</b><span data-i18n="wp.c5.sum.p">No single party can move user funds.</span></div>
-      <h3 data-i18n="wp.c5.h1">Shamir threshold signing</h3>
+      <h3 data-i18n="wp.c5.h1">Shamir multi-share signing</h3>
 
       <figure class="diagram">
         <div class="diagram-head">
           <div>
             <div class="diagram-title" data-i18n="wp.c5.d.t">2-of-3 Shamir topology</div>
-            <div class="diagram-sub" data-i18n="wp.c5.d.s">device · Telegram · recovery → threshold signature</div>
+            <div class="diagram-sub" data-i18n="wp.c5.d.s">device · Telegram · recovery → signed transaction</div>
           </div>
           <div class="diagram-legend">
             <span><i style="background:var(--brand)"></i><span data-i18n="wp.c5.d.l1">Active share</span></span>
@@ -620,11 +620,11 @@
             <marker id="mp-arr-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker>
           </defs>
           <rect x="20" y="20" width="840" height="280" rx="14" fill="#f4f6f9" stroke="#e5e8ed" stroke-dasharray="4 4"/>
-          <text style="font:500 10px 'JetBrains Mono',monospace;letter-spacing:1.4px;fill:#54627a" x="40" y="44" data-i18n-svg="wp.c5.d.frame">SHAMIR · 2-of-3 THRESHOLD</text>
+          <text style="font:500 10px 'JetBrains Mono',monospace;letter-spacing:1.4px;fill:#54627a" x="40" y="44" data-i18n-svg="wp.c5.d.frame">SHAMIR · 2-of-3 SHARES</text>
           <g><rect class="node" x="60" y="78" width="200" height="50" rx="10"/><text class="node-lbl" x="160" y="108" text-anchor="middle" data-i18n-svg="wp.c5.d.n1">Device share</text></g>
           <g><rect class="node" x="60" y="148" width="200" height="50" rx="10"/><text class="node-lbl" x="160" y="178" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Telegram auth</text></g>
           <g><rect class="node alt" x="60" y="218" width="200" height="50" rx="10"/><text class="node-lbl alt" x="160" y="248" text-anchor="middle" data-i18n-svg="wp.c5.d.n3">Recovery share</text></g>
-          <g><rect class="node" x="380" y="120" width="200" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="480" y="156" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">threshold signing</text></g>
+          <g><rect class="node" x="380" y="120" width="200" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="480" y="156" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">multi-share signing</text></g>
           <path class="edge" d="M 260 103 L 380 145" marker-end="url(#mp-arr)"/>
           <path class="edge" d="M 260 173 L 380 165" marker-end="url(#mp-arr)"/>
           <path class="edge alt" d="M 260 243 L 380 185" marker-end="url(#mp-arr-w)"/>
@@ -637,7 +637,7 @@
             <text class="node-sub" x="396" y="272" data-i18n-svg="wp.c5.d.r2">·  shares are rotatable</text>
           </g>
         </svg>
-        <figcaption data-i18n="wp.c5.fig">Figure 5.1 — 2-of-3 Shamir threshold signing topology</figcaption>
+        <figcaption data-i18n="wp.c5.fig">Figure 5.1 — 2-of-3 Shamir multi-share signing topology</figcaption>
       </figure>
 
       <h3 data-i18n="wp.c5.h2">Threat model</h3>
@@ -647,6 +647,7 @@
           <tr><td data-i18n="wp.c5.t.1.1">Device theft</td><td data-i18n="wp.c5.t.1.2">Loss of one share</td><td data-i18n="wp.c5.t.1.3">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td></tr>
           <tr><td data-i18n="wp.c5.t.2.1">Telegram account or session hijack</td><td data-i18n="wp.c5.t.2.2">Access to the Telegram share only (one share)</td><td data-i18n="wp.c5.t.2.3">The Telegram share alone cannot reconstruct the key or sign; an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td></tr>
           <tr><td data-i18n="wp.c5.t.5.1">Recovery social engineering</td><td data-i18n="wp.c5.t.5.2">Coerced recovery share</td><td data-i18n="wp.c5.t.5.3">Time-locked recovery.</td></tr>
+          <tr><td data-i18n="wp.c5.t.6.1">Device compromise at sign time</td><td data-i18n="wp.c5.t.6.2">Attacker on the device can combine two shares</td><td data-i18n="wp.c5.t.6.3">Partially mitigated — re-auth, cooldown, high-value limits, anomaly checks; not fully eliminated.</td></tr>
         </tbody>
       </table></div>
       <div class="callout c-risk"><b data-i18n="wp.c5.cal.t">Risk</b><span data-i18n="wp.c5.cal.p">No custody model is unbreakable.</span></div>
@@ -815,7 +816,7 @@
       <h3 data-i18n="wp.c12.h1">Glossary</h3>
       <dl class="glossary">
         <dt data-i18n="wp.c12.g.sss.t">Shamir's Secret Sharing (SSS)</dt><dd data-i18n="wp.c12.g.sss.d">Shamir's Secret Sharing.</dd>
-        <dt data-i18n="wp.c12.g.thr.t">Threshold signature</dt><dd data-i18n="wp.c12.g.thr.d">A signature produced by any qualifying subset of share-holders.</dd>
+        <dt data-i18n="wp.c12.g.thr.t">Threshold scheme (Shamir-based)</dt><dd data-i18n="wp.c12.g.thr.d">A K-of-N access structure; not a threshold signature scheme (TSS).</dd>
         <dt data-i18n="wp.c12.g.tma.t">TMA</dt><dd data-i18n="wp.c12.g.tma.d">Telegram Mini App.</dd>
         <dt data-i18n="wp.c12.g.set.t">Settlement webhook</dt><dd data-i18n="wp.c12.g.set.d">A signed HTTP callback.</dd>
         <dt data-i18n="wp.c12.g.rec.t">Recovery share</dt><dd data-i18n="wp.c12.g.rec.d">An offline Shamir share.</dd>

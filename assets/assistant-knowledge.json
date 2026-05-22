@@ -1075,7 +1075,7 @@
         "custody",
         "settlement"
       ],
-      "text": "Layer 1 Client: Telegram Mini App, React + TMA SDK. Layer 2 Edge: auth, Shamir signing orchestration, price feeds, webhooks; stateless functions that hold no share; the key is reconstructed only transiently on the user device during signing. Layer 3 Custody (target architecture): signer service, recovery share registry, Telegram-share binding; isolated environment; hardware-protected share custody planned; holds no single signable key. Layer 4 Settlement: chain adapters, payment processor, indexer, merchant API; TON and EVM; idempotent settlement."
+      "text": "Layer 1 Client: Telegram Mini App, React + TMA SDK. Layer 2 Edge: auth, Shamir signing orchestration, price feeds, webhooks; stateless functions that hold no share; the key is reconstructed only transiently on the user device during signing. Layer 3 Custody (target architecture): signer service, recovery share registry, Telegram-share binding; hardened environment; planned hardware-backed share protection; holds no single signable key. Layer 4 Settlement: chain adapters, payment processor, indexer, merchant API; TON and EVM; idempotent settlement."
     },
     {
       "id": "wp-ch5",
@@ -1090,7 +1090,7 @@
         "threat model",
         "recovery"
       ],
-      "text": "Custody promise: no single party can move user funds. The 2-of-3 Shamir topology uses a device share, a Telegram-account-bound share, and a recovery share; any two are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via the recovery share plus a fresh Telegram-bound share; a Telegram account or session hijack cannot sign because the Telegram share alone is insufficient — an attacker still needs a second share (device or recovery) — and high-value transfers add re-auth and cooldown; recovery social engineering is mitigated by time-locked recovery. Because Shamir reconstructs the key at signing time, there is a brief on-device exposure window, mitigated by ephemeral reconstruction and immediate wipe. No custody model is unbreakable."
+      "text": "Custody promise: no single party can move user funds. The 2-of-3 Shamir topology uses a device share, a Telegram-account-bound share, and a recovery share; any two are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via the recovery share plus a fresh Telegram-bound share; a Telegram account or session hijack cannot sign because the Telegram share alone is insufficient — an attacker still needs a second share (device or recovery) — and high-value transfers add re-auth and cooldown; recovery social engineering is mitigated by time-locked recovery; a fully compromised device at sign time can reach two shares and is only partially mitigated (re-auth, cooldown, high-value limits, anomaly checks), not fully eliminated. Because Shamir reconstructs the key at signing time, there is a brief on-device exposure window, mitigated by ephemeral reconstruction and immediate wipe. No custody model is unbreakable."
     },
     {
       "id": "wp-ch6",
@@ -1184,7 +1184,7 @@
         "tma",
         "webhook"
       ],
-      "text": "Shamir's Secret Sharing (SSS): splits a key into N shares so any K (here 2 of 3) can reconstruct it while fewer reveal nothing; ONEWALLET reconstructs the key only briefly, on-device in an isolated context, to sign, then wipes it. Threshold signature: a signature authorized by any qualifying subset of shares. TMA: Telegram Mini App. Settlement webhook: a signed HTTP callback used for merchant reconciliation. Recovery share: an offline Shamir share used in recovery flows."
+      "text": "Shamir's Secret Sharing (SSS): splits a key into N shares so any K (here 2 of 3) can reconstruct it while fewer reveal nothing; ONEWALLET reconstructs the key only briefly, on-device in an isolated context, to sign, then wipes it. Threshold scheme (Shamir-based): a K-of-N access structure; not a threshold signature scheme (TSS), which never reconstructs the key. TMA: Telegram Mini App. Settlement webhook: a signed HTTP callback used for merchant reconciliation. Recovery share: an offline Shamir share used in recovery flows."
     },
     {
       "id": "hp-platform",
@@ -1196,7 +1196,7 @@
         "stack",
         "overview"
       ],
-      "text": "Open a wallet inside a chat. QR rail, not a portfolio app. 2-of-3 Shamir, no single point of failure. Web3 acceptance with Web2 ergonomics. $1 powers the working layer."
+      "text": "Open a wallet inside a chat. QR rail, not a portfolio app. 2-of-3 Shamir, no persistent single point of failure. Web3 acceptance with Web2 ergonomics. $1 powers the working layer."
     },
     {
       "id": "hp-audience",

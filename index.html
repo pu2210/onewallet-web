@@ -999,8 +999,8 @@
       </a>
       <a class="plat-card plat-mint" href="#security">
         <div class="plat-tag" data-i18n="plat.3.t">Security</div>
-        <h3 data-i18n="plat.3.h">2-of-3 Shamir.<br>No single point of failure.</h3>
-        <p data-i18n="plat.3.p">Threshold signing across device, Telegram, and recovery. The Telegram share alone never moves funds.</p>
+        <h3 data-i18n="plat.3.h">2-of-3 Shamir.<br>No single persistent point of failure.</h3>
+        <p data-i18n="plat.3.p">Multi-share signing across device, Telegram, and recovery. The Telegram share alone never moves funds.</p>
         <div class="plat-vis" aria-hidden="true"><img src="assets/platform/security.webp" alt="" loading="lazy" decoding="async" /></div>
       </a>
       <a class="plat-card plat-lavender" href="#payments">
@@ -1064,7 +1064,7 @@
     <div class="sect-head reveal">
       <span class="eyebrow" data-i18n="sec.eb">Security model</span>
       <h2 data-i18n="sec.h">Keyless by design.<br>Recoverable by default.</h2>
-      <p data-i18n="sec.p">2-of-3 Shamir's Secret Sharing eliminates the single point of failure that breaks most consumer wallets. Any two of the three shares are combined on your device in an isolated context to sign, then wiped. No single share — including the Telegram share — can reconstruct the key or sign alone.</p>
+      <p data-i18n="sec.p">2-of-3 Shamir's Secret Sharing removes the persistent single point of failure that breaks most consumer wallets. Any two of the three shares are combined on your device in an isolated context to sign, then wiped. No single share — including the Telegram share — can reconstruct the key or sign alone.</p>
     </div>
     <div class="security-grid">
       <div class="reveal">
@@ -1083,7 +1083,7 @@
             <g><rect class="node" x="20" y="30" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="58" text-anchor="middle" data-i18n-svg="wp.c5.d.n1">Device share</text></g>
             <g><rect class="node" x="20" y="118" width="150" height="44" rx="10"/><text class="node-lbl" x="95" y="146" text-anchor="middle" data-i18n-svg="wp.c5.d.n2">Telegram auth</text></g>
             <g><rect class="node alt" x="20" y="206" width="150" height="44" rx="10"/><text class="node-lbl alt" x="95" y="234" text-anchor="middle" data-i18n-svg="wp.c5.d.n3">Recovery share</text></g>
-            <g><rect class="node" x="270" y="100" width="170" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="355" y="138" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">threshold signing</text></g>
+            <g><rect class="node" x="270" y="100" width="170" height="80" rx="12" fill="rgba(15,122,90,0.06)"/><text class="node-lbl" x="355" y="138" text-anchor="middle" data-i18n-svg="wp.c5.d.thr">multi-share signing</text></g>
             <path class="edge" d="M 170 52 L 270 130" marker-end="url(#sec-arr)"/>
             <path class="edge" d="M 170 140 L 270 145" marker-end="url(#sec-arr)"/>
             <path class="edge alt" d="M 170 228 L 270 160" marker-end="url(#sec-arr-w)"/>
@@ -1098,6 +1098,7 @@
             <tbody>
               <tr><td data-i18n="sec.thr.1.v">Device lost</td><td data-i18n="sec.thr.1.m">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td><td><span class="badge badge-ok" data-i18n="sec.thr.1.s">Mitigated</span></td></tr>
               <tr><td data-i18n="sec.thr.2.v">Telegram account or session hijack</td><td data-i18n="sec.thr.2.m">The Telegram share alone cannot reconstruct the key or sign — an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td><td><span class="badge badge-ok" data-i18n="sec.thr.2.s">Mitigated</span></td></tr>
+              <tr><td data-i18n="sec.thr.5.v">Device compromise at sign time</td><td data-i18n="sec.thr.5.m">A fully compromised device can reach two shares; mitigated — not eliminated — by re-auth, cooldowns, high-value limits, and anomaly checks.</td><td><span class="badge badge-warn" data-i18n="sec.thr.5.s">Layered</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1129,7 +1130,7 @@
         <div class="pay-flow"><ol>
         <li><div><b data-i18n="pay.1.b">Merchant generates an invoice</b><span data-i18n="pay.1.s">Static or per-order QR with chain, amount, and memo.</span></div></li>
         <li><div><b data-i18n="pay.2.b">User scans inside Telegram</b><span data-i18n="pay.2.s">ONEWALLET resolves chain, displays receiver, fees, and FX preview.</span></div></li>
-        <li><div><b data-i18n="pay.3.b">Shamir signs and broadcasts</b><span data-i18n="pay.3.s">Threshold signature on the chosen chain. No seed prompt.</span></div></li>
+        <li><div><b data-i18n="pay.3.b">Shamir signs and broadcasts</b><span data-i18n="pay.3.s">Multi-share signature on the chosen chain. No seed prompt.</span></div></li>
         <li><div><b data-i18n="pay.4.b">Settlement webhook fires</b><span data-i18n="pay.4.s">Merchant receives stablecoin and a signed event for POS reconciliation.</span></div></li>
       </ol></div>
       </div>
