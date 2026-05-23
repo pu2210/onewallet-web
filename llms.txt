@@ -1,6 +1,6 @@
 # ONEWALLET
 
-> Telegram-native Web3 wallet, payment rail, $1 ecosystem, and source-grounded ONEWALLET AI Assistant. Keyless MPC custody, QR merchant payments, multi-chain support. This file follows llmstxt.org and lists approved public sources only. Forward-looking statements ("target", "planned", "draft") remain subject to product, security, and legal review. Not financial advice.
+> Telegram-native Web3 wallet, payment rail, $1 ecosystem, and source-grounded ONEWALLET AI Assistant. Keyless Multi-Share (Shamir) custody, QR merchant payments, multi-chain support. This file follows llmstxt.org and lists approved public sources only. Forward-looking statements ("target", "planned", "draft") remain subject to product, security, and legal review. Not financial advice.
 
 ## Primary
 

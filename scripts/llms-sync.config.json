@@ -2,12 +2,12 @@
   "$schema_note": "Google Docs source mapping for /llms.txt and /llms-full.txt. Doc IDs are not secrets.",
   "docs": [
     {
-      "docId": "15i7ifUxtkg0yfCsdcb0pebynZXPsaDpYDR6Mx0oTlGs",
+      "docId": "1VuEOapRlOdOj9Mwo-Z2o2CN8XSNppisDQQGdiU2WaB4",
       "out": "llms.txt",
       "label": "ONEWALLET - llms.txt source"
     },
     {
-      "docId": "1PkLhE8fSJWTL_t1f6aYHocCiOX_ZB7WyNbmcPBXS-zI",
+      "docId": "10MEV1LWKRT-1GUEXevhjyB5sCzI_A4c2mm8ZPmmlf2s",
       "out": "llms-full.txt",
       "label": "ONEWALLET - llms-full.txt source"
     }

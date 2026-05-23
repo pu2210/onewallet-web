@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "generated": "2026-05-14",
+    "generated": "2026-05-22",
     "locales": [
       "en",
       "ko",
@@ -27,7 +27,7 @@
         "mini",
         "app"
       ],
-      "text": "ONEWALLET is a Telegram-native Web3 wallet and payment rail. It bundles keyless MPC custody, QR payments, merchant tools, and $1 utility into a single Mini App flow."
+      "text": "ONEWALLET is a Telegram-native Web3 wallet and payment rail. It bundles keyless Multi-Share custody, QR payments, merchant tools, and $1 utility into a single Mini App flow."
     },
     {
       "id": "qa-open-en",
@@ -55,15 +55,16 @@
       "tags": [
         "custody",
         "custodial",
-        "mpc",
+        "shamir",
+        "multi-share",
         "key",
         "security",
         "sign",
         "share",
-        "server",
+        "telegram",
         "self"
       ],
-      "text": "No single party can move funds. The target custody model is 2-of-3 MPC across device, server, and recovery shares. Any one share alone — including the server — cannot sign a transaction."
+      "text": "No single party can move funds. The target custody model is 2-of-3 Shamir across device, Telegram, and recovery shares. Any two are combined on your device in an isolated context to sign, then wiped. Any one share alone — including the Telegram share — cannot reconstruct the key or sign a transaction."
     },
     {
       "id": "qa-recovery-en",
@@ -79,7 +80,7 @@
         "share",
         "rotate"
       ],
-      "text": "Recovery is designed around issuing a fresh device share and validating it through the recovery share. Losing a device or Telegram session should not give the server enough authority to move funds alone."
+      "text": "Recovery is designed around issuing a fresh device share and validating it through the recovery share. Losing a device or Telegram session should not give the Telegram share enough authority to move funds alone — a second share is still required."
     },
     {
       "id": "qa-seed-en",
@@ -91,9 +92,10 @@
         "phrase",
         "backup",
         "key",
-        "mpc"
+        "shamir",
+        "multi-share"
       ],
-      "text": "Not by default. ONEWALLET uses MPC, so there is no single seed phrase a normal user must hold. Advanced backup or export behavior remains subject to product and security approval."
+      "text": "Not by default. ONEWALLET uses Multi-Share (Shamir) custody, so there is no single seed phrase a normal user must hold. Advanced backup or export behavior remains subject to product and security approval."
     },
     {
       "id": "qa-networks-en",
@@ -129,7 +131,7 @@
         "stablecoin",
         "checkout"
       ],
-      "text": "A merchant generates a QR invoice. The user scans it inside Telegram. ONEWALLET previews receiver, fees, and FX, MPC signs the transaction, and a settlement webhook supports POS reconciliation."
+      "text": "A merchant generates a QR invoice. The user scans it inside Telegram. ONEWALLET previews receiver, fees, and FX, Shamir signing completes the transaction, and a settlement webhook supports POS reconciliation."
     },
     {
       "id": "qa-fees-en",
@@ -295,7 +297,7 @@
         "mini",
         "app"
       ],
-      "text": "ONEWALLET은 Telegram 안에서 작동하는 Web3 지갑이자 결제 레일입니다. 무시드 MPC 커스터디, QR 결제, 머천트 도구, $1 유틸리티를 하나의 Mini App 흐름으로 연결합니다."
+      "text": "ONEWALLET은 Telegram 안에서 작동하는 Web3 지갑이자 결제 레일입니다. 무시드 Multi-Share 커스터디, QR 결제, 머천트 도구, $1 유틸리티를 하나의 Mini App 흐름으로 연결합니다."
     },
     {
       "id": "qa-open-ko",
@@ -319,13 +321,14 @@
       "source": "#security",
       "tags": [
         "커스터디",
-        "mpc",
+        "shamir",
+        "multi-share",
         "보안",
         "서명",
         "분산키",
-        "서버"
+        "텔레그램"
       ],
-      "text": "단일 주체가 자금을 이동할 수 없도록 설계합니다. 목표 커스터디 모델은 기기·서버·복구 분산 키를 사용하는 2-of-3 MPC입니다. 서버 분산 키 하나만으로는 거래에 서명할 수 없습니다."
+      "text": "단일 주체가 자금을 이동할 수 없도록 설계합니다. 목표 커스터디 모델은 기기·텔레그램·복구 분산 키를 사용하는 2-of-3 Shamir입니다. 임의의 2개가 사용자 기기의 격리된 컨텍스트에서 키를 잠시 재구성해 서명한 뒤 폐기합니다. 텔레그램 분산 키 하나만으로는 키를 재구성하거나 거래에 서명할 수 없습니다."
     },
     {
       "id": "qa-recovery-ko",
@@ -353,9 +356,10 @@
         "문구",
         "백업",
         "키",
-        "mpc"
+        "shamir",
+        "multi-share"
       ],
-      "text": "기본적으로 필요하지 않습니다. ONEWALLET은 MPC를 사용하므로 일반 사용자가 관리해야 하는 단일 시드 문구가 없습니다. 고급 백업이나 내보내기 기능은 제품·보안 승인 범위로 남겨야 합니다."
+      "text": "기본적으로 필요하지 않습니다. ONEWALLET은 Multi-Share(Shamir) 커스터디를 사용하므로 일반 사용자가 관리해야 하는 단일 시드 문구가 없습니다. 고급 백업이나 내보내기 기능은 제품·보안 승인 범위로 남겨야 합니다."
     },
     {
       "id": "qa-networks-ko",
@@ -390,7 +394,7 @@
         "pos",
         "스테이블코인"
       ],
-      "text": "머천트가 QR 인보이스를 만들고, 사용자가 Telegram 안에서 스캔합니다. ONEWALLET은 수신자, 수수료, 환율을 미리 보여주고, MPC 서명 후 정산 Webhook으로 POS 대조를 지원합니다."
+      "text": "머천트가 QR 인보이스를 만들고, 사용자가 Telegram 안에서 스캔합니다. ONEWALLET은 수신자, 수수료, 환율을 미리 보여주고, Shamir 서명 후 정산 Webhook으로 POS 대조를 지원합니다."
     },
     {
       "id": "qa-fees-ko",
@@ -541,7 +545,7 @@
         "mini",
         "app"
       ],
-      "text": "ONEWALLET は Telegram ネイティブの Web3 ウォレット兼決済レールです。キーレス MPC カストディ、QR 決済、加盟店ツール、$1 ユーティリティを Telegram の Mini App 内でつなぎます。"
+      "text": "ONEWALLET は Telegram ネイティブの Web3 ウォレット兼決済レールです。キーレス Multi-Share カストディ、QR 決済、加盟店ツール、$1 ユーティリティを Telegram の Mini App 内でつなぎます。"
     },
     {
       "id": "qa-open-ja",
@@ -565,13 +569,14 @@
       "source": "#security",
       "tags": [
         "custody",
-        "mpc",
+        "shamir",
+        "multi-share",
         "security",
         "sign",
         "share",
-        "server"
+        "telegram"
       ],
-      "text": "単一の当事者だけでは資金を動かせません。目標カストディモデルは、デバイス、サーバー、復旧シェアによる 2-of-3 MPC です。サーバーシェア単体では取引に署名できません。"
+      "text": "単一の当事者だけでは資金を動かせません。目標カストディモデルは、デバイス、Telegram、復旧シェアによる 2-of-3 Shamir です。任意の2つがユーザー端末の隔離されたコンテキストで鍵を一時的に再構成して署名し、直後に破棄します。Telegramシェア単体では、鍵の再構成も取引への署名もできません。"
     },
     {
       "id": "qa-recovery-ja",
@@ -599,9 +604,10 @@
         "phrase",
         "backup",
         "key",
-        "mpc"
+        "shamir",
+        "multi-share"
       ],
-      "text": "標準では不要です。ONEWALLET は MPC を使うため、通常ユーザーが管理する単一のシードフレーズはありません。高度なバックアップやエクスポートは、製品・セキュリティ承認の対象です。"
+      "text": "標準では不要です。ONEWALLET は Multi-Share(Shamir) カストディを使うため、通常ユーザーが管理する単一のシードフレーズはありません。高度なバックアップやエクスポートは、製品・セキュリティ承認の対象です。"
     },
     {
       "id": "qa-networks-ja",
@@ -636,7 +642,7 @@
         "pos",
         "stablecoin"
       ],
-      "text": "加盟店が QR 請求を作成し、ユーザーが Telegram 内でスキャンします。ONEWALLET は受取先、手数料、為替プレビューを表示し、MPC 署名後に決済 Webhook で POS 照合を支援します。"
+      "text": "加盟店が QR 請求を作成し、ユーザーが Telegram 内でスキャンします。ONEWALLET は受取先、手数料、為替プレビューを表示し、Shamir 署名後に決済 Webhook で POS 照合を支援します。"
     },
     {
       "id": "qa-fees-ja",
@@ -787,7 +793,7 @@
         "mini",
         "app"
       ],
-      "text": "ONEWALLET 是原生于 Telegram 的 Web3 钱包和支付通道。它把无种子短语 MPC 托管、QR 支付、商户工具和 $1 效用整合到 Telegram Mini App 中。"
+      "text": "ONEWALLET 是原生于 Telegram 的 Web3 钱包和支付通道。它把无种子短语 Multi-Share 托管、QR 支付、商户工具和 $1 效用整合到 Telegram Mini App 中。"
     },
     {
       "id": "qa-open-zh",
@@ -811,13 +817,14 @@
       "source": "#security",
       "tags": [
         "custody",
-        "mpc",
+        "shamir",
+        "multi-share",
         "security",
         "sign",
         "share",
-        "server"
+        "telegram"
       ],
-      "text": "没有任何单一主体可以移动资金。目标托管模型是设备、服务器和恢复分片组成的 2-of-3 MPC。任何单一分片，包括服务器分片，都不能单独签名交易。"
+      "text": "没有任何单一主体可以移动资金。目标托管模型是设备、Telegram 和恢复分片组成的 2-of-3 Shamir。任意两个在用户设备的隔离环境中短暂重构密钥以完成签名，随后销毁。任何单一分片，包括 Telegram 分片，都无法独立重构密钥或签名交易。"
     },
     {
       "id": "qa-recovery-zh",
@@ -845,9 +852,10 @@
         "phrase",
         "backup",
         "key",
-        "mpc"
+        "shamir",
+        "multi-share"
       ],
-      "text": "默认不需要。ONEWALLET 使用 MPC，因此普通用户不需要管理单一助记词。高级备份或导出行为仍应经过产品和安全审批。"
+      "text": "默认不需要。ONEWALLET 使用 Multi-Share(Shamir) 托管，因此普通用户不需要管理单一助记词。高级备份或导出行为仍应经过产品和安全审批。"
     },
     {
       "id": "qa-networks-zh",
@@ -882,7 +890,7 @@
         "pos",
         "stablecoin"
       ],
-      "text": "商户生成 QR 发票，用户在 Telegram 内扫描。ONEWALLET 预览收款方、费用和汇率，MPC 签名后通过结算 Webhook 支持 POS 对账。"
+      "text": "商户生成 QR 发票，用户在 Telegram 内扫描。ONEWALLET 预览收款方、费用和汇率，Shamir 签名后通过结算 Webhook 支持 POS 对账。"
     },
     {
       "id": "qa-fees-zh",
@@ -1029,7 +1037,7 @@
         "overview",
         "positioning"
       ],
-      "text": "ONEWALLET is a Telegram-native Web3 wallet that replaces seed phrases with 2-of-3 MPC custody. The whitepaper covers product, architecture, security, token model, growth, business model, roadmap, team, and risks."
+      "text": "ONEWALLET is a Telegram-native Web3 wallet that replaces seed phrases with 2-of-3 Shamir custody. The whitepaper covers product, architecture, security, token model, growth, business model, roadmap, team, and risks."
     },
     {
       "id": "wp-ch2",
@@ -1042,7 +1050,7 @@
         "mini app",
         "stablecoin"
       ],
-      "text": "Telegram Mini Apps run native-feeling UIs without app-store gatekeeping. MPC custody has matured from research to production-grade libraries. Stablecoin volume is structurally meaningful for merchant payments. Consumer fatigue with seed-phrase ceremonies opens the field for keyless wallets. ONEWALLET combines wallet, payment rail, and ecosystem in one Telegram-native flow."
+      "text": "Telegram Mini Apps run native-feeling UIs without app-store gatekeeping. Shamir-based custody has matured from research to production-grade libraries. Stablecoin volume is structurally meaningful for merchant payments. Consumer fatigue with seed-phrase ceremonies opens the field for keyless wallets. ONEWALLET combines wallet, payment rail, and ecosystem in one Telegram-native flow."
     },
     {
       "id": "wp-ch3",
@@ -1067,21 +1075,22 @@
         "custody",
         "settlement"
       ],
-      "text": "Layer 1 Client: Telegram Mini App, React + TMA SDK. Layer 2 Edge: auth, MPC orchestration, price feeds, webhooks; stateless functions with zero-knowledge of full keys. Layer 3 Custody (target architecture): MPC server share, signer service, recovery share registry; isolated environment; hardware-protected key storage planned; cannot sign alone. Layer 4 Settlement: chain adapters, payment processor, indexer, merchant API; TON and EVM; idempotent settlement."
+      "text": "Layer 1 Client: Telegram Mini App, React + TMA SDK. Layer 2 Edge: auth, Shamir signing orchestration, price feeds, webhooks; stateless functions that hold no share; the key is reconstructed only transiently on the user device during signing. Layer 3 Custody (target architecture): signer service, recovery share registry, Telegram-share binding; hardened environment; planned hardware-backed share protection; holds no single signable key. Layer 4 Settlement: chain adapters, payment processor, indexer, merchant API; TON and EVM; idempotent settlement."
     },
     {
       "id": "wp-ch5",
       "locale": "en",
-      "title": "Security model — 2-of-3 MPC and threat model",
+      "title": "Security model — 2-of-3 Shamir and threat model",
       "source": "whitepaper.html#ch5",
       "tags": [
         "security",
-        "mpc",
+        "shamir",
+        "multi-share",
         "threshold",
         "threat model",
         "recovery"
       ],
-      "text": "Custody promise: no single party can move user funds. The 2-of-3 MPC topology uses a device share, a server share, and a recovery share; any two are required for a threshold signature; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via server plus recovery cooperation; server compromise or Telegram session hijack cannot sign because the server share alone is insufficient, and high-value transfers add re-auth and cooldown; recovery social engineering is mitigated by time-locked recovery. No custody model is unbreakable."
+      "text": "Custody promise: no single party can move user funds. The 2-of-3 Shamir topology uses a device share, a Telegram-account-bound share, and a recovery share; any two are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via the recovery share plus a fresh Telegram-bound share; a Telegram account or session hijack cannot sign because the Telegram share alone is insufficient — an attacker still needs a second share (device or recovery) — and high-value transfers add re-auth and cooldown; recovery social engineering is mitigated by time-locked recovery; a fully compromised device at sign time can reach two shares and is only partially mitigated (re-auth, cooldown, high-value limits, anomaly checks), not fully eliminated. Because Shamir reconstructs the key at signing time, there is a brief on-device exposure window, mitigated by ephemeral reconstruction and immediate wipe. No custody model is unbreakable."
     },
     {
       "id": "wp-ch6",
@@ -1133,7 +1142,7 @@
         "phases",
         "status"
       ],
-      "text": "Phase 1 Core wallet (MPC custody, TMA, multi-chain): completed. Phase 2 Payments rail (QR invoices, settlement webhooks): in progress. Phase 3 $1 utility (fee discount layer, reward engine): planned. Phase 4 Ecosystem (mini-app store, partner program): planned. Dates are intentionally omitted until owners approve public commitments."
+      "text": "Phase 1 Core wallet (Multi-Share custody, TMA, multi-chain): completed. Phase 2 Payments rail (QR invoices, settlement webhooks): in progress. Phase 3 $1 utility (fee discount layer, reward engine): planned. Phase 4 Ecosystem (mini-app store, partner program): planned. Dates are intentionally omitted until owners approve public commitments."
     },
     {
       "id": "wp-ch10",
@@ -1159,7 +1168,7 @@
         "platform",
         "regulatory"
       ],
-      "text": "High: custody compromise — any flaw in MPC share rotation could expose funds. High: platform dependency — Telegram is the runtime; progressive web fallback is planned. Medium: regulatory shift — rules vary by region; legal counsel is the mitigation. Medium: merchant adoption — requires integration density; anchor partners. Low: token utility drift — activity-linked rewards. Low: localization quality — native review pipeline."
+      "text": "High: custody compromise — Shamir reconstructs the key at signing time, creating a brief in-memory exposure window on the device; any flaw in share rotation, reconstruction, or key wipe could expose funds. High: platform dependency — Telegram is the runtime; progressive web fallback is planned. Medium: regulatory shift — rules vary by region; legal counsel is the mitigation. Medium: merchant adoption — requires integration density; anchor partners. Low: token utility drift — activity-linked rewards. Low: localization quality — native review pipeline."
     },
     {
       "id": "wp-ch12",
@@ -1170,11 +1179,12 @@
         "glossary",
         "definitions",
         "vocabulary",
-        "mpc",
+        "shamir",
+        "multi-share",
         "tma",
         "webhook"
       ],
-      "text": "MPC: multi-party computation. Threshold signature: a signature produced by any qualifying subset of share-holders. TMA: Telegram Mini App. Settlement webhook: a signed HTTP callback used for merchant reconciliation. Recovery share: a non-online MPC share used in recovery flows."
+      "text": "Shamir's Secret Sharing (SSS): splits a key into N shares so any K (here 2 of 3) can reconstruct it while fewer reveal nothing; ONEWALLET reconstructs the key only briefly, on-device in an isolated context, to sign, then wipes it. Threshold scheme (Shamir-based): a K-of-N access structure; not a threshold signature scheme (TSS), which never reconstructs the key. TMA: Telegram Mini App. Settlement webhook: a signed HTTP callback used for merchant reconciliation. Recovery share: an offline Shamir share used in recovery flows."
     },
     {
       "id": "hp-platform",
@@ -1186,7 +1196,7 @@
         "stack",
         "overview"
       ],
-      "text": "Open a wallet inside a chat. QR rail, not a portfolio app. 2-of-3 MPC, no single point of failure. Web3 acceptance with Web2 ergonomics. $1 powers the working layer."
+      "text": "Open a wallet inside a chat. QR rail, not a portfolio app. 2-of-3 Shamir, no persistent single point of failure. Web3 acceptance with Web2 ergonomics. $1 powers the working layer."
     },
     {
       "id": "hp-audience",
@@ -1199,7 +1209,7 @@
         "investors",
         "merchants"
       ],
-      "text": "For users: a wallet that just opens. Keyless onboarding inside Telegram. Plain-language recovery. Send, pay, and earn without managing a seed phrase. For investors: Telegram-scale distribution, MPC-secured custody architecture, token utility tied to real activity, referral-driven growth. For merchants: Web3 payments without the Web3 work — QR invoicing, stablecoin settlement, webhooks, ecosystem rewards."
+      "text": "For users: a wallet that just opens. Keyless onboarding inside Telegram. Plain-language recovery. Send, pay, and earn without managing a seed phrase. For investors: Telegram-scale distribution, Multi-Share custody architecture, token utility tied to real activity, referral-driven growth. For merchants: Web3 payments without the Web3 work — QR invoicing, stablecoin settlement, webhooks, ecosystem rewards."
     },
     {
       "id": "hp-security",
@@ -1208,7 +1218,8 @@
       "source": "index.html#security",
       "tags": [
         "security",
-        "mpc",
+        "shamir",
+        "multi-share",
         "recovery",
         "audit"
       ],

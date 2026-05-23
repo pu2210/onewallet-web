@@ -104,13 +104,13 @@ async function reachable() {
 
   // 8. Grounded question → ok:true OR safe fallback (model may not be reachable in dev)
   {
-    const r = await call({ body: { locale: 'en', question: 'How does MPC recovery work?' } });
+    const r = await call({ body: { locale: 'en', question: 'How does Shamir recovery work?' } });
     if (r.status === 200 && r.json && r.json.ok === true && Array.isArray(r.json.sources) && r.json.sources.length > 0) {
-      ok(`grounded MPC question → ok:true sources=${r.json.sources.map(s => s.id).join(',')}`);
+      ok(`grounded Shamir question → ok:true sources=${r.json.sources.map(s => s.id).join(',')}`);
     } else if (r.status === 200 && r.json && r.json.ok === false && r.json.mode === 'fallback') {
-      ok(`grounded MPC question → safe fallback (${r.json.reason})`);
+      ok(`grounded Shamir question → safe fallback (${r.json.reason})`);
     } else {
-      bad('grounded MPC question', `status=${r.status} body=${JSON.stringify(r.json)}`);
+      bad('grounded Shamir question', `status=${r.status} body=${JSON.stringify(r.json)}`);
     }
   }
 

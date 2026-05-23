@@ -48,7 +48,7 @@ const matrix = [
   ['thanks',                                                 'courtesy'],
   ['what can you do?',                                       'capability'],
   ['tell me about ONEWALLET',                                'supportedProductQuestion'],
-  ['how does MPC recovery work?',                            'supportedProductQuestion'],
+  ['how does Shamir recovery work?',                         'supportedProductQuestion'],
   ['do I need a seed phrase?',                               'supportedProductQuestion'],
   ['here is my seed phrase abandon abandon abandon',         'privateData'],
   ['abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about', 'privateData'],
@@ -105,7 +105,7 @@ function simulateSubmit(q, t, intents) {
     return { history, workerCalled, intent };
   }
   // supportedProductQuestion: pretend retrieval missed (null) or hit ('match')
-  const match = q.includes('MPC') ? { a: 'MPC answer' } : null;
+  const match = q.includes('Shamir') ? { a: 'Shamir answer' } : null;
   history.push({ role: 'user', text: q });
   if (match) {
     history.push({ role: 'bot', text: match.a });
@@ -165,12 +165,12 @@ console.log('\n--- submit-handler branch invariants ---');
   else ok('financial probe → refusal copy, no Worker call');
 }
 
-// MPC product question: falls through to retrieval (simulator hit), worker called.
+// Shamir product question: falls through to retrieval (simulator hit), worker called.
 {
-  const r = simulateSubmit('how does MPC recovery work?', tEn, shim);
-  if (r.intent !== 'supportedProductQuestion') bad('MPC intent', r.intent);
-  else if (!r.workerCalled) bad('MPC worker call', 'expected Worker call after match');
-  else ok('MPC question → supported, Worker invoked');
+  const r = simulateSubmit('how does Shamir recovery work?', tEn, shim);
+  if (r.intent !== 'supportedProductQuestion') bad('Shamir intent', r.intent);
+  else if (!r.workerCalled) bad('Shamir worker call', 'expected Worker call after match');
+  else ok('Shamir question → supported, Worker invoked');
 }
 
 // Off-topic with retrieval miss: classifyOfftopic kicks in via simulator.

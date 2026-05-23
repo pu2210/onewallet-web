@@ -8,27 +8,28 @@ Disclaimer: Forward-looking statements remain subject to product, security, and 
 
 SECTION 1 — What ONEWALLET is
 ------------------------------
-ONEWALLET is a Telegram-native Web3 wallet and payment rail. It bundles keyless MPC custody, QR payments, merchant tools, and $1 utility into a single Telegram Mini App flow. Users open ONEWALLET inside Telegram, verify the device, create the wallet, and then send, pay, or earn from the Mini App. The default flow avoids app-store downloads and seed-phrase setup.
+ONEWALLET is a Telegram-native Web3 wallet and payment rail. It bundles keyless Multi-Share custody, QR payments, merchant tools, and $1 utility into a single Telegram Mini App flow. Users open ONEWALLET inside Telegram, verify the device, create the wallet, and then send, pay, or earn from the Mini App. The default flow avoids app-store downloads and seed-phrase setup.
 
 SECTION 2 — Custody and security model
 ---------------------------------------
-ONEWALLET targets a 2-of-3 MPC custody model across three shares: a device share, a server share, and a recovery share. Any single share alone — including the server share — cannot sign a transaction. Two shares of the three are required to produce a threshold signature. Shares are rotatable.
+ONEWALLET targets a 2-of-3 Shamir custody model across three shares: a device share, a Telegram-account-bound share, and a recovery share. Any single share alone — including the Telegram share — cannot reconstruct the key or sign a transaction. Any two of the three are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it. Shares are rotatable.
 
 Trust boundaries:
 - Edge services see signing requests but never the complete key material.
-- Custody stores only one MPC share and cannot sign unilaterally.
-- Settlement broadcasts only after a valid threshold signature returns.
+- Each holder stores only one Shamir share and cannot sign unilaterally.
+- Settlement broadcasts only after a valid signature returns.
 
 Threat model (selected):
 - Device theft → loss of one share → rotate device share via server + recovery cooperation.
-- Server compromise or Telegram session hijack → server share alone cannot sign; high-value transfers add re-auth and cooldown.
+- Telegram account or session hijack → the Telegram share alone cannot reconstruct the key or sign; an attacker still needs a second share (device or recovery); high-value transfers add re-auth and cooldown.
+- Device compromise at sign time → a fully compromised device can reach two shares; partially mitigated (re-auth, cooldown, high-value limits, anomaly checks), not fully eliminated.
 - Recovery social engineering → coerced recovery share is mitigated by time-locked recovery.
 
 Custody isolation and hardware-protected key storage are described as target architecture, not a present-day guarantee. No custody model is unbreakable.
 
 SECTION 3 — Recovery and seed phrases
 --------------------------------------
-ONEWALLET uses MPC, so there is no single seed phrase a normal user must hold. If a user loses their device or Telegram account, recovery is designed around issuing a fresh device share and validating it through the recovery share. Losing a device or Telegram session does not give the server enough authority to move funds alone. Advanced backup or export behavior remains subject to product and security approval.
+ONEWALLET uses Multi-Share (Shamir) custody, so there is no single seed phrase a normal user must hold. If a user loses their device or Telegram account, recovery is designed around issuing a fresh device share and validating it through the recovery share. Losing a device or Telegram session does not give the Telegram share enough authority to move funds alone — a second share is still required. Advanced backup or export behavior remains subject to product and security approval.
 
 SECTION 4 — Networks
 ---------------------
@@ -36,7 +37,7 @@ The public draft targets TON, Ethereum, BNB Chain, TRON, and major stablecoins (
 
 SECTION 5 — Merchant payments
 ------------------------------
-Merchant flow: a merchant generates a QR invoice; the user scans it inside Telegram; ONEWALLET previews receiver, fees, and FX; MPC signs the transaction; a settlement webhook supports POS reconciliation. Merchant tooling includes QR invoicing, stablecoin settlement, webhooks, and ecosystem rewards.
+Merchant flow: a merchant generates a QR invoice; the user scans it inside Telegram; ONEWALLET previews receiver, fees, and FX; Shamir signing completes the transaction; a settlement webhook supports POS reconciliation. Merchant tooling includes QR invoicing, stablecoin settlement, webhooks, and ecosystem rewards.
 
 SECTION 6 — Fees and $1 utility
 --------------------------------
@@ -53,7 +54,7 @@ ONEWALLET makes no price, return, or exchange-listing promises. $1 is positioned
 
 SECTION 7 — Roadmap
 --------------------
-- Phase 1 — Core wallet (MPC custody, TMA, multi-chain): completed.
+- Phase 1 — Core wallet (Multi-Share custody, TMA, multi-chain): completed.
 - Phase 2 — Payments rail (QR invoices, settlement webhooks): in progress.
 - Phase 3 — $1 utility (fee discount layer, reward engine): planned.
 - Phase 4 — Ecosystem (mini-app store, partner program): planned.
@@ -62,7 +63,7 @@ Dates are intentionally omitted until owners approve public commitments.
 
 SECTION 8 — Risks (disclosed)
 ------------------------------
-- Custody compromise (high) — any flaw in MPC share rotation could expose funds.
+- Custody compromise (high) — Shamir reconstructs the key at signing time, creating a brief on-device in-memory exposure window; a flaw in share rotation, reconstruction, or key wipe could expose funds.
 - Platform dependency (high) — Telegram is the runtime; mitigation includes progressive web fallback.
 - Regulatory shift (medium) — rules vary by region; mitigation involves legal counsel.
 - Merchant adoption (medium) — requires integration density; mitigation via anchor partners.
@@ -72,8 +73,8 @@ SECTION 8 — Risks (disclosed)
 SECTION 9 — Architecture (four layers)
 ---------------------------------------
 - Layer 01 — Client: Telegram Mini App, React + TMA SDK; UI, session, device share, UX state.
-- Layer 02 — Edge: auth, MPC orchestration, price feeds, webhooks; stateless functions; zero-knowledge of full keys.
-- Layer 03 — Custody (target architecture): MPC server share, signer service, recovery share registry; isolated environment; hardware-protected key storage (planned); cannot sign alone.
+- Layer 02 — Edge: auth, Shamir signing orchestration, price feeds, webhooks; stateless functions; holds no share; key reconstructed only transiently on-device during signing.
+- Layer 03 — Custody (target architecture): signer service, recovery share registry, Telegram-share binding; hardened environment; planned hardware-backed share protection; holds no single signable key.
 - Layer 04 — Settlement: chain adapters, payment processor, indexer, merchant API; TON, EVM, stablecoin rails; idempotent settlement.
 
 SECTION 10 — Growth model
@@ -93,11 +94,11 @@ The team section names the founders, engineering, and operating partners listed 
 
 SECTION 13 — Glossary
 ----------------------
-- MPC — multi-party computation.
-- Threshold signature — a signature produced by any qualifying subset of share-holders.
+- Shamir's Secret Sharing (SSS) — splits a key into N shares so that any K (here 2 of 3) can reconstruct it while fewer than K reveal nothing; ONEWALLET reconstructs the key only briefly, on-device in an isolated context, to sign, then wipes it.
+- Threshold scheme (Shamir-based) — a K-of-N access structure; not a threshold signature scheme (TSS), which never reconstructs the key.
 - TMA — Telegram Mini App.
 - Settlement webhook — a signed HTTP callback used for merchant reconciliation.
-- Recovery share — a non-online MPC share used in recovery flows.
+- Recovery share — an offline Shamir share used in recovery flows.
 
 SECTION 14 — Support and community channels
 --------------------------------------------
@@ -113,7 +114,7 @@ The Telegram Mini App link is the product entry, not a social channel. Launch up
 
 SECTION 15 — ONEWALLET AI Assistant
 ------------------------------------
-The website includes the ONEWALLET AI Assistant. It is source-grounded on approved public website, whitepaper, and assistant-corpus material. It can answer questions about wallet setup, MPC security, recovery, payments, fees, $1 utility, roadmap, risks, team, and community channels.
+The website includes the ONEWALLET AI Assistant. It is source-grounded on approved public website, whitepaper, and assistant-corpus material. It can answer questions about wallet setup, Multi-Share (Shamir) security, recovery, payments, fees, $1 utility, roadmap, risks, team, and community channels.
 
 The assistant does not access user accounts, private wallet data, recovery data, or execute wallet actions. Answers can still be wrong and should not be treated as financial, legal, tax, investment, audit, regulatory, exchange-listing, or vendor-architecture advice. If context is unsupported or unsafe, the assistant should fall back to a safe refusal.
 
