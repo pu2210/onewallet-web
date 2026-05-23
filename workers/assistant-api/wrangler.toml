@@ -10,7 +10,7 @@ binding = "AI"
 # Runtime config. Override per-environment by passing different vars on deploy.
 [vars]
 ALLOWED_ORIGINS = "https://onewallet.store,https://www.onewallet.store,https://onewallet-web.vercel.app,http://localhost:4173,http://localhost:5173,http://127.0.0.1:4173"
-CORPUS_URL = "https://onewallet-web.vercel.app/assets/assistant-knowledge.json"
+CORPUS_URL = "https://onewallet.store/assets/assistant-knowledge.json"
 MODEL_ID = "@cf/google/gemma-4-26b-a4b-it"
 
 # Optional observability — enable when ready.
