@@ -22,8 +22,8 @@ Trust boundaries:
 Threat model (selected):
 - Device theft → loss of one share → rotate device share via server + recovery cooperation.
 - Telegram account or session hijack → the Telegram share alone cannot reconstruct the key or sign; an attacker still needs a second share (device or recovery); high-value transfers add re-auth and cooldown.
-- Device compromise at sign time → a fully compromised device can reach two shares; partially mitigated (re-auth, cooldown, high-value limits, anomaly checks), not fully eliminated.
-- Recovery social engineering → coerced recovery share is mitigated by time-locked recovery.
+- Signing from a compromised device → malware on the device attempts to combine two shares; per-signature biometric re-auth, value caps, cooldowns, and anomaly checks raise attacker cost and surface intervention before high-value broadcasts.
+- Coerced recovery attempt → user tricked or pressured into using the recovery share; time-locked recovery window with multi-step confirmation surfaces alerts before any share is released.
 
 Custody isolation and hardware-protected key storage are described as target architecture, not a present-day guarantee. No custody model is unbreakable.
 
