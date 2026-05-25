@@ -1098,7 +1098,7 @@
             <tbody>
               <tr><td data-i18n="sec.thr.1.v">Device lost</td><td data-i18n="sec.thr.1.m">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td><td><span class="badge badge-ok" data-i18n="sec.thr.1.s">Mitigated</span></td></tr>
               <tr><td data-i18n="sec.thr.2.v">Telegram account or session hijack</td><td data-i18n="sec.thr.2.m">The Telegram share alone cannot reconstruct the key or sign — an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td><td><span class="badge badge-ok" data-i18n="sec.thr.2.s">Mitigated</span></td></tr>
-              <tr><td data-i18n="sec.thr.5.v">Device compromise at sign time</td><td data-i18n="sec.thr.5.m">A fully compromised device can reach two shares; mitigated — not eliminated — by re-auth, cooldowns, high-value limits, and anomaly checks.</td><td><span class="badge badge-warn" data-i18n="sec.thr.5.s">Layered</span></td></tr>
+              <tr><td data-i18n="sec.thr.5.v">Compromised device attempts a sign</td><td data-i18n="sec.thr.5.m">Even when device and Telegram shares are present, signatures require fresh biometric re-auth and pass through cooldowns, high-value limits, and anomaly checks before broadcast.</td><td><span class="badge badge-warn" data-i18n="sec.thr.5.s">Layered</span></td></tr>
             </tbody>
           </table>
         </div>

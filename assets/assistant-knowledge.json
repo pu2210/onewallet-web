@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "generated": "2026-05-22",
+    "generated": "2026-05-25",
     "locales": [
       "en",
       "ko",
@@ -1090,7 +1090,7 @@
         "threat model",
         "recovery"
       ],
-      "text": "Custody promise: no single party can move user funds. The 2-of-3 Shamir topology uses a device share, a Telegram-account-bound share, and a recovery share; any two are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via the recovery share plus a fresh Telegram-bound share; a Telegram account or session hijack cannot sign because the Telegram share alone is insufficient — an attacker still needs a second share (device or recovery) — and high-value transfers add re-auth and cooldown; recovery social engineering is mitigated by time-locked recovery; a fully compromised device at sign time can reach two shares and is only partially mitigated (re-auth, cooldown, high-value limits, anomaly checks), not fully eliminated. Because Shamir reconstructs the key at signing time, there is a brief on-device exposure window, mitigated by ephemeral reconstruction and immediate wipe. No custody model is unbreakable."
+      "text": "Custody promise: no single party can move user funds. The 2-of-3 Shamir topology uses a device share, a Telegram-account-bound share, and a recovery share; any two are combined on the user device in an isolated context to reconstruct the key, sign, then wipe it; shares are rotatable. Threat model: device theft is mitigated by rotating the device share via the recovery share plus a fresh Telegram-bound share; a Telegram account or session hijack cannot sign because the Telegram share alone is insufficient — an attacker still needs a second share (device or recovery) — and high-value transfers add re-auth and cooldown; a coerced recovery attempt — where a user is tricked or pressured into using the recovery share — is mitigated by a time-locked recovery window with multi-step confirmation, surfacing alerts before any share is released; a signing attempt from a compromised device, where malware on the device tries to combine two shares, is met with per-signature biometric re-auth, value caps, cooldowns, and anomaly checks that raise attacker cost and surface intervention before high-value broadcasts. Because Shamir reconstructs the key at signing time, there is a brief on-device exposure window, mitigated by ephemeral reconstruction and immediate wipe. No custody model is unbreakable."
     },
     {
       "id": "wp-ch6",

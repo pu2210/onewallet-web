@@ -646,8 +646,8 @@
         <tbody>
           <tr><td data-i18n="wp.c5.t.1.1">Device theft</td><td data-i18n="wp.c5.t.1.2">Loss of one share</td><td data-i18n="wp.c5.t.1.3">Rotate the device share via the recovery share + a fresh Telegram-bound share.</td></tr>
           <tr><td data-i18n="wp.c5.t.2.1">Telegram account or session hijack</td><td data-i18n="wp.c5.t.2.2">Access to the Telegram share only (one share)</td><td data-i18n="wp.c5.t.2.3">The Telegram share alone cannot reconstruct the key or sign; an attacker still needs a 2nd share (device or recovery). High-value transfers add re-auth + cooldown.</td></tr>
-          <tr><td data-i18n="wp.c5.t.5.1">Recovery social engineering</td><td data-i18n="wp.c5.t.5.2">Coerced recovery share</td><td data-i18n="wp.c5.t.5.3">Time-locked recovery.</td></tr>
-          <tr><td data-i18n="wp.c5.t.6.1">Device compromise at sign time</td><td data-i18n="wp.c5.t.6.2">Attacker on the device can combine two shares</td><td data-i18n="wp.c5.t.6.3">Partially mitigated — re-auth, cooldown, high-value limits, anomaly checks; not fully eliminated.</td></tr>
+          <tr><td data-i18n="wp.c5.t.5.1">Coerced recovery attempt</td><td data-i18n="wp.c5.t.5.2">User tricked or pressured into using the recovery share</td><td data-i18n="wp.c5.t.5.3">Time-locked recovery window with multi-step confirmation — the delay surfaces alerts before any share is released.</td></tr>
+          <tr><td data-i18n="wp.c5.t.6.1">Signing from a compromised device</td><td data-i18n="wp.c5.t.6.2">Malware on the device attempts to combine two shares</td><td data-i18n="wp.c5.t.6.3">Per-signature biometric re-auth, value caps, cooldowns, and anomaly checks raise attacker cost and surface intervention before high-value broadcasts.</td></tr>
         </tbody>
       </table></div>
       <div class="callout c-risk"><b data-i18n="wp.c5.cal.t">Risk</b><span data-i18n="wp.c5.cal.p">No custody model is unbreakable.</span></div>
