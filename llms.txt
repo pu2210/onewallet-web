@@ -4,8 +4,8 @@
 
 ## Primary
 
-- [Homepage](https://onewallet.store/): Product overview, security model, payments, $1 utility, roadmap, team, FAQ.
-- [Whitepaper](https://onewallet.store/whitepaper.html): Twelve chapters covering executive summary, product thesis, UX, architecture, security, token model, growth, business model, roadmap, team, risks, glossary.
+- [Homepage](https://onewallet.store/): Product overview, security model, payments, $1 utility, roadmap, Malaysia foundation context, team, FAQ.
+- [Whitepaper](https://onewallet.store/whitepaper.html): Twelve chapters covering executive summary, product thesis, UX, architecture, security, token model, growth, business model, roadmap, Malaysia foundation and team governance, risks, glossary.
 - [Full text for LLMs](https://onewallet.store/llms-full.txt): Concatenated approved copy in a single plain-text file.
 
 ## Assistant corpus

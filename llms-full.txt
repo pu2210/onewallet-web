@@ -90,7 +90,18 @@ SECTION 11 — Business model
 
 SECTION 12 — Team and governance
 ---------------------------------
-The team section names the founders, engineering, and operating partners listed in the current public copy. For governance or partnership questions outside that list, contact the team on Telegram.
+ONE COMPANY is listed as a Malaysia foundation registered with SSM, Companies Commission of Malaysia.
+
+Foundation details from the latest update:
+- Corporate type: Foundation
+- Foundation name: ONE COMPANY
+- Country of establishment: Malaysia
+- Business address: 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur
+- Registration authority: SSM, Companies Commission of Malaysia
+
+Foundation mandate: support a global digital platform ecosystem across blockchain and Web3 research, education, and support; digital wallet, fintech, AI, game, travel, and information platforms; blockchain platform development and technical standardization; healthy digital asset and token use; Web3 community, membership, and rewards; AI automation and data platforms; online games, digital content, NFT, and metaverse ecosystems; travel, tourism, payment, and membership platforms; partnerships, seminars, conferences, education, promotion, publishing, youth and startup support, project support, safety, transparency, user protection, and compliance systems.
+
+Public team roles: James Kim (CEO and project leader), Kim Jae Mo (Director CMO), Max Khoo (Director CFO), Lee Jun Bong (Director), and Park Ju-Jin (Director).
 
 SECTION 13 — Glossary
 ----------------------

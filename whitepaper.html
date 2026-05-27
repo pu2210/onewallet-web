@@ -161,11 +161,20 @@
   table.t { width: 100%; min-width: 480px; border-collapse: collapse; margin: 18px 0; font-size: 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
   table.t th, table.t td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
   table.t tr:last-child td { border-bottom: 0; }
-  table.t th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-subtle); font-weight: 500; background: var(--bg-elevated); }
-  html[lang="ko"] table.t th, html[lang="ja"] table.t th, html[lang="zh"] table.t th { font-family: inherit; letter-spacing: 0.04em; }
-  table.t tr:nth-child(even) td { background: rgba(94,234,212,0.025); }
+	  table.t th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-subtle); font-weight: 500; background: var(--bg-elevated); }
+	  html[lang="ko"] table.t th, html[lang="ja"] table.t th, html[lang="zh"] table.t th { font-family: inherit; letter-spacing: 0.04em; }
+	  table.t tr:nth-child(even) td { background: rgba(94,234,212,0.025); }
+	  table.t.foundation-table { min-width: 0; }
+	  table.t.foundation-table th { width: 34%; }
+	  table.t.foundation-table td { overflow-wrap: anywhere; }
+	  @media (max-width: 720px) {
+	    table.t.foundation-table th,
+	    table.t.foundation-table td { display: block; width: 100%; }
+	    table.t.foundation-table th { border-bottom: 0; padding-bottom: 4px; }
+	    table.t.foundation-table td { padding-top: 4px; }
+	  }
 
-  .diagram { background: var(--bg-code); border: 1px solid var(--border); border-radius: var(--radius-md); padding: clamp(18px, 3vw, 30px); margin: 24px 0; box-shadow: 0 2px 6px rgba(6,17,43,0.04), 0 12px 32px rgba(6,17,43,0.05); }
+	  .diagram { background: var(--bg-code); border: 1px solid var(--border); border-radius: var(--radius-md); padding: clamp(18px, 3vw, 30px); margin: 24px 0; box-shadow: 0 2px 6px rgba(6,17,43,0.04), 0 12px 32px rgba(6,17,43,0.05); }
   .diagram-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--border-strong); }
   .diagram-title { font-family: var(--mono); font-size: 12.5px; color: var(--fg-strong); letter-spacing: 0.04em; }
   .diagram-sub { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); }
@@ -789,12 +798,22 @@
       <div class="callout c-assume"><b data-i18n="wp.c9.cal.t">Assumption</b><span data-i18n="wp.c9.cal.p">Dates are intentionally omitted.</span></div>
     </section>
 
-    <section class="chap reveal" id="ch10">
-      <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 10</div>
-      <h2 data-i18n="wp.ch.10">Team &amp; governance</h2>
-      <div class="summary-card"><b data-i18n="wp.c10.sum.t">Operators, not generalists</b><span data-i18n="wp.c10.sum.p">Shipping history across consumer fintech…</span></div>
-      <div class="wp-team" id="wpTeamGrid"></div>
-    </section>
+	    <section class="chap reveal" id="ch10">
+	      <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 10</div>
+	      <h2 data-i18n="wp.ch.10">Team &amp; governance</h2>
+	      <div class="summary-card"><b data-i18n="wp.c10.sum.t">Operators, not generalists</b><span data-i18n="wp.c10.sum.p">Shipping history across consumer fintech…</span></div>
+	      <div class="callout c-approved"><b data-i18n="wp.c10.legal.t">Malaysia foundation</b><span data-i18n="wp.c10.legal.p">The foundation update lists ONE COMPANY as a Malaysia foundation registered with SSM, Companies Commission of Malaysia, with the business address at 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur.</span></div>
+	      <div class="t-wrap"><table class="t foundation-table">
+	        <tbody>
+	          <tr><th scope="row" data-i18n="foundation.k1">Corporate type</th><td data-i18n="foundation.v1">Foundation</td></tr>
+	          <tr><th scope="row" data-i18n="foundation.k2">Country</th><td data-i18n="foundation.v2">Malaysia</td></tr>
+	          <tr><th scope="row" data-i18n="foundation.k3">Registration authority</th><td data-i18n="foundation.v3">SSM, Companies Commission of Malaysia</td></tr>
+	          <tr><th scope="row" data-i18n="foundation.k4">Business address</th><td data-i18n="foundation.v4">3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur</td></tr>
+	        </tbody>
+	      </table></div>
+	      <div class="callout c-assume"><b data-i18n="wp.c10.mandate.t">Foundation mandate</b><span data-i18n="wp.c10.mandate.p">The mandate covers research, education, and support for blockchain and Web3; digital wallet, fintech, AI, game, travel, and information platform ecosystems; blockchain-based platform development and standardization; healthy digital asset and token use; Web3 community, membership, and reward systems; AI automation and data platforms; online games, digital content, NFT, and metaverse ecosystems; travel, tourism, payment, and membership platforms; partnerships, events, publishing, youth and startup education, project support, safety, transparency, user protection, and compliance systems.</span></div>
+	      <div class="wp-team" id="wpTeamGrid"></div>
+	    </section>
 
     <section class="chap reveal" id="ch11">
       <div class="chap-num"><span data-i18n="wp.chnum">Chapter</span> 11</div>

@@ -66,9 +66,8 @@ const cases = [
   // Unsupported-claim path → either no match, OR matched chunk must contain explicit denial wording.
   { q: 'will $1 be listed on Binance next month?', locale: 'en', expectIdLike: null, mustDeny: true },
   { q: 'guaranteed returns yield', locale: 'en', expectIdLike: null, mustDeny: true },
-  // Out-of-scope corporate questions — must NOT bleed into product chunks.
-  { q: 'legal company registration', locale: 'en', expectIdLike: null, allowNull: true },
-  { q: 'registered company address', locale: 'en', expectIdLike: null, allowNull: true },
+	  { q: 'legal company registration', locale: 'en', expectIdLike: /qa-team|wp-ch10/ },
+	  { q: 'registered company address', locale: 'en', expectIdLike: /qa-team|wp-ch10/ },
   { q: 'terms of service',           locale: 'en', expectIdLike: null, allowNull: true },
   // "founder email contact" — contact questions correctly redirect to the support chunk
   // (curated text points users to Telegram), not a leak. Allow support routing.
@@ -133,7 +132,7 @@ function searchFallback(query) {
 const fallbackCases = [
   { q: 'do i need a seed phrase',     expectId: 'seed' },
   { q: 'merchant qr payment',         expectId: 'payments' },
-  { q: 'legal company registration',  expectNull: true },
+	  { q: 'legal company registration',  expectId: 'team' },
   { q: 'founder email contact',       expectIdLike: /support|team/ },
   { q: 'bank grade security',         expectNull: true },
   { q: 'terms of service',            expectNull: true }

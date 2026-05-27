@@ -4,36 +4,36 @@
 window.I18N = (function () {
 
   /* ---------- Helpers shared across languages ---------- */
-  const TEAM = {
-    en: [
-      { role: 'CEO', krName: '김종성', name: 'James Kim', li: ['Project leader', 'Foundation oversight & global strategy', 'Vision lead for ONEWALLET'] },
-      { role: 'Director · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] },
-      { role: 'Director · CFO', krName: '', name: 'Khoo Yih Shian', li: ['Token economy management', 'Project financial strategy', 'Investment & partnership structuring'] },
-      { role: 'Director', krName: '박주진', name: 'Park Ju-Jin', li: ['Foundation oversight', 'Global strategy'] },
-      { role: 'Director', krName: '이준봉', name: 'Lee Jun Bong', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] }
-    ],
-    ko: [
-      { role: '최고경영자', krName: '김종성', name: 'James Kim', li: ['프로젝트 리더', '재단 총괄 및 글로벌 전략', 'ONEWALLET 비전 리드'] },
-      { role: '이사 · 마케팅 총괄', krName: '김재모', name: 'Kim Jae Mo', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] },
-      { role: '이사 · 재무 총괄', krName: '', name: 'Khoo Yih Shian', li: ['토큰 이코노미 관리', '프로젝트 재무 전략', '투자 및 파트너십 구조화'] },
-      { role: '이사', krName: '박주진', name: 'Park Ju-Jin', li: ['재단 운영 총괄', '글로벌 전략'] },
-      { role: '이사', krName: '이준봉', name: 'Lee Jun Bong', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] }
-    ],
-    ja: [
-      { role: '最高経営責任者', krName: '김종성', name: 'James Kim', li: ['プロジェクトリード', '財団運営とグローバル戦略', 'ONEWALLET のビジョン責任者'] },
-      { role: '取締役 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] },
-      { role: '取締役 · CFO', krName: '', name: 'Khoo Yih Shian', li: ['トークンエコノミー運用', '財務戦略の策定', '投資およびパートナーシップ設計'] },
-      { role: '取締役', krName: '박주진', name: 'Park Ju-Jin', li: ['財団運営の統括', 'グローバル戦略'] },
-      { role: '取締役', krName: '이준봉', name: 'Lee Jun Bong', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] }
-    ],
-    zh: [
-      { role: '首席执行官', krName: '김종성', name: 'James Kim', li: ['项目负责人', '基金会监督与全球战略', 'ONEWALLET 愿景负责人'] },
-      { role: '董事 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] },
-      { role: '董事 · CFO', krName: '', name: 'Khoo Yih Shian', li: ['代币经济管理', '项目财务战略', '投资与合作架构'] },
-      { role: '董事', krName: '박주진', name: 'Park Ju-Jin', li: ['基金会监督', '全球战略'] },
-      { role: '董事', krName: '이준봉', name: 'Lee Jun Bong', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] }
-    ]
-  };
+    const TEAM = {
+      en: [
+        { role: 'CEO', krName: '김종성', name: 'James Kim', li: ['Project leader', 'Foundation oversight & global strategy', 'Vision lead for ONEWALLET'] },
+        { role: 'Director · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] },
+        { role: 'Director · CFO', krName: '', name: 'Max Khoo', li: ['Token economy management', 'Project financial strategy', 'Investment & partnership structuring'] },
+        { role: 'Director', krName: '박주진', name: 'Park Ju-Jin', li: ['Foundation oversight & global strategy', 'Former Chairman, CrossCoin Foundation'] },
+        { role: 'Director', krName: '이준봉', name: 'Lee Jun Bong', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] }
+      ],
+      ko: [
+        { role: '최고경영자', krName: '김종성', name: 'James Kim', li: ['프로젝트 리더', '재단 총괄 및 글로벌 전략', 'ONEWALLET 비전 리드'] },
+        { role: '이사 · 마케팅 총괄', krName: '김재모', name: 'Kim Jae Mo', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] },
+        { role: '이사 · 재무 총괄', krName: '', name: 'Max Khoo', li: ['토큰 이코노미 관리', '프로젝트 재무 전략', '투자 및 파트너십 구조화'] },
+        { role: '이사', krName: '박주진', name: 'Park Ju-Jin', li: ['재단 총괄 및 글로벌 전략', '전 CrossCoin Foundation 의장'] },
+        { role: '이사', krName: '이준봉', name: 'Lee Jun Bong', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] }
+      ],
+      ja: [
+        { role: '最高経営責任者', krName: '김종성', name: 'James Kim', li: ['プロジェクトリード', '財団運営とグローバル戦略', 'ONEWALLET のビジョン責任者'] },
+        { role: '取締役 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] },
+        { role: '取締役 · CFO', krName: '', name: 'Max Khoo', li: ['トークンエコノミー運用', '財務戦略の策定', '投資およびパートナーシップ設計'] },
+        { role: '取締役', krName: '박주진', name: 'Park Ju-Jin', li: ['財団運営とグローバル戦略', '元 CrossCoin Foundation 議長'] },
+        { role: '取締役', krName: '이준봉', name: 'Lee Jun Bong', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] }
+      ],
+      zh: [
+        { role: '首席执行官', krName: '김종성', name: 'James Kim', li: ['项目负责人', '基金会监督与全球战略', 'ONEWALLET 愿景负责人'] },
+        { role: '董事 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] },
+        { role: '董事 · CFO', krName: '', name: 'Max Khoo', li: ['代币经济管理', '项目财务战略', '投资与合作架构'] },
+        { role: '董事', krName: '박주진', name: 'Park Ju-Jin', li: ['基金会监督与全球战略', '前 CrossCoin Foundation 主席'] },
+        { role: '董事', krName: '이준봉', name: 'Lee Jun Bong', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] }
+      ]
+    };
 
   /* ============ ENGLISH (source) ============ */
   const en = {
@@ -166,9 +166,16 @@ window.I18N = (function () {
     'road.3.q': 'Phase 3', 'road.3.h': '$1 utility', 'road.3.li1': 'Fee discount layer', 'road.3.li2': 'Reward engine', 'road.3.li3': 'Governance signal',
     'road.4.q': 'Phase 4', 'road.4.h': 'Ecosystem', 'road.4.li1': 'Mini-app store', 'road.4.li2': 'Partner program', 'road.4.li3': 'Localized launches',
 
-    'team.eb': 'Team',
-    'team.h': 'The people building ONEWALLET.',
-    'team.p': 'Operators with shipping history across consumer fintech, exchange infrastructure, and Web3 product. We list responsibilities, not slogans.',
+      'team.eb': 'Team',
+      'team.h': 'The people building ONEWALLET.',
+      'team.p': 'Operators with shipping history across consumer fintech, exchange infrastructure, and Web3 product. We list responsibilities, not slogans.',
+      'foundation.eb': 'Foundation',
+      'foundation.h': 'ONE COMPANY Malaysia foundation.',
+      'foundation.p': 'ONE COMPANY is listed as a Malaysia foundation registered with SSM, Companies Commission of Malaysia. Its mandate supports a global digital platform ecosystem across blockchain, Web3, digital wallets, fintech, AI, games, travel, information services, community, membership, and rewards.',
+      'foundation.k1': 'Corporate type', 'foundation.v1': 'Foundation',
+      'foundation.k2': 'Country', 'foundation.v2': 'Malaysia',
+      'foundation.k3': 'Registration authority', 'foundation.v3': 'SSM, Companies Commission of Malaysia',
+      'foundation.k4': 'Business address', 'foundation.v4': '3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur',
 
     'faq.eb': 'FAQ',
     'faq.h': 'The questions that block sign-ups.',
@@ -360,9 +367,13 @@ window.I18N = (function () {
     'wp.c9.cal.t': 'Assumption',
     'wp.c9.cal.p': 'Dates are intentionally omitted in this draft until product, security, and legal owners approve a public commitment.',
 
-    /* Ch10 */
-    'wp.c10.sum.t': 'Operators, not generalists',
-    'wp.c10.sum.p': 'Shipping history across consumer fintech, exchange infrastructure, and Web3 product. Governance transitions from team stewardship to ecosystem participation as $1 utility matures.',
+      /* Ch10 */
+      'wp.c10.sum.t': 'Operators, not generalists',
+      'wp.c10.sum.p': 'ONE COMPANY is the Malaysia foundation context for ONEWALLET. The team section lists the foundation and operating roles provided in the latest foundation update.',
+      'wp.c10.legal.t': 'Malaysia foundation',
+      'wp.c10.legal.p': 'The foundation update lists ONE COMPANY as a Malaysia foundation registered with SSM, Companies Commission of Malaysia, with the business address at 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur.',
+      'wp.c10.mandate.t': 'Foundation mandate',
+      'wp.c10.mandate.p': 'The mandate covers research, education, and support for blockchain and Web3; digital wallet, fintech, AI, game, travel, and information platform ecosystems; blockchain-based platform development and standardization; healthy digital asset and token use; Web3 community, membership, and reward systems; AI automation and data platforms; online games, digital content, NFT, and metaverse ecosystems; travel, tourism, payment, and membership platforms; partnerships, events, publishing, youth and startup education, project support, safety, transparency, user protection, and compliance systems.',
 
     /* Ch11 */
     'wp.c11.sum.t': 'Honesty as credibility',
@@ -521,9 +532,16 @@ window.I18N = (function () {
     'road.3.q': '3단계', 'road.3.h': '$1 유틸리티', 'road.3.li1': '수수료 할인 레이어', 'road.3.li2': '리워드 엔진', 'road.3.li3': '거버넌스 시그널',
     'road.4.q': '4단계', 'road.4.h': '에코시스템', 'road.4.li1': '미니 앱 스토어', 'road.4.li2': '파트너 프로그램', 'road.4.li3': '현지화 출시',
 
-    'team.eb': '팀',
-    'team.h': 'ONEWALLET을 만드는 사람들.',
-    'team.p': '소비자 핀테크, 거래소 인프라, Web3 제품 전반에 걸친 출시 경험. 슬로건이 아닌 책임을 적습니다.',
+      'team.eb': '팀',
+      'team.h': 'ONEWALLET을 만드는 사람들.',
+      'team.p': '소비자 핀테크, 거래소 인프라, Web3 제품 전반에 걸친 출시 경험. 슬로건이 아닌 책임을 적습니다.',
+      'foundation.eb': '재단',
+      'foundation.h': 'ONE COMPANY 말레이시아 재단.',
+      'foundation.p': 'ONE COMPANY는 말레이시아 SSM(Companies Commission of Malaysia)에 등록된 말레이시아 재단으로 기재되어 있습니다. 재단의 목적은 블록체인, Web3, 디지털 지갑, 핀테크, AI, 게임, 여행, 정보 서비스, 커뮤니티, 멤버십, 리워드를 아우르는 글로벌 디지털 플랫폼 생태계 지원입니다.',
+      'foundation.k1': '법인 형태', 'foundation.v1': '재단',
+      'foundation.k2': '설립 국가', 'foundation.v2': '말레이시아',
+      'foundation.k3': '등록기관', 'foundation.v3': 'SSM, Companies Commission of Malaysia',
+      'foundation.k4': '사업지 주소', 'foundation.v4': '3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur',
 
     'faq.eb': '자주 묻는 질문',
     'faq.h': '가입을 가로막는 질문들.',
@@ -702,8 +720,12 @@ window.I18N = (function () {
     'wp.c9.cal.t': '가정',
     'wp.c9.cal.p': '날짜는 본 초안에서 의도적으로 생략되었으며, 제품·보안·법무 담당자가 공개 약속을 승인한 시점에 게재됩니다.',
 
-    'wp.c10.sum.t': '제너럴리스트가 아닌 운영자들',
-    'wp.c10.sum.p': '소비자 핀테크, 거래소 인프라, Web3 제품 전반의 출시 경험. 거버넌스는 $1 유틸리티가 성숙함에 따라 팀 운영에서 에코시스템 참여로 전환됩니다.',
+      'wp.c10.sum.t': '재단과 운영진',
+      'wp.c10.sum.p': 'ONE COMPANY는 ONEWALLET의 말레이시아 재단 맥락입니다. 이 팀 섹션은 최신 재단 업데이트에 제공된 재단 및 운영 역할을 기준으로 정리했습니다.',
+      'wp.c10.legal.t': '말레이시아 재단',
+      'wp.c10.legal.p': '재단 업데이트에는 ONE COMPANY가 말레이시아 SSM(Companies Commission of Malaysia)에 등록된 말레이시아 재단으로, 사업지 주소가 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur로 기재되어 있습니다.',
+      'wp.c10.mandate.t': '재단 목적',
+      'wp.c10.mandate.p': '재단 목적은 블록체인 및 Web3 연구·교육·지원, 디지털 지갑·핀테크·AI·게임·여행·정보 플랫폼 생태계, 블록체인 기반 플랫폼 개발 및 표준화, 디지털자산과 토큰 기반 서비스의 건전한 활용, Web3 커뮤니티·멤버십·리워드, AI 자동화와 데이터 플랫폼, 온라인 게임·디지털 콘텐츠·NFT·메타버스, 여행·관광·결제·멤버십 플랫폼, 국내외 협력, 세미나·컨퍼런스·출판, 청년·스타트업·개발자·창작자 교육과 프로젝트 지원, 안전성·투명성·이용자 보호·컴플라이언스 체계 구축 지원을 포함합니다.',
 
     'wp.c11.sum.t': '정직함이 신뢰',
     'wp.c11.sum.p': '위험을 공개하는 것은 제품의 일부입니다. 아래 매트릭스는 ONEWALLET이 가장 진지하게 다루는 위험을 명시합니다.',
@@ -860,9 +882,16 @@ window.I18N = (function () {
     'road.3.q': 'フェーズ3', 'road.3.h': '$1ユーティリティ', 'road.3.li1': '手数料割引レイヤー', 'road.3.li2': '報酬エンジン', 'road.3.li3': 'ガバナンスシグナル',
     'road.4.q': 'フェーズ4', 'road.4.h': 'エコシステム', 'road.4.li1': 'ミニアプリストア', 'road.4.li2': 'パートナープログラム', 'road.4.li3': 'ローカライズ展開',
 
-    'team.eb': 'チーム',
-    'team.h': 'ONEWALLETをつくる人々。',
-    'team.p': 'コンシューマーフィンテック、取引所インフラ、Web3プロダクト全般での出荷実績。スローガンではなく責任範囲を明記します。',
+      'team.eb': 'チーム',
+      'team.h': 'ONEWALLETをつくる人々。',
+      'team.p': 'コンシューマーフィンテック、取引所インフラ、Web3プロダクト全般での出荷実績。スローガンではなく責任範囲を明記します。',
+      'foundation.eb': '財団',
+      'foundation.h': 'ONE COMPANY マレーシア財団。',
+      'foundation.p': 'ONE COMPANY は、マレーシアの SSM（Companies Commission of Malaysia）に登録されたマレーシア財団として記載されています。財団の目的は、ブロックチェーン、Web3、デジタルウォレット、フィンテック、AI、ゲーム、旅行、情報サービス、コミュニティ、メンバーシップ、報酬を含むグローバルなデジタルプラットフォームエコシステムを支援することです。',
+      'foundation.k1': '法人形態', 'foundation.v1': '財団',
+      'foundation.k2': '設立国', 'foundation.v2': 'マレーシア',
+      'foundation.k3': '登録機関', 'foundation.v3': 'SSM, Companies Commission of Malaysia',
+      'foundation.k4': '事業所住所', 'foundation.v4': '3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur',
 
     'faq.eb': 'よくある質問',
     'faq.h': 'サインアップを止める質問たち。',
@@ -1041,8 +1070,12 @@ window.I18N = (function () {
     'wp.c9.cal.t': '前提',
     'wp.c9.cal.p': '日付は本ドラフトでは意図的に省略され、プロダクト・セキュリティ・法務が公開コミットを承認した時点で記載されます。',
 
-    'wp.c10.sum.t': 'ジェネラリストではなく実行者',
-    'wp.c10.sum.p': 'コンシューマーフィンテック、取引所インフラ、Web3プロダクト全般の出荷実績。ガバナンスは$1ユーティリティの成熟に伴いチーム主導からエコシステム参加へ移行します。',
+      'wp.c10.sum.t': '財団と運営体制',
+      'wp.c10.sum.p': 'ONE COMPANY は ONEWALLET のマレーシア財団コンテキストです。このチームセクションは、最新の財団アップデートで提供された財団および運営上の役割に基づいています。',
+      'wp.c10.legal.t': 'マレーシア財団',
+      'wp.c10.legal.p': '財団アップデートでは、ONE COMPANY はマレーシアの SSM（Companies Commission of Malaysia）に登録されたマレーシア財団であり、事業所住所は 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur とされています。',
+      'wp.c10.mandate.t': '財団の目的',
+      'wp.c10.mandate.p': '目的には、ブロックチェーンとWeb3の研究・教育・支援、デジタルウォレット・フィンテック・AI・ゲーム・旅行・情報プラットフォームのエコシステム、ブロックチェーン基盤プラットフォームの開発と標準化、デジタル資産とトークン型サービスの健全な利用、Web3コミュニティ・メンバーシップ・報酬、AI自動化とデータプラットフォーム、オンラインゲーム・デジタルコンテンツ・NFT・メタバース、旅行・観光・決済・メンバーシッププラットフォーム、国内外の協力、セミナー・カンファレンス・出版、若者・スタートアップ・開発者・クリエイター教育とプロジェクト支援、安全性・透明性・利用者保護・コンプライアンス体制の支援が含まれます。',
 
     'wp.c11.sum.t': '誠実さこそが信頼',
     'wp.c11.sum.p': 'リスクの開示はプロダクトの一部です。以下のマトリクスはONEWALLETが最も重く扱うリスクを列挙します。',
@@ -1199,9 +1232,16 @@ window.I18N = (function () {
     'road.3.q': '阶段 3', 'road.3.h': '$1 效用', 'road.3.li1': '费用折扣层', 'road.3.li2': '奖励引擎', 'road.3.li3': '治理信号',
     'road.4.q': '阶段 4', 'road.4.h': '生态', 'road.4.li1': '小程序商店', 'road.4.li2': '合作计划', 'road.4.li3': '本地化发布',
 
-    'team.eb': '团队',
-    'team.h': '建设 ONEWALLET 的人。',
-    'team.p': '在消费金融、交易所基础设施与 Web3 产品方面的交付经验。我们列出职责,而非口号。',
+      'team.eb': '团队',
+      'team.h': '建设 ONEWALLET 的人。',
+      'team.p': '在消费金融、交易所基础设施与 Web3 产品方面的交付经验。我们列出职责,而非口号。',
+      'foundation.eb': '基金会',
+      'foundation.h': 'ONE COMPANY 马来西亚基金会。',
+      'foundation.p': 'ONE COMPANY 被列为在马来西亚 SSM（Companies Commission of Malaysia）注册的马来西亚基金会。其宗旨是支持覆盖区块链、Web3、数字钱包、金融科技、AI、游戏、旅游、信息服务、社区、会员与奖励的全球数字平台生态。',
+      'foundation.k1': '法人形态', 'foundation.v1': '基金会',
+      'foundation.k2': '设立国家', 'foundation.v2': '马来西亚',
+      'foundation.k3': '注册机构', 'foundation.v3': 'SSM, Companies Commission of Malaysia',
+      'foundation.k4': '营业地址', 'foundation.v4': '3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur',
 
     'faq.eb': '常见问题',
     'faq.h': '阻碍注册的问题。',
@@ -1380,8 +1420,12 @@ window.I18N = (function () {
     'wp.c9.cal.t': '假设',
     'wp.c9.cal.p': '本草稿故意省略日期,待产品、安全与法务负责人核准公开承诺后再补充。',
 
-    'wp.c10.sum.t': '不是通才,而是实干者',
-    'wp.c10.sum.p': '在消费金融、交易所基础设施与 Web3 产品方面的交付经验。随着 $1 效用成熟,治理将从团队主导过渡到生态参与。',
+      'wp.c10.sum.t': '基金会与运营团队',
+      'wp.c10.sum.p': 'ONE COMPANY 是 ONEWALLET 的马来西亚基金会背景。本团队章节依据最新基金会更新中提供的基金会和运营角色整理。',
+      'wp.c10.legal.t': '马来西亚基金会',
+      'wp.c10.legal.p': '基金会更新显示,ONE COMPANY 是在马来西亚 SSM（Companies Commission of Malaysia）注册的马来西亚基金会,营业地址为 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur。',
+      'wp.c10.mandate.t': '基金会宗旨',
+      'wp.c10.mandate.p': '宗旨包括区块链与 Web3 研究、教育与支持;数字钱包、金融科技、AI、游戏、旅游与信息平台生态;区块链平台开发与标准化;数字资产和代币服务的健康使用;Web3 社区、会员与奖励体系;AI 自动化与数据平台;线上游戏、数字内容、NFT 与元宇宙;旅游、观光、支付与会员平台;国内外合作;研讨会、会议、出版;青年、初创企业、开发者和创作者教育与项目支持;以及安全、透明、用户保护和合规体系建设。',
 
     'wp.c11.sum.t': '坦诚即可信',
     'wp.c11.sum.p': '披露风险是产品的一部分。下表列出 ONEWALLET 最重视的风险。',

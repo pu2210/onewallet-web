@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "generated": "2026-05-25",
+    "generated": "2026-05-27",
     "locales": [
       "en",
       "ko",
@@ -230,11 +230,18 @@
         "team",
         "founders",
         "governance",
-        "who",
-        "behind",
-        "people"
+        "foundation",
+        "malaysia",
+        "ssm",
+        "one",
+        "company",
+        "directors",
+        "people",
+        "legal",
+        "registration",
+        "address"
       ],
-      "text": "The team section names the founders, engineering, and operating partners listed in the current public copy. For governance or partnership questions outside that list, please reach the team on Telegram."
+      "text": "The latest foundation update lists ONE COMPANY as a Malaysia foundation registered with SSM, Companies Commission of Malaysia. The public team section lists James Kim as CEO, Kim Jae Mo as Director CMO, Max Khoo as Director CFO, Park Ju-Jin as Director, and Lee Jun Bong as Director."
     },
     {
       "id": "qa-support-en",
@@ -483,12 +490,15 @@
       "source": "#team",
       "tags": [
         "팀",
-        "창립자",
-        "거버넌스",
-        "누구",
-        "사람"
+        "재단",
+        "말레이시아",
+        "ssm",
+        "one",
+        "company",
+        "이사",
+        "거버넌스"
       ],
-      "text": "팀 섹션에는 공개된 창립자, 엔지니어링, 운영 파트너가 명시되어 있습니다. 거버넌스나 파트너십 등 공개 정보 외 문의는 Telegram으로 연락해 주세요."
+      "text": "최신 재단 업데이트는 ONE COMPANY를 말레이시아 SSM(Companies Commission of Malaysia)에 등록된 말레이시아 재단으로 기재합니다. 공개 팀 섹션에는 James Kim CEO, Kim Jae Mo 이사 CMO, Max Khoo 이사 CFO, Park Ju-Jin 이사, Lee Jun Bong 이사가 표시됩니다."
     },
     {
       "id": "qa-support-ko",
@@ -732,11 +742,15 @@
         "team",
         "founders",
         "governance",
-        "who",
-        "behind",
+        "foundation",
+        "malaysia",
+        "ssm",
+        "one",
+        "company",
+        "directors",
         "people"
       ],
-      "text": "チームセクションでは、公開コピーに記載された創業者、エンジニアリング、運営パートナーを紹介しています。ガバナンスやパートナーシップなど公開外の質問は Telegram でご連絡ください。"
+      "text": "最新の財団アップデートでは、ONE COMPANY はマレーシアの SSM（Companies Commission of Malaysia）に登録されたマレーシア財団として記載されています。公開チームセクションには、CEO の James Kim、Director CMO の Kim Jae Mo、Director CFO の Max Khoo、Director の Park Ju-Jin と Lee Jun Bong が掲載されています。"
     },
     {
       "id": "qa-support-ja",
@@ -980,11 +994,15 @@
         "team",
         "founders",
         "governance",
-        "who",
-        "behind",
+        "foundation",
+        "malaysia",
+        "ssm",
+        "one",
+        "company",
+        "directors",
         "people"
       ],
-      "text": "团队部分介绍了公开文案中列出的创始人、工程和运营合作伙伴。关于治理或合作的其他问题，请通过 Telegram 联系团队。"
+      "text": "最新基金会更新显示,ONE COMPANY 是在马来西亚 SSM（Companies Commission of Malaysia）注册的马来西亚基金会。公开团队部分列出 James Kim 为 CEO、Kim Jae Mo 为 Director CMO、Max Khoo 为 Director CFO、Park Ju-Jin 与 Lee Jun Bong 为 Director。"
     },
     {
       "id": "qa-support-zh",
@@ -1154,7 +1172,7 @@
         "governance",
         "founders"
       ],
-      "text": "Operators, not generalists. The team section lists founders, engineering, and operating partners with shipping history across consumer fintech. For governance or partnership questions beyond the listed names, reach the team on Telegram."
+      "text": "ONE COMPANY is listed as a Malaysia foundation registered with SSM, Companies Commission of Malaysia. Business address: 3F. KLTS Block C No78, Jalan Gombak, Kuala Lumpur. Foundation mandate covers blockchain and Web3 research, education, and support; digital wallet, fintech, AI, game, travel, information platform ecosystems; blockchain platform development and standardization; healthy digital asset and token use; Web3 community, membership, and rewards; AI automation and data platforms; online games, digital content, NFT and metaverse ecosystems; travel, tourism, payment, and membership platforms; partnerships, events, publishing, youth and startup education, project support, safety, transparency, user protection, and compliance systems. Public team roles: James Kim CEO and project leader; Kim Jae Mo Director CMO; Max Khoo Director CFO; Lee Jun Bong Director; Park Ju-Jin Director."
     },
     {
       "id": "wp-ch11",
