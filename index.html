@@ -1481,7 +1481,7 @@
       const grid = document.getElementById('teamGrid');
       if (!grid || !window.I18N || !window.I18N.TEAM) return;
       const members = window.I18N.TEAM[lang] || window.I18N.TEAM.en;
-      const photos = ['james-kim','kim-jae-mo','khoo-yih-shian','park-ju-jin','lee-jun-bong'];
+      const photos = ['chiba-mitsuru','james-kim','kim-jae-mo','khoo-yih-shian','lee-jun-bong','park-ju-jin'];
       grid.innerHTML = members.map((m, i) => {
         const lis = m.li.map(t => `<li>${t}</li>`).join('');
         const kr = m.krName ? `<span class="kr">${m.krName}</span>` : '';

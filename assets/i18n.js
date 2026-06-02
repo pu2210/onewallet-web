@@ -6,32 +6,36 @@ window.I18N = (function () {
   /* ---------- Helpers shared across languages ---------- */
     const TEAM = {
       en: [
+        { role: 'Foundation Chair', krName: '', name: 'Chiba Mitsuru', li: ['Foundation governance & Japan market leadership', 'Representative Director, REMOTEX JAPAN Co., Ltd.', 'Representative, ITCOM INTERNATIONAL LLC'] },
         { role: 'CEO', krName: '김종성', name: 'James Kim', li: ['Project leader', 'Foundation oversight & global strategy', 'Vision lead for ONEWALLET'] },
         { role: 'Director · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] },
         { role: 'Director · CFO', krName: '', name: 'Max Khoo', li: ['Token economy management', 'Project financial strategy', 'Investment & partnership structuring'] },
-        { role: 'Director', krName: '박주진', name: 'Park Ju-Jin', li: ['Foundation oversight & global strategy', 'Former Chairman, SearchOne Co., Ltd.', 'Former CEO, Tongil Trading Co., Ltd.', 'Former CEO, HighGood Co., Ltd.', 'Former Chairman, CrossCoin Foundation'] },
-        { role: 'Director', krName: '이준봉', name: 'Lee Jun Bong', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] }
+        { role: 'Director', krName: '이준봉', name: 'Lee Jun Bong', li: ['Global community building', 'User growth strategy', 'Partnership marketing'] },
+        { role: 'Director', krName: '박주진', name: 'Park Ju-Jin', li: ['Foundation oversight & global strategy', 'Former Chairman, SearchOne Co., Ltd.', 'Former CEO, Tongil Trading Co., Ltd.', 'Former CEO, HighGood Co., Ltd.', 'Former Chairman, CrossCoin Foundation'] }
       ],
       ko: [
+        { role: '재단 의장', krName: '', name: 'Chiba Mitsuru', li: ['재단 거버넌스와 일본 내 사업 리더십', 'REMOTEX JAPAN 주식회사 대표이사', 'ITCOM INTERNATIONAL 합동회사 대표'] },
         { role: '최고경영자', krName: '김종성', name: 'James Kim', li: ['프로젝트 리더', '재단 총괄 및 글로벌 전략', 'ONEWALLET 비전 리드'] },
         { role: '이사 · 마케팅 총괄', krName: '김재모', name: 'Kim Jae Mo', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] },
         { role: '이사 · 재무 총괄', krName: '', name: 'Max Khoo', li: ['토큰 이코노미 관리', '프로젝트 재무 전략', '투자 및 파트너십 구조화'] },
-        { role: '이사', krName: '박주진', name: 'Park Ju-Jin', li: ['재단 총괄 및 글로벌 전략', '전 SearchOne Co., Ltd. 의장', '전 Tongil Trading Co., Ltd. 대표이사', '전 HighGood Co., Ltd. 대표이사', '전 CrossCoin Foundation 의장'] },
-        { role: '이사', krName: '이준봉', name: 'Lee Jun Bong', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] }
+        { role: '이사', krName: '이준봉', name: 'Lee Jun Bong', li: ['글로벌 커뮤니티 구축', '사용자 성장 전략', '파트너십 마케팅'] },
+        { role: '이사', krName: '박주진', name: 'Park Ju-Jin', li: ['재단 총괄 및 글로벌 전략', '전 SearchOne Co., Ltd. 의장', '전 Tongil Trading Co., Ltd. 대표이사', '전 HighGood Co., Ltd. 대표이사', '전 CrossCoin Foundation 의장'] }
       ],
       ja: [
+        { role: '財団議長', krName: '', name: 'Chiba Mitsuru', li: ['財団ガバナンスと日本市場のリーダーシップ', 'REMOTEX JAPAN株式会社 代表取締役', 'ITCOM INTERNATIONAL合同会社 代表'] },
         { role: '最高経営責任者', krName: '김종성', name: 'James Kim', li: ['プロジェクトリード', '財団運営とグローバル戦略', 'ONEWALLET のビジョン責任者'] },
         { role: '取締役 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] },
         { role: '取締役 · CFO', krName: '', name: 'Max Khoo', li: ['トークンエコノミー運用', '財務戦略の策定', '投資およびパートナーシップ設計'] },
-        { role: '取締役', krName: '박주진', name: 'Park Ju-Jin', li: ['財団運営とグローバル戦略', '元 SearchOne Co., Ltd. 会長', '元 Tongil Trading Co., Ltd. CEO', '元 HighGood Co., Ltd. CEO', '元 CrossCoin Foundation 議長'] },
-        { role: '取締役', krName: '이준봉', name: 'Lee Jun Bong', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] }
+        { role: '取締役', krName: '이준봉', name: 'Lee Jun Bong', li: ['グローバルコミュニティ構築', 'ユーザー成長戦略', 'パートナーシップマーケティング'] },
+        { role: '取締役', krName: '박주진', name: 'Park Ju-Jin', li: ['財団運営とグローバル戦略', '元 SearchOne Co., Ltd. 会長', '元 Tongil Trading Co., Ltd. CEO', '元 HighGood Co., Ltd. CEO', '元 CrossCoin Foundation 議長'] }
       ],
       zh: [
+        { role: '基金会主席', krName: '', name: 'Chiba Mitsuru', li: ['基金会治理与日本市场领导', 'REMOTEX JAPAN株式会社代表取締役', 'ITCOM INTERNATIONAL合同会社代表'] },
         { role: '首席执行官', krName: '김종성', name: 'James Kim', li: ['项目负责人', '基金会监督与全球战略', 'ONEWALLET 愿景负责人'] },
         { role: '董事 · CMO', krName: '김재모', name: 'Kim Jae Mo', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] },
         { role: '董事 · CFO', krName: '', name: 'Max Khoo', li: ['代币经济管理', '项目财务战略', '投资与合作架构'] },
-        { role: '董事', krName: '박주진', name: 'Park Ju-Jin', li: ['基金会监督与全球战略', '前 SearchOne Co., Ltd. 主席', '前 Tongil Trading Co., Ltd. CEO', '前 HighGood Co., Ltd. CEO', '前 CrossCoin Foundation 主席'] },
-        { role: '董事', krName: '이준봉', name: 'Lee Jun Bong', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] }
+        { role: '董事', krName: '이준봉', name: 'Lee Jun Bong', li: ['全球社区建设', '用户增长策略', '合作伙伴营销'] },
+        { role: '董事', krName: '박주진', name: 'Park Ju-Jin', li: ['基金会监督与全球战略', '前 SearchOne Co., Ltd. 主席', '前 Tongil Trading Co., Ltd. CEO', '前 HighGood Co., Ltd. CEO', '前 CrossCoin Foundation 主席'] }
       ]
     };
 
